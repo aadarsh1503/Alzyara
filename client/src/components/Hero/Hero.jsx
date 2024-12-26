@@ -14,7 +14,7 @@ const Hero = () => {
       <div className="bg-[#0f2027]">
     <div className=" text-white max-w-6xl mx-auto flex flex-col min-h-screen lg:flex-row items-center justify-between px-8 lg:px-24 py-12 lg:py-24">
       {/* Left Section */}
-      <div className="lg:w-1/2 text-center lg:text-left mt-12 space-y-6">
+      <div className="lg:w-1/2 text-center lg:text-left mt- space-y-6">
         <h1 className="text-3xl lg:text-6xl font-bold leading-snug">
           Email & SMS marketing so good, it’s boring
         </h1>

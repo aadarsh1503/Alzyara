@@ -1,0 +1,13 @@
+
+
+.skiptranslate > iframe.skiptranslate {
+    display: none !important;
+}
+
+body {
+    top: 0px !important;
+}
+
+#google_translate_element .goog-logo-link {
+    display: none !important;
+}
