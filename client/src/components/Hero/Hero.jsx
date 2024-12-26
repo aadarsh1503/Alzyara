@@ -11,13 +11,14 @@ import Join from "../Join/Join";
 const Hero = () => {
   return (
     <div>
-    <div className="bg-[#0f2027] text-white flex flex-col min-h-screen lg:flex-row items-center justify-between px-8 lg:px-24 py-12 lg:py-24">
+      <div className="bg-[#0f2027]">
+    <div className=" text-white max-w-6xl mx-auto flex flex-col min-h-screen lg:flex-row items-center justify-between px-8 lg:px-24 py-12 lg:py-24">
       {/* Left Section */}
       <div className="lg:w-1/2 text-center lg:text-left space-y-6">
         <h1 className="text-3xl lg:text-5xl font-bold leading-snug">
           Email & SMS marketing so good, it’s boring
         </h1>
-        <p className="text-lg text-gray-300 leading-relaxed">
+        <p className="text-base text-gray-300 leading-relaxed">
           You’ve got enough exciting stuff to worry about. Let us be the
           reliable platform you can depend on.{" "}
           <span className="text-white font-semibold">
@@ -26,10 +27,10 @@ const Hero = () => {
         </p>
         {/* Buttons */}
         <div className="flex flex-col lg:flex-row items-center gap-4">
-          <button className="bg-[#a3ff12] text-black px-6 py-3 rounded-lg font-bold text-lg hover:bg-[#91e50f]">
+          <button className="bg-parrot  hover:outline-parrot outline hover:bg-black hover:text-parrot text-black w-[200px] py-2 rounded-lg font-bold text-sm ">
             Start free
           </button>
-          <button className="bg-transparent border-2 border-white px-6 py-3 rounded-lg font-bold text-lg hover:bg-white hover:text-black">
+          <button className="bg-transparent border-2 border-white w-[200px] py-2 rounded-lg font-bold text-sm hover:bg-white hover:text-black">
             See pricing
           </button>
         </div>
@@ -72,6 +73,7 @@ const Hero = () => {
       className="w-full h-full object-cover"
     />
   </div>
+</div>
 </div>
 
     </div>

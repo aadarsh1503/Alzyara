@@ -100,7 +100,7 @@ const Slide = () => {
     };
 
     return (
-        <section className="py-10 lg:max-w-7xl lg:w-full w-[200px] mx-auto">
+        <section className="py-10 lg:max-w-7xl mb-10 lg:w-full w-[200px] mx-auto">
             <h1 className='text-center font-extrabold mb-4'>Trusted by 125,000+ ecommerce brands</h1>
         <div className="">
             {isLoaded ? (

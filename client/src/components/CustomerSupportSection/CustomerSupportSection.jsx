@@ -35,7 +35,7 @@ const CustomerSupportSection = () => {
 
   return (
     <div>
-    <div className="py-10 bg-green-100 mx-auto max-w-5xl px-4">
+    <div className="py-10 bg-green-100 mx-auto max-w-5xl  px-4">
       <div className="flex p-4 flex-col md:flex-row items-center text-center md:text-left mb-8">
         <div className="md:w-1/2 ml-20 flex justify-center md:justify-start">
           <img src={i1} alt="Award" className="h-72" />
@@ -93,7 +93,7 @@ const CustomerSupportSection = () => {
 </div>
       </div>
 
-      <div className="text-center mt-10">
+      <div className="text-center  mt-10">
         <button className="bg-green-500 text-white py-4 px-6 w-56 rounded-lg hover:bg-green-600">
           Start free
         </button>
@@ -102,7 +102,7 @@ const CustomerSupportSection = () => {
         </button>
       </div>
 
-      <div className="text-center mt-4 text-sm text-gray-500">
+      <div className="text-center mb-20 mt-4 text-sm text-gray-500">
         <p>Over 5,300+ five-star Shopify reviews</p>
       </div>
     </div>
