@@ -7,6 +7,7 @@ import Navbar from './components/Navbar/Navbar'
 import { DirectionProvider } from './components/DirectionContext'
 import { BrowserRouter as Router, Route, Routes, useLocation, BrowserRouter } from 'react-router-dom'; // Import Router components
 import LanguageSwitcher from './components/LanguageSwticher/LanguageSwitcher'
+import Footer from './components/Footer/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,6 +19,7 @@ function App() {
       <LanguageSwitcher />
       <Navbar />
 <Hero />
+<Footer />
 </DirectionProvider>
 </BrowserRouter>
     </div>

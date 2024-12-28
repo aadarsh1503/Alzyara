@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontSize: {
+        '13px': '13px', // Custom font size
+        '12px': '12px',
+      },
       colors:{
         dgreen:'#2f8481',
         parrot:'#a4f41c',
