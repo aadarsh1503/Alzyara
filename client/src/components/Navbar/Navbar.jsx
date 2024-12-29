@@ -48,7 +48,7 @@ const Navbar = () => {
     <div>
       <nav
         className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-          isScrolled ? "bg-white text-black shadow-md" : "bg-[#0f2027] text-white"
+          isScrolled ? "bg-[#0f2027] text-white" : "bg-[#0f2027] text-white"
         }`}
       >
         <div className="container mx-auto flex max-w-7xl items-center justify-between px-6 py-2">
@@ -91,7 +91,7 @@ g1
                 >
                   <AiOutlineSearch
                     className={`text-xl mr-2 ${
-                      isScrolled ? "text-black" : "text-white"
+                      isScrolled ? "text-white" : "text-white"
                     }`}
                   />
                   Search
@@ -113,14 +113,14 @@ g1
             <div className="flex space-x-4">
               <button
                 className={`w-32 h-8  text-xs hover:outline-parrot  rounded-md ${
-                  isScrolled ? "text-black outline hover:bg-parrot hover:text-black" : "text-black bg-parrot hover:text-white hover:outline-white outline hover:bg-[#0f2027]"
+                  isScrolled ? "text-black bg-parrot hover:text-white hover:outline-white outline hover:bg-[#0f2027]" : "text-black bg-parrot hover:text-white hover:outline-white outline hover:bg-[#0f2027]"
                 }`}
               >
                 Request Demo
               </button>
               <button
                 className={`w-20 h-8 bg-parrot hover:outline-parrot rounded-md ${
-                  isScrolled ? "text-black outline  bg-white hover:bg-parrot" : "text-black bg-parrot hover:text-white hover:outline-white outline hover:bg-[#0f2027] "
+                  isScrolled ? "text-black bg-parrot hover:text-white hover:outline-white outline hover:bg-[#0f2027]" : "text-black bg-parrot hover:text-white hover:outline-white outline hover:bg-[#0f2027] "
                 }`}
               >
                 Log in
