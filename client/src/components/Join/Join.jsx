@@ -41,7 +41,7 @@ const Join = () => {
       </div>
 
       {/* Right side image */}
-      <div className="absolute top-0 right-0 w-1/3 h-full">
+      <div className="absolute top-0 right-0 lg:w-1/3 w-32 h-32 lg:h-full">
         <img src={i45} alt="Right Side Image" className="object-cover w-full h-full" />
       </div>
     </div>

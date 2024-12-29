@@ -35,28 +35,28 @@ const Hero = () => {
           </button>
         </div>
         {/* Integration Icons */}
-        <div className=" items-center gap-4 mt-8 justify-center lg:justify-start">
+        <div className=" items-center gap-4 mt-8  justify-center lg:justify-start">
   <div className="text-gray-400 mb-4 text-sm block">Connect Alzyara to your platform</div>
-  <div className="flex gap-4">
+  <div className="flex gap-4 lg:ml-0 ml-6">
     <img
       src="https://www.omnisend.com/wp-content/themes/omnisend-v2/assets/img/boooring/bf-h-1.png"
       alt="Shopify"
-      className="w-[86px] h-[25px]"
+      className="lg:w-[86px] w-[42px] h-[15px] lg:h-[25px]"
     />
     <img
       src="https://www.omnisend.com/wp-content/themes/omnisend-v2/assets/img/boooring/bf-h-2.png"
       alt="WordPress"
-      className="w-[86px] h-[25px]"
+      className="lg:w-[86px] w-[42px] h-[15px] lg:h-[25px]"
     />
     <img
       src="https://www.omnisend.com/wp-content/themes/omnisend-v2/assets/img/boooring/bf-h-3.png"
       alt="WooCommerce"
-      className="w-[86px] h-[25px]"
+      className="lg:w-[86px] w-[42px] h-[15px] lg:h-[25px]"
     />
     <img
       src="https://www.omnisend.com/wp-content/themes/omnisend-v2/assets/img/boooring/bf-h-4.png"
       alt="Wix"
-      className="w-[86px] h-[25px]"
+      className="lg:w-[86px] w-[42px] h-[15px] lg:h-[25px]"
     />
   </div>
 </div>
@@ -65,12 +65,12 @@ const Hero = () => {
 
       {/* Right Section */}
       <div className="lg:w-1/2 mt-8 lg:mt-0 flex justify-center">
-  <div className="w-80 h-80 lg:w-[420px] lg:h-[420px] rounded-full bg-gray-700 overflow-hidden flex items-center justify-center">
+  <div className="w-32 h-32 lg:w-[420px] lg:h-[420px] rounded-full bg-gray-700 overflow-hidden flex items-center justify-center">
     {/* Image */}
     <img
       src="https://assets.entrepreneur.com/content/3x2/2000/20180726155253-GettyImages-860221048.jpeg"
       alt="Circular Display"
-      className="w-full h-full object-cover"
+      className="lg:w-full lg:h-full w-32 h-32 object-cover"
     />
   </div>
 </div>

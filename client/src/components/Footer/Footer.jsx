@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
 
         {/* Links Section */}
-        <div className="-mt-28 ml-56 grid grid-cols-2 md:grid-cols-5 gap-6">
+        <div className="mt-0 lg:-mt-28 ml-0 mt:ml-56 grid grid-cols-2 md:grid-cols-5 gap-6">
           <div>
             <h5 className="font-semibold mb-4">Product</h5>
             <ul className="space-y-2 text-gray-400 text-13px">

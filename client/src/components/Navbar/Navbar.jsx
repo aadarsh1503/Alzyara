@@ -54,15 +54,18 @@ const Navbar = () => {
         <div className="container mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
           {/* Logo Section */}
           <div className="flex items-center space-x-4">
-            <a href="/">
-              <img
-                src="" // Replace with your logo
-                alt="Logo"
-                className="h-22 w-44"
-              />
-            </a>
-          </div>
-
+  <a href="/">
+    <img
+      src={
+        isScrolled
+          ? "https://www.omnisend.com/wp-content/themes/omnisend-v2/assets/img/omnisend_logo_dark.svg" // Replace with the dark logo URL
+          : "https://www.omnisend.com/wp-content/themes/omnisend-v2/assets/img/omnisend_logo_light.svg" // Replace with the light logo URL
+      }
+      alt="Logo"
+      className="h-22 w-44"
+    />
+  </a>
+</div>
           {/* Desktop Menu Items */}
           <div className="hidden md:flex font-semibold items-center space-x-7 text-xs tracking-wide">
             <Link to="/#services" className="hover:text-gray-600">

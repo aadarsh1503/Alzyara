@@ -5,7 +5,7 @@ const Thirdsegment = () => {
   return (
     <div className="bg-white  mx-auto flex flex-col lg:flex-row items-center justify-between px-8 lg:px-20 py-12 lg:py-12">
       {/* Left Section */}
-      <div className=" max-w-sm ml-20 mx-auto space-y-6">
+      <div className=" max-w-sm ml-0 lg:ml-20 mx-auto space-y-6">
         <p className="text-sm text-gray-500 uppercase font-semibold tracking-wider">
         segmentation
         </p>

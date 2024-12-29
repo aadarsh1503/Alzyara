@@ -50,47 +50,9 @@ const CustomerSupportSection = () => {
           </p>
         </div>
       </div>
-      <hr className="border-t border-gray-300 mt-2 mb-10" />
+     
 
-      <div className="text-center mb-8">
-        <h3 className="text-xl font-semibold">Meet amazing people behind our support</h3>
-        <div className="flex flex-col items-center gap-4 mt-4">
-  <div className="grid grid-cols-4 gap-4">
-    {visibleMembers.map((member, index) => (
-      <div
-        key={index}
-        className="relative text-center w-56 h-40 mx-auto rounded-xl overflow-hidden border-2 border-gray-300"
-      >
-        <img
-          src={member.src}
-          alt={member.name}
-          className="object-cover w-full h-full"
-        />
-        <div className="absolute bottom-0 p-2 font-extrabold text-left bg-opacity-60 text-white text-sm w-full py-1">
-          {member.name}
-        </div>
-      </div>
-    ))}
-  </div>
 
-  {/* Buttons below the grid */}
-  <div className="flex gap-4">
-    <button
-      onClick={handlePrev}
-      className="bg-gray-300 p-3 rounded-full hover:bg-gray-400"
-    >
-      <FaArrowLeft className="text-xl text-gray-700" />
-    </button>
-
-    <button
-      onClick={handleNext}
-      className="bg-gray-300 p-3 rounded-full hover:bg-gray-400"
-    >
-      <FaArrowRight className="text-xl text-gray-700" />
-    </button>
-  </div>
-</div>
-</div>
       </div>
 
       <div className="text-center  mt-10">
