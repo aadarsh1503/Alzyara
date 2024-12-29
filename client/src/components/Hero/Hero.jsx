@@ -37,28 +37,7 @@ const Hero = () => {
         {/* Integration Icons */}
         <div className=" items-center gap-4 mt-8  justify-center lg:justify-start">
   <div className="text-gray-400 mb-4 text-sm block">Connect Alzyara to your platform</div>
-  <div className="flex gap-4 lg:ml-0 ml-6">
-    <img
-      src="https://www.omnisend.com/wp-content/themes/omnisend-v2/assets/img/boooring/bf-h-1.png"
-      alt="Shopify"
-      className="lg:w-[86px] w-[42px] h-[15px] lg:h-[25px]"
-    />
-    <img
-      src="https://www.omnisend.com/wp-content/themes/omnisend-v2/assets/img/boooring/bf-h-2.png"
-      alt="WordPress"
-      className="lg:w-[86px] w-[42px] h-[15px] lg:h-[25px]"
-    />
-    <img
-      src="https://www.omnisend.com/wp-content/themes/omnisend-v2/assets/img/boooring/bf-h-3.png"
-      alt="WooCommerce"
-      className="lg:w-[86px] w-[42px] h-[15px] lg:h-[25px]"
-    />
-    <img
-      src="https://www.omnisend.com/wp-content/themes/omnisend-v2/assets/img/boooring/bf-h-4.png"
-      alt="Wix"
-      className="lg:w-[86px] w-[42px] h-[15px] lg:h-[25px]"
-    />
-  </div>
+
 </div>
 
       </div>
