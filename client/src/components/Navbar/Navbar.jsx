@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom"; // Import Link for React Router navigation
 import { AiOutlineSearch } from "react-icons/ai";
 import { FaBars, FaTimes } from "react-icons/fa"; // Import icons for menu
-
+import g1 from "./g1.png"
 import LanguageSwitcher from "../LanguageSwticher/LanguageSwitcher";
 import { useDirection } from "../DirectionContext";
 
@@ -51,18 +51,16 @@ const Navbar = () => {
           isScrolled ? "bg-white text-black shadow-md" : "bg-[#0f2027] text-white"
         }`}
       >
-        <div className="container mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
+        <div className="container mx-auto flex max-w-7xl items-center justify-between px-6 py-2">
           {/* Logo Section */}
           <div className="flex items-center space-x-4">
   <a href="/">
     <img
       src={
-        isScrolled
-          ? "https://www.omnisend.com/wp-content/themes/omnisend-v2/assets/img/omnisend_logo_dark.svg" // Replace with the dark logo URL
-          : "https://www.omnisend.com/wp-content/themes/omnisend-v2/assets/img/omnisend_logo_light.svg" // Replace with the light logo URL
+g1
       }
       alt="Logo"
-      className="h-22 w-44"
+      className="h-20 w-20"
     />
   </a>
 </div>
@@ -125,17 +123,9 @@ const Navbar = () => {
                   isScrolled ? "text-black outline  bg-white hover:bg-parrot" : "text-black bg-parrot hover:text-white hover:outline-white outline hover:bg-[#0f2027] "
                 }`}
               >
-                Start Free
-              </button>
-              <button
-                className={` px-2 rounded-md ${
-                  isScrolled
-                    ? " text-black hover:bg-black hover:text-white"
-                    : "bg-[#0f2027] text-white hover:text-black hover:bg-parrot"
-                }`}
-              >
                 Log in
               </button>
+             
             </div>
           </div>
 

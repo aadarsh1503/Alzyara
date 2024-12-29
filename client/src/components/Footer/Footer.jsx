@@ -1,5 +1,5 @@
 import React from "react";
-
+import g1 from "./g1.png"
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-13px text-white py-10">
@@ -9,20 +9,19 @@ const Footer = () => {
           {/* Omnisend Section */}
           <div className="md:col-span-2">
             <img
-              src="https://www.omnisend.com/wp-content/themes/omnisend-v2/assets/img/omnisend_logo_light.svg"
+              src={g1}
               alt="Omnisend Logo"
               className="mb-4 w-32"
             />
-            <p className="text-gray-400 text-12px mb-6">
-              The top-rated marketing <br />automation platform for ecommerce.
+            <p className="text-gray-400 text-center ml-0 lg:-ml-72 text-12px mb-6">
+              The top-rated marketing <br />automation platform <br />for ecommerce.
             </p>
             <div className="flex items-start">
               <img
                 src="https://www.omnisend.com/wp-content/themes/omnisend-v2/assets/img/footerfall-min.png"
                 alt="Leader Fall 2024"
-                className="mr-4 w-44"
+                className="-ml-6 w-44"
               />
-            
             </div>
           </div>
 
@@ -46,7 +45,7 @@ const Footer = () => {
         </div>
 
         {/* Links Section */}
-        <div className="mt-0 lg:-mt-28 ml-0 mt:ml-56 grid grid-cols-2 md:grid-cols-5 gap-6">
+        <div className="mt-0 lg:-mt-56 ml-0 lg:ml-56 grid grid-cols-2 md:grid-cols-5 gap-6">
           <div>
             <h5 className="font-semibold mb-4">Product</h5>
             <ul className="space-y-2 text-gray-400 text-13px">
