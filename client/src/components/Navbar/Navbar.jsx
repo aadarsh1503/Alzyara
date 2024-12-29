@@ -66,7 +66,7 @@ g1
 </div>
           {/* Desktop Menu Items */}
           <div className="hidden md:flex font-semibold items-center space-x-7 text-xs tracking-wide">
-            <Link to="/#services" className="hover:text-gray-600">
+            <Link to="/email" className="hover:text-gray-600">
               Features
             </Link>
             <Link to="/#why-us" className="hover:text-gray-600">

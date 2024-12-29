@@ -1,16 +1,17 @@
 import React from "react";
 import g1 from "./g1.png"
+import g2 from "./g2.png"
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-13px text-white py-10">
       <div className="max-w-6xl mx-auto px-6">
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-          {/* Omnisend Section */}
+          {/* Alzyara Section */}
           <div className="md:col-span-2">
             <img
               src={g1}
-              alt="Omnisend Logo"
+              alt="Alzyara Logo"
               className="mb-4 w-32"
             />
             <p className="text-gray-400 text-center ml-0 lg:-ml-72 text-12px mb-6">
@@ -18,7 +19,7 @@ const Footer = () => {
             </p>
             <div className="flex items-start">
               <img
-                src="https://www.omnisend.com/wp-content/themes/omnisend-v2/assets/img/footerfall-min.png"
+                src={g2}
                 alt="Leader Fall 2024"
                 className="-ml-6 w-44"
               />
@@ -28,7 +29,7 @@ const Footer = () => {
           {/* Subscription Section */}
           <div className="md:col-span-3">
             <p className="text-gray-300 mb-4">
-              Get insights about omnichannel marketing automation and Omnisend
+              Get insights about Alzyara marketing automation and Alzyara
               news. No spam, ever!
             </p>
             <div className="flex">
@@ -101,7 +102,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h5 className="font-semibold mb-4">Omnisend</h5>
+            <h5 className="font-semibold mb-4">Alzyara</h5>
             <ul className="space-y-2 text-gray-400 text-13px">
               <li>About us</li>
               <li>Contact us</li>
@@ -124,7 +125,7 @@ const Footer = () => {
           <p>
             *The average return of $73 for every dollar spent is based on our
             internal analysis. This figure is an estimate based on ecommerce
-            revenue attributed to Omnisend US merchants using paid plans for
+            revenue attributed to Alzyara US merchants using paid plans for
             email, 13pxS, and push campaigns & automations between January 1 and
             December 31, 2023. Actual results may vary depending on individual
             circumstances, market conditions, region, and other factors. Past

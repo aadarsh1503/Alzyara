@@ -21,7 +21,7 @@ const Automation = () => {
         Money doesn’t sleep (but you can)
         </h2>
         <p className="text-lg text-gray-700 leading-relaxed">
-        Save time with pre-built automations that engage & sell. From welcome series to abandoned cart recovery, and post-purchase campaigns, Omnisend does the heavy lifting, so you don’t have to.
+        Save time with pre-built automations that engage & sell. From welcome series to abandoned cart recovery, and post-purchase campaigns, Alzyara does the heavy lifting, so you don’t have to.
         </p>
 
         <div className="items-center gap-2 mt-6">
