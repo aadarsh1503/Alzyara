@@ -69,16 +69,16 @@ g1
             <Link to="/email" className="hover:text-gray-600">
               Features
             </Link>
-            <Link to="/#why-us" className="hover:text-gray-600">
-              Pricing
+            <Link to="/marketing" className="hover:text-gray-600">
+            Solution
             </Link>
-            <Link to="/#clients" className="hover:text-gray-600">
-              Migration
+            <Link to="/pricing" className="hover:text-gray-600">
+              Pricing
             </Link>
             <Link to="/#partners" className="hover:text-gray-600">
               Integrations
             </Link>
-            <Link to="/manPower" className="hover:text-gray-600">
+            <Link to="/tutorials" className="hover:text-gray-600">
               Resources
             </Link>
 

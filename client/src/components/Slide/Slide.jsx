@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import "./Slide.css";
-import item2 from "./item2.png";
+import i2 from "./i2.png";
 import i3 from "./i3.png";
 import i4 from "./i4.png";
 import i5 from "./i5.png";
@@ -17,20 +17,9 @@ import i11 from "./i11.png";
 import i12 from "./i12.png";
 
 const Slide = () => {
-    const images = [i1, item2, i3, i4, i5, i6 ,i7,i8,i9,i10,i11,i12];
+    const images = [i1, i2, i3, i4, i5, i6 ,i7,i8,i9,i10,i11,i12];
     const imageLinks = [
-        "http://www.pangea-network.com",
-        "https://www.glafamily.com/",
-        "http://www.logifem.com.tr",
-        "http://www.signaturegln.com",
-        "https://www.jctrans.com/en/",
-        "https://fiata.org/",
-        "https://bridginglogpro.com/",
-        "https://www.gtran.net/",
-        "https://www.worldfoodcargoalliance.com",
-        "https://crisscrossconnex.co.jp",
-        "https://www.df-alliance.com/",
-        "https://www.smilelogisticsnetworks.com/"
+        
     ];
 
     const [isLoaded, setIsLoaded] = useState(false);

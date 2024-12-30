@@ -1,7 +1,10 @@
 import React from 'react';
-import ToolsSection from '../ToolsSection/ToolsSection';
+import MarketingAgencies from '../MarketingAgencies/MarketingAgencies';
+import CounterSection from './CounterSection';
+import EmailMarketingSection from './EmailMarketingSection';
 
-const EmailSection = () => {
+
+const Solutions = () => {
   return (
     <div>
     <div className="flex flex-col md:flex-row items-center max-w-7xl mx-auto justify-between  px-6 py-10 md:px-16 md:py-20">
@@ -91,16 +94,17 @@ const EmailSection = () => {
 
       {/* Right Side Image */}
       <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center">
-        <img src="https://sendmails.io/wp-content/uploads/2024/09/Email-Designer-Gift-Card-1.png" alt="Email Design Preview" className="max-w-full h-auto rounded-md shadow-lg" />
+        <img src="https://sendmails.io/wp-content/uploads/2024/09/Advanced-Segmentation-1.png" alt="Email Design Preview" className="max-w-full h-auto rounded-md" />
       </div>
     </div>
     
-
+<MarketingAgencies />
+<CounterSection />
     {/*Second */}
     <div className="flex flex-col md:flex-row items-center max-w-7xl mx-auto justify-between  px-6 py-10 md:px-16 md:py-20">
   {/* Right Side Image */}
   <div className="md:w-1/2 mt-10 md:mt-0 flex -ml-20 justify-center">
-    <img src="https://sendmails.io/wp-content/uploads/2024/09/AI-Powered-Content-Writer.png" alt="Email Design Preview" className="max-w-full h-auto rounded-md " />
+    <img src="https://sendmails.io/wp-content/uploads/2024/10/Marketing-Agency-Graphic-1-3-1971x2048.png" alt="Email Design Preview" className="max-w-full h-auto rounded-md " />
   </div>
 
   {/* Left Side Content */}
@@ -278,12 +282,12 @@ const EmailSection = () => {
 
       {/* Right Side Image */}
       <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center">
-        <img src="https://sendmails.io/wp-content/uploads/2024/09/Copy-of-Glide-Campaign-AI-Chatbot.png" alt="Email Design Preview" className="max-w-full h-auto rounded-md " />
+        <img src="https://sendmails.io/wp-content/uploads/2022/09/automation-workflow-2048x1456.png" alt="Email Design Preview" className="max-w-full h-auto rounded-md " />
       </div>
     </div>
-    <ToolsSection />
+    <EmailMarketingSection />
     </div>
   );
 };
 
-export default EmailSection;
+export default Solutions;

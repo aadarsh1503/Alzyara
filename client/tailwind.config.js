@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+      },
       fontSize: {
         '13px': '13px', // Custom font size
         '12px': '12px',
@@ -13,6 +16,7 @@ export default {
       colors:{
         dgreen:'#2f8481',
         parrot:'#a4f41c',
+        lgreen:'#308484',
       }
     },
   },

@@ -8,6 +8,10 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'; // Import Route
 import LanguageSwitcher from './components/LanguageSwticher/LanguageSwitcher';
 import Footer from './components/Footer/Footer';
 import EmailSection from './components/EmailSection/EmailSection';
+import MarketingAgencies from './components/MarketingAgencies/MarketingAgencies';
+import Solutions from './components/Solutions/Solutions';
+import PricingSection from './components/PricingSection/PricingSection';
+import TutorialPage from './components/Resources/Resources';
 
 
 function App() {
@@ -23,6 +27,9 @@ function App() {
             {/* Define route paths for different components */}
             <Route path="/" element={<Hero />} />\
             <Route path="/email" element={<EmailSection />} />
+            <Route path="/marketing" element={<Solutions />} />
+            <Route path="/pricing" element={<PricingSection />} />
+            <Route path="/tutorials" element={<TutorialPage />} />
      
             {/* Add more routes as needed */}
           </Routes>
