@@ -14,10 +14,10 @@ import i8 from "./i8.png";
 import i9 from "./i9.png";
 import i10 from "./i10.png";
 import i11 from "./i11.png";
-import i12 from "./i12.png";
+
 
 const Slide = () => {
-    const images = [i1, i2, i3, i4, i5, i6 ,i7,i8,i9,i10,i11,i12];
+    const images = [i1, i2, i3, i4, i5, i6 ,i7,i8,i9,i10,i11];
     const imageLinks = [
         
     ];
@@ -54,7 +54,7 @@ const Slide = () => {
         autoplay: true,
         autoplaySpeed: 2100,
         cssEase: "linear",
-        pauseOnHover: true,
+        pauseOnHover: false,
         beforeChange: (current, next) => {
             if (sliderRef.current) {
                 sliderRef.current.slickGoTo(next);
@@ -87,10 +87,11 @@ const Slide = () => {
             }
         ]
     };
+    
 
     return (
-        <section className="py-10 lg:max-w-7xl mb-10 lg:w-full w-[200px] mx-auto">
-            <h1 className='text-center font-extrabold mb-4'>Trusted by 125,000+ ecommerce brands</h1>
+        <section className="py-10 lg:max-w-7xl mb-10  lg:w-full w-[200px] mx-auto">
+            <h1 className='text-center font-extrabold mb-14'>Trusted by 125,000+ ecommerce brands</h1>
         <div className="">
             {isLoaded ? (
                 <Slider ref={sliderRef} {...settings}>
@@ -100,8 +101,8 @@ const Slide = () => {
                                 <img
                                     src={src}
                                     alt={`Slide ${index + 1}`}
-                                    className="object-contain w-full md:w-3/4 mx-auto slide-image"
-                                    style={{ maxHeight: '300px' }}
+                                    className="object-contain w-full md:w-/4 mx-auto slide-image"
+                                    style={{ maxHeight: '200px' }}
                                 />
                             </a>
                         </div>
