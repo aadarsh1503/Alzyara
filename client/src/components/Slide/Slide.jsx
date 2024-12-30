@@ -14,10 +14,11 @@ import i8 from "./i8.png";
 import i9 from "./i9.png";
 import i10 from "./i10.png";
 import i11 from "./i11.png";
+import i12 from "./i12.png";
 
 
 const Slide = () => {
-    const images = [i1, i2, i3, i4, i5, i6 ,i7,i8,i9,i10,i11];
+    const images = [i1, i2, i3, i4, i5, i6 ,i7,i8,i9,i10,i11,i12];
     const imageLinks = [
         
     ];
