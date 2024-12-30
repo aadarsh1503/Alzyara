@@ -87,10 +87,9 @@ const Slide = () => {
             }
         ]
     };
-    
 
     return (
-        <section className="py-10 lg:max-w-7xl mb-10  lg:w-full w-[200px] mx-auto">
+        <section className="py-10 lg:max-w-7xl mb-10 lg:w-full w-[200px] mx-auto">
             <h1 className='text-center font-extrabold mb-14'>Trusted by 125,000+ ecommerce brands</h1>
         <div className="">
             {isLoaded ? (
@@ -101,7 +100,7 @@ const Slide = () => {
                                 <img
                                     src={src}
                                     alt={`Slide ${index + 1}`}
-                                    className="object-contain w-full md:w-/4 mx-auto slide-image"
+                                    className="object-contain w-full md:w-4/4 mx-auto slide-image"
                                     style={{ maxHeight: '200px' }}
                                 />
                             </a>
