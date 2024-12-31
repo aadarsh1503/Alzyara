@@ -12,6 +12,8 @@ import MarketingAgencies from './components/MarketingAgencies/MarketingAgencies'
 import Solutions from './components/Solutions/Solutions';
 import PricingSection from './components/PricingSection/PricingSection';
 import TutorialPage from './components/Resources/Resources';
+import Integrations from './components/Integrations/Integrations';
+import SignUpForm from './components/SignUpForm/SignUpForm';
 
 
 function App() {
@@ -30,6 +32,8 @@ function App() {
             <Route path="/marketing" element={<Solutions />} />
             <Route path="/pricing" element={<PricingSection />} />
             <Route path="/tutorials" element={<TutorialPage />} />
+            <Route path="/integration" element={<Integrations />} />
+            <Route path="/signup" element={<SignUpForm />} />
      
             {/* Add more routes as needed */}
           </Routes>

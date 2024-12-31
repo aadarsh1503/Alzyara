@@ -10,12 +10,12 @@ const Solutions = () => {
     <div className="flex flex-col md:flex-row items-center max-w-7xl mx-auto justify-between  px-6 py-10 md:px-16 md:py-20">
       {/* Left Side Content */}
       <div className="md:w-1/2 mt-0 lg:mt-10 text-left">
-      <h1 className='font-semibold mb-2'>Drag-and-Drop Email Designer 🎨</h1>
-        <h1 className="text-4xl font-semibold text-gray-900 leading-tight md:leading-snug">
-          Create Stunning Emails <br />Effortlessly
+      <h1 className='font-semibold mb-2'>Advanced Segmentation 📈</h1>
+        <h1 className="text-3xl font-semibold text-gray-900 leading-tight md:leading-snug">
+        Deliver Targeted <br />Campaigns
         </h1>
         <p className="mt-4 text-lg text-gray-700">
-          Easily craft beautiful, responsive emails with <br />our intuitive drag-and-drop designer—no<br /> coding skills needed.
+        Send highly personalized and segmented email <br />campaigns for each client with precise targeting.
         </p>
         <ul className="mt-6 space-y-4">
           <li className="flex items-start">
@@ -25,7 +25,7 @@ const Solutions = () => {
               </svg>
             </span>
             <span className="text-black font-medium">
-              <span className='font-bold'>User-Friendly Interface:</span><span className='font-normal'> Design professional emails with a<br /> simple drag-and-drop editor.</span> 
+              <span className='font-bold'>Detailed Segmentation: </span><span className='font-normal'> Create targeted segments based<br /> on customer  behavior and demographics</span> 
             </span>
           </li>
           <li className="flex items-start">
@@ -35,7 +35,7 @@ const Solutions = () => {
               </svg>
             </span>
             <span className="text-black font-medium">
-              <strong>Customizable Templates:</strong> <span className="font-normal">Choose from a variety of pre-<br />designed templates or start from scratch.</span>
+              <strong>Custom Filters:</strong> <span className="font-normal">Use custom filters to refine your audience.</span>
             </span>
           </li>
           <li className="flex items-start">
@@ -45,7 +45,17 @@ const Solutions = () => {
               </svg>
             </span>
             <span className="text-gray-800 font-medium">
-              <strong>Mobile-Responsive Designs:</strong><span className="font-normal text-base"> Ensure your emails look perfect<br /> on any device.</span>
+              <strong>Higher Engagement:</strong><span className="font-normal text-base"> Deliver relevant content to the right <br />audience.</span>
+            </span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-white mr-3 mt-2 p-xs rounded-full  bg-lgreen">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 " fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+            </span>
+            <span className="text-gray-800 font-medium">
+              <strong>Improved Results: </strong><span className="font-normal text-base"> Enhance your campaign performance <br />with precise targeting.</span>
             </span>
           </li>
         </ul>
@@ -60,7 +70,7 @@ const Solutions = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
               </span>
-              No Coding Required
+              Detailed Segments
             </li>
             <li className="flex items-start">
               <span className="text-lgreen mr-2">
@@ -68,7 +78,7 @@ const Solutions = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
               </span>
-              Professional Designs in Minutes
+              Higher Engagement
             </li>
           </ul>
           <ul className="space-y-2">
@@ -78,7 +88,7 @@ const Solutions = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
               </span>
-              Responsive on All Devices
+              Custom Filters
             </li>
             <li className="flex items-start">
               <span className="text-lgreen mr-2">
@@ -86,7 +96,8 @@ const Solutions = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
               </span>
-              Unlimited Design Flexibility
+              
+Better Performance
             </li>
           </ul>
         </div>
@@ -109,12 +120,12 @@ const Solutions = () => {
 
   {/* Left Side Content */}
   <div className="md:w-1/2 mt-0 lg:mt-10 text-left">
-    <h1 className='font-semibold mb-2'>AI-Powered Content Generator 🤖</h1>
+    <h1 className='font-semibold mb-2'>Cost-Effective Email Marketing Solutions 💰</h1>
     <h1 className="text-4xl font-semibold text-gray-900 leading-tight md:leading-snug">
-    Generate Engaging <br />Content with Ease
+    Maximize ROI with  <br />Affordable Email <br />Campaigns
     </h1>
     <p className="mt-4 text-lg text-gray-700">
-    Leverage AI to create compelling email<br />content and subject lines in seconds, boosting<br /> your campaign’s effectiveness. 
+    Offer your clients cost-effective email marketing solutions without compromising on quality or features.
     </p>
     <ul className="mt-6 space-y-4">
       <li className="flex items-start">
@@ -124,7 +135,7 @@ const Solutions = () => {
           </svg>
         </span>
         <span className="text-black font-medium">
-          <span className='font-bold'>Effortless Content Creation:</span><span className='font-normal'> Use AI to generate high-quality<br /> email content.</span>
+          <span className='font-bold'>Low Email Costs:<span className='font-normal'> Send 10,000 emails for just $1 with Amazon SES.</span></span>
         </span>
       </li>
       <li className="flex items-start">
@@ -134,7 +145,7 @@ const Solutions = () => {
           </svg>
         </span>
         <span className="text-black font-medium">
-          <strong>Optimized Subject Lines:</strong> <span className="font-normal">Craft subject lines that maximize <br />open rates.</span>
+          <strong>Budget-Friendly Tools:</strong> <span className="font-normal">Access premium features  <br />at a fraction of the cost.</span>
         </span>
       </li>
       <li className="flex items-start">
@@ -144,7 +155,7 @@ const Solutions = () => {
           </svg>
         </span>
         <span className="text-gray-800 font-medium">
-          <strong>Time-Saving Tool: </strong><span className="font-normal text-base"> Focus on strategy while AI handles<br /> the writing.</span>
+          <strong>Time-Saving Tool: </strong><span className="font-normal text-base"> Enjoy all future updates <br /> without extra charges.</span>
         </span>
       </li>
     </ul>
@@ -159,7 +170,7 @@ const Solutions = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </span>
-          No Coding Required
+          Single Payment
         </li>
         <li className="flex items-start">
           <span className="text-lgreen mr-2">
@@ -167,7 +178,7 @@ const Solutions = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </span>
-          Professional Designs in Minutes
+          Premium Features
         </li>
       </ul>
       <ul className="space-y-2">
@@ -185,7 +196,7 @@ const Solutions = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </span>
-          Unlimited Design Flexibility
+          Low Cost
         </li>
       </ul>
     </div>
@@ -197,13 +208,13 @@ const Solutions = () => {
 <div className="flex flex-col md:flex-row items-center max-w-7xl mx-auto justify-between  px-6 py-10 md:px-16 md:py-20">
       {/* Left Side Content */}
       <div className="md:w-1/2 mt-0 lg:mt-10 text-left">
-      <h1 className='font-semibold mb-2'>Detailed Analytics 📊</h1>
+      <h1 className='font-semibold mb-2'>Robust Automation and Workflows 🤖</h1>
         <h1 className="text-4xl font-semibold text-gray-900 leading-tight md:leading-snug">
-        Track and Optimize Your <br />Campaigns
+        Automate Marketing<br /> Efforts for Better<br /> Efficiency
 
         </h1>
         <p className="mt-4 text-lg text-gray-700">
-          Easily craft beautiful, responsive emails with <br />our intuitive drag-and-drop designer—no<br /> coding skills needed.
+        Save time and resources by automating repetitive tasks,<br /> allowing your team to focus on strategy and creativity.
         </p>
         <ul className="mt-6 space-y-4">
           <li className="flex items-start">
@@ -213,7 +224,7 @@ const Solutions = () => {
               </svg>
             </span>
             <span className="text-black font-medium">
-              <span className='font-bold'>User-Friendly Interface:</span><span className='font-normal'> Design professional emails with a<br /> simple drag-and-drop editor.</span> 
+              <span className='font-bold'>AI-Powered Workflows:</span><span className='font-normal'> Use AI to automate follow-ups and <br />lead nurturing.</span> 
             </span>
           </li>
           <li className="flex items-start">
@@ -223,7 +234,7 @@ const Solutions = () => {
               </svg>
             </span>
             <span className="text-black font-medium">
-              <strong>Customizable Templates:</strong> <span className="font-normal">Choose from a variety of pre-<br />designed templates or start from scratch.</span>
+              <strong>Custom Automation:</strong> <span className="font-normal">Create customized workflows to <br />match client needs.</span>
             </span>
           </li>
           <li className="flex items-start">
@@ -233,7 +244,17 @@ const Solutions = () => {
               </svg>
             </span>
             <span className="text-gray-800 font-medium">
-              <strong>Mobile-Responsive Designs:</strong><span className="font-normal text-base"> Ensure your emails look perfect<br /> on any device.</span>
+              <strong>Behavior Triggers:</strong><span className="font-normal text-base"> Automate emails based on user behavior<br /> and interactions.</span>
+            </span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-white mr-3 mt-2 p-xs rounded-full  bg-lgreen">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 " fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+            </span>
+            <span className="text-gray-800 font-medium">
+              <strong>24/7 Engagement:</strong><span className="font-normal text-base"> Keep clients' audiences engaged<br /> around the clock.</span>
             </span>
           </li>
         </ul>
@@ -248,7 +269,8 @@ const Solutions = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
               </span>
-              No Coding Required
+           
+AI Automation
             </li>
             <li className="flex items-start">
               <span className="text-lgreen mr-2">
@@ -256,7 +278,7 @@ const Solutions = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
               </span>
-              Professional Designs in Minutes
+              Behavior Triggers
             </li>
           </ul>
           <ul className="space-y-2">
@@ -266,7 +288,7 @@ const Solutions = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
               </span>
-              Responsive on All Devices
+              Custom Workflows
             </li>
             <li className="flex items-start">
               <span className="text-lgreen mr-2">
@@ -274,7 +296,7 @@ const Solutions = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
               </span>
-              Unlimited Design Flexibility
+              Continuous Engagement
             </li>
           </ul>
         </div>

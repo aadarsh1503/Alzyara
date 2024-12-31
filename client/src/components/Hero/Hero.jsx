@@ -11,7 +11,7 @@ import Join from "../Join/Join";
 const Hero = () => {
   return (
     <div>
-      <div className="bg-[#0f2027]">
+      <div className="bg-[#0f2027] mt-20">
     <div className=" text-white max-w-6xl mx-auto flex flex-col min-h-screen lg:flex-row items-center justify-between px-8 lg:px-24 py-12 lg:py-24">
       {/* Left Section */}
       <div className="lg:w-1/2 text-center lg:text-left mt- space-y-6">

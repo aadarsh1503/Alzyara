@@ -4,7 +4,6 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import "./Slide.css";
 import i2 from "./i2.png";
-import i3 from "./i3.png";
 import i4 from "./i4.png";
 import i5 from "./i5.png";
 import i1 from "./i1.png";
@@ -18,7 +17,7 @@ import i12 from "./i12.png";
 
 
 const Slide = () => {
-    const images = [i1, i2, i3, i4, i5, i6 ,i7,i8,i9,i10,i11,i12];
+    const images = [i1, i2, i4, i5, i6 ,i7,i8,i9,i10,i11,i12];
     const imageLinks = [
         
     ];
