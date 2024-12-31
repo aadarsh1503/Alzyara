@@ -202,7 +202,7 @@ const Navbar = () => {
   </div>
 </div>
             </div>
-<div className="pricing-section ">
+<div className="pricing-section">
             <Link to="/pricing" className="hover:text-black p-8">
               Pricing
             </Link>
