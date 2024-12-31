@@ -52,7 +52,7 @@ const Navbar = () => {
     }
     if (window.location.pathname.includes('/pricing')) {
       // Change the text color of the feature section to white
-      document.querySelector('.pricing-section').style.color = 'gray';
+      document.querySelector('.pricing').style.color = 'gray';
     }
     if (window.location.pathname.includes('/integration')) {
       // Change the text color of the feature section to white
@@ -202,10 +202,12 @@ const Navbar = () => {
   </div>
 </div>
             </div>
-<div className="pricing-section">
-            <Link to="/pricing" className="hover:text-black p-8">
+<div className=" pricing ">
+  <a href="/pricing">
+            <div className="hover:text-black p-8">
               Pricing
-            </Link>
+            </div>
+            </a>
             </div>
             <div className="group relative">
             <div className="hover:text-black integration-section p-8">
