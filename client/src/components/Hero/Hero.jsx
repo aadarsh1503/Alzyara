@@ -15,15 +15,12 @@ const Hero = () => {
     <div className=" text-white max-w-6xl mx-auto flex flex-col min-h-screen lg:flex-row items-center justify-between px-8 lg:px-24 py-12 lg:py-24">
       {/* Left Section */}
       <div className="lg:w-1/2 text-center lg:text-left mt- space-y-6">
-        <h1 className="text-3xl lg:text-6xl font-bold leading-snug">
-          Email & SMS marketing so good, it’s boring
+        <h1 className="text-3xl lg:text-5xl font-bold leading-snug">
+        Email Newsletters & Marketing Automation, 100x Better 
         </h1>
         <p className="text-base text-gray-300 leading-relaxed">
-          You’ve got enough exciting stuff to worry about. Let us be the
-          reliable platform you can depend on.{" "}
-          <span className="text-white font-semibold">
-            Make an average $73* for every $1 you spend. So boring.
-          </span>
+        All-in-one AI-powered platform to send emails, manage contacts, capture leads and automate your marketing.
+          
         </p>
         {/* Buttons */}
         <div className="flex flex-col lg:flex-row items-center gap-4">
@@ -61,7 +58,7 @@ const Hero = () => {
     <CustomerSupportSection />
     <Automation />
     <Thirdsegment />
-    <EcommercePlatformSection />
+
     <WhySwitch />
     <Join />
     

@@ -90,7 +90,7 @@ const Slide = () => {
 
     return (
         <section className="py-10 lg:max-w-7xl mb-10 lg:w-full w-[200px] mx-auto">
-            <h1 className='text-center font-extrabold mb-14'>Trusted by 125,000+ ecommerce brands</h1>
+            <h1 className='text-center font-extrabold mb-14'>Trusted Brands</h1>
         <div className="">
             {isLoaded ? (
                 <Slider ref={sliderRef} {...settings}>

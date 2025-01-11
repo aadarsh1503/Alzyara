@@ -8,7 +8,7 @@ const PaymentSection = () => {
         <img
           src="https://sendmails.io/wp-content/uploads/2024/08/cm-payment-options-optimized-1024x124.png-1.webp"
           alt="PayPal"
-          className="h-20 w-auto"
+          className="h-20 w-full"
         />
 
       </div>
@@ -19,7 +19,7 @@ const PaymentSection = () => {
           <img
             src="https://sendmails.io/wp-content/uploads/2024/08/trust2-black-opacity1.png-1.webp"
             alt="Secure Checkout"
-            className="h-12 w-72"
+            className="h-12 w-96"
           />
         
         </div>

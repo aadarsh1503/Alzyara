@@ -12,28 +12,37 @@ const PricingSection = () => {
 
   return (
     <>
-    <div className="bg-[#f4f7f6] font-poppins py-16 mt-20 px-4 text-center">
+    <div className=" font-poppins py-16 mt-20 px-4 text-center">
         <h1 className="font-bold">Plans & Pricing</h1>
 <h2 className="text-2xl font-bold lg:text-5xl">Choose a pricing plan that works for you</h2>
 <p className="text-xl mt-3 mb-8">Whether you're an individual, a small team, or a growing<br /> enterprise, we have a plan that aligns perfectly with your goals.</p>
-      <div className="flex justify-center items-center mb-4">
-        <button
-          className={`${
-            !isMonthly ? "bg-[#134e4a] text-white" : "bg-white text-[#134e4a]"
-          } px-4 py-2 rounded-l-lg border border-[#d6dedb]`}
-          onClick={() => setIsMonthly(false)}
-        >
-          Annually
-        </button>
-        <button
-          className={`${
-            isMonthly ? "bg-[#134e4a] text-white" : "bg-white text-[#134e4a]"
-          } px-4 py-2 rounded-r-lg border border-[#d6dedb]`}
-          onClick={() => setIsMonthly(true)}
-        >
-          Monthly
-        </button>
-      </div>
+<div className="flex justify-center items-center mb-8">
+  <div className="border-2 border-gray-500 rounded-lg p-1 bg-white shadow-lg w-full max-w-sm">
+    <div className="flex flex-row space-x-2">
+      <button
+        className={`flex-1 px-4 py-3 text-base font-semibold transition-all duration-300 rounded-md ${
+          !isMonthly
+            ? 'bg-[#134e4a] text-white shadow-xl'
+            : 'bg-white text-[#134e4a] hover:bg-green-100'
+        }`}
+        onClick={() => setIsMonthly(false)}
+      >
+        Annually
+      </button>
+      <button
+        className={`flex-1 px-4 py-3 text-base font-semibold transition-all duration-300 rounded-md ${
+          isMonthly
+            ? 'bg-[#134e4a] text-white shadow-xl'
+            : 'bg-white  text-[#134e4a] hover:bg-green-100'
+        }`}
+        onClick={() => setIsMonthly(true)}
+      >
+        Monthly
+      </button>
+    </div>
+  </div>
+</div>
+
       <p className="text-base mt-6 text-[#4b615f] mb-8">
         🔥 Get 20% off with annual subscription
       </p>
