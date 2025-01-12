@@ -25,6 +25,7 @@ import Ecommerce from './components/Ecommerce/Ecommerce';
 import Pabblyintegration from './components/Pabblyintegration/Pabblyintegration';
 import WooIntegration from './components/woointegration/woointegration';
 import Apiintegrations from './components/ApiIntegration/ApiIntegration';
+import MobileNavbar from './components/MobileNavbar/MobileNavbar';
 
 
 
@@ -35,7 +36,7 @@ function App() {
     <div>
       <BrowserRouter>
      
-        
+        <MobileNavbar />
           <Navbar />
           <Routes>
             {/* Define route paths for different components */}
