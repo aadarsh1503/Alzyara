@@ -27,9 +27,11 @@ const Hero = () => {
           <button className="bg-parrot  hover:outline-parrot outline hover:bg-black hover:text-parrot text-black w-[200px] py-2 rounded-lg font-bold text-sm ">
             Start free
           </button>
+          <a href="/pricing">
           <button className="bg-transparent border-2 border-white w-[200px] py-2 rounded-lg font-bold text-sm hover:bg-white hover:text-black">
             See pricing
           </button>
+          </a>
         </div>
         {/* Integration Icons */}
         <div className=" items-center gap-4 mt-8  justify-center lg:justify-start">
