@@ -2,7 +2,7 @@ import React from 'react';
 import MarketingAgencies from '../MarketingAgencies/MarketingAgencies';
 import CounterSection from './CounterSection';
 import EmailMarketingSection from './EmailMarketingSection';
-
+import i1 from "./i1.png"
 
 const Solutions = () => {
   return (
@@ -105,7 +105,7 @@ Better Performance
 
       {/* Right Side Image */}
       <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center">
-        <img src="https://sendmails.io/wp-content/uploads/2024/09/Advanced-Segmentation-1.png" alt="Email Design Preview" className="max-w-full h-auto rounded-md" />
+        <img src={i1} alt="Email Design Preview" className="max-w-full h-auto rounded-md" />
       </div>
     </div>
     

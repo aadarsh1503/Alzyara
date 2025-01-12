@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Tool3 from './Tool3';
+import i1 from "./i1.png"
 
 const ContactCRM = () => {
   return (
@@ -320,7 +321,7 @@ Gain Better Insights
 
       {/* Right Side Image */}
       <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center">
-        <img src="https://sendmails.io/wp-content/uploads/2024/09/Engagement-Tracking-%F0%9F%93%88.png" alt="Email Design Preview" className="max-w-full h-auto rounded-md " />
+        <img src={i1} alt="Email Design Preview" className="max-w-full h-auto rounded-md " />
       </div>
     </div>
     <Tool3 />

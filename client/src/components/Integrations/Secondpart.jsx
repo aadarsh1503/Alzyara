@@ -1,5 +1,5 @@
 import React from 'react'
-
+import i2 from "./i2.png"
 const Secondpart = () => {
   return (
     <div>
@@ -20,7 +20,7 @@ const Secondpart = () => {
       <div className="lg:w-2/3 mt-8 lg:-ml-[300px] lg:mt-0 flex justify-center">
   <div className="w-full h-auto rounded-lg flex items-center justify-center">
     {/* Placeholder for the right side */}
-    <img src="https://sendmails.io/wp-content/uploads/2024/09/Email-Verification-1-1-1024x1024.png" className="w-[500px] h-auto lg:w-[500px] lg:h-auto" alt="Right Side Image" />
+    <img src={i2} className="w-[500px] h-auto lg:w-[500px] lg:h-auto" alt="Right Side Image" />
   </div>
 </div>
 </div>

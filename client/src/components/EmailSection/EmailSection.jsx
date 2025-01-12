@@ -1,6 +1,6 @@
 import React from 'react';
 import ToolsSection from '../ToolsSection/ToolsSection';
-
+import i1 from "./i1.png"
 const EmailSection = () => {
   return (
     <div>
@@ -91,7 +91,7 @@ const EmailSection = () => {
 
       {/* Right Side Image */}
       <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center">
-        <img src="https://sendmails.io/wp-content/uploads/2024/09/Email-Designer-Gift-Card-1.png" alt="Email Design Preview" className="max-w-full h-auto rounded-md shadow-lg" />
+        <img src={i1} alt="Email Design Preview" className="max-w-full h-auto rounded-md shadow-lg" />
       </div>
     </div>
     

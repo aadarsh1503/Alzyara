@@ -7,7 +7,7 @@ import {
   faGem,
 
 } from '@fortawesome/free-solid-svg-icons';
-
+import i1 from "./i1.png"
 import { faConfluence } from '@fortawesome/free-brands-svg-icons'; 
 import { faHandshake } from '@fortawesome/free-solid-svg-icons';
 

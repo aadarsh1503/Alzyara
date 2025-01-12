@@ -1,5 +1,5 @@
 import React from "react";
-import i1 from "./i1.webp"
+import i1 from "./i1.png"
 
 const MarketingSection = () => {
   return (
