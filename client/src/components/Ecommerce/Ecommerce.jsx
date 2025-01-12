@@ -2,7 +2,7 @@ import React from 'react';
 import CounterSection from '../Solutions/CounterSection';
 import EmailMarketingSection from '../Solutions/EmailMarketingSection';
 import Ecommerce2 from './Ecommerce2';
-
+import i5 from "./i5.png"
 
 
 const Ecommerce = () => {
@@ -121,7 +121,7 @@ Recovery Analytics
     <div className="flex flex-col md:flex-row items-center max-w-7xl mx-auto justify-between  px-6 py-10 md:px-16 md:py-20">
   {/* Right Side Image */}
   <div className="md:w-1/2 mt-10 md:mt-0 flex -ml-20 justify-center">
-    <img src="https://sendmails.io/wp-content/uploads/2024/09/Personalized-Email-Campaigns-ecommerce.png" alt="Email Design Preview" className="max-w-full h-auto rounded-md " />
+    <img src={i5} alt="Email Design Preview" className="max-w-full h-auto rounded-md " />
   </div>
 
   {/* Left Side Content */}

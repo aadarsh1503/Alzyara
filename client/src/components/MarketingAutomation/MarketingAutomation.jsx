@@ -1,7 +1,8 @@
 import React from 'react';
 import ToolsSection from '../ToolsSection/ToolsSection';
 import Tool2 from './Tool2';
-
+import i5 from "./i5.png"
+import i1 from "./i1.png"
 const MarketingAutomation = () => {
   return (
     <div>
@@ -104,7 +105,7 @@ const MarketingAutomation = () => {
 
       {/* Right Side Image */}
       <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center">
-        <img src="https://sendmails.io/wp-content/uploads/2024/09/Workflow-Builder.png" alt="Email Design Preview" className="max-w-full h-auto rounded-md " />
+        <img src={i1} alt="Email Design Preview" className="max-w-full h-auto rounded-md " />
       </div>
     </div>
     
@@ -113,7 +114,7 @@ const MarketingAutomation = () => {
     <div className="flex flex-col md:flex-row items-center max-w-7xl mx-auto justify-between  px-6 py-10 md:px-16 md:py-20">
   {/* Right Side Image */}
   <div className="md:w-1/2 mt-10 md:mt-0 flex -ml-20 justify-center">
-    <img src="https://sendmails.io/wp-content/uploads/2024/09/Trigger-Based-Emails.png" alt="Email Design Preview" className="max-w-full h-auto rounded-md " />
+    <img src={i5} alt="Email Design Preview" className="max-w-full h-auto rounded-md " />
   </div>
 
   {/* Left Side Content */}

@@ -115,10 +115,10 @@ const Navbar = () => {
       {/* Dropdown for Features */}
       {openDropdown === 'features' && (
         <div className="absolute lg:-left-[420px] w-screen top-[68px] pt-3 text-black">
-  <div className="grid grid-cols-2 gap-4 bg-white -ml-32 h-[400px] p-12">
+  <div className="grid grid-cols-2  gap-4 bg-white -ml-32 h-[400px] p-12">
     {/* Email Marketing */}
     <a href="/feature1">
-      <div className="flex items-center ml-72 space-x-4 p-4 hover:bg-gray-200 rounded">
+      <div className="flex items-center w-[446px] ml-72 space-x-4 p-4 hover:bg-gray-200 rounded">
         <img
           src="https://sendmails.io/wp-content/uploads/2024/09/email-marketing-3.png"
           alt="Email Marketing"
@@ -128,7 +128,7 @@ const Navbar = () => {
           <div className="block hover:text-gray-800 text-lg font-semibold">
             Email Marketing
           </div>
-          <p className="text-sm font-normal w-full text-black">
+          <p className="text-sm font-normal text-black">
             Create and send stunning, personalized email campaigns to engage with your audience.
           </p>
         </div>
@@ -136,7 +136,7 @@ const Navbar = () => {
     </a>
     {/* Marketing Automation */}
     <a href="/feature2">
-      <div className="flex items-center ml-20 w-[456px] space-x-4 p-4 hover:bg-gray-200 rounded">
+      <div className="flex items-center ml-20 w-[446px] space-x-4 p-4 hover:bg-gray-200 rounded">
         <img
           src="https://sendmails.io/wp-content/uploads/2024/09/marketing-automation-2.png"
           alt="Marketing Automation"
@@ -146,7 +146,7 @@ const Navbar = () => {
           <div className="block hover:text-gray-800 text-lg font-semibold">
             Marketing Automation
           </div>
-          <p className="text-sm font-normal w-full text-black">
+          <p className="text-sm font-normal  text-black">
             Automate email workflows based on customer actions to nurture leads and drive sales.
           </p>
         </div>

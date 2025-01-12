@@ -2,7 +2,7 @@ import React from "react";
 import CounterSection from "../Solutions/CounterSection";
 
 import EmailMarketingSection from "../Solutions/EmailMarketingSection";
-
+import i1 from "./i1.png"
 import Second from "./Second";
 
 
@@ -30,7 +30,7 @@ const WooIntegration = () => {
       <div className="lg:w-2/3 mt-8 lg:-ml-[300px] lg:mt-0 flex justify-center">
   <div className="w-full h-auto rounded-lg flex items-center justify-center">
     {/* Placeholder for the right side */}
-    <img src="https://sendmails.io/wp-content/uploads/2024/09/Zapier-Integration-1-1024x728.png" className="w-[500px] h-auto lg:w-[500px] lg:h-auto" alt="Right Side Image" />
+    <img src={i1} className="w-[500px] h-auto lg:w-[500px] lg:h-auto" alt="Right Side Image" />
   </div>
 </div>
 </div>

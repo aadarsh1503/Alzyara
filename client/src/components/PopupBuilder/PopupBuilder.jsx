@@ -1,7 +1,7 @@
 import React from 'react';
 import Tool4 from './Tool4';
 
-
+import i5 from "./i5.png"
 const PopupBuilder  = () => {
   return (
     <div>
@@ -105,7 +105,7 @@ Wide Range of Templates
 
       {/* Right Side Image */}
       <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center">
-        <img src="https://sendmails.io/wp-content/uploads/2024/09/Customizable-Templates-%F0%9F%8E%A8.png" alt="Email Design Preview" className="max-w-full h-auto rounded-md " />
+        <img src={i5} alt="Email Design Preview" className="max-w-full h-auto rounded-md " />
       </div>
     </div>
     

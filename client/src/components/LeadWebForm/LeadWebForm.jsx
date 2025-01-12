@@ -1,7 +1,7 @@
 import React from 'react';
 import Tool5 from './Tool5';
 
-
+import i5 from "./i5.png"
 const LeadWebForm = () => {
   return (
     <div>
@@ -114,7 +114,7 @@ User-Friendly Interface
     <div className="flex flex-col md:flex-row items-center max-w-7xl mx-auto justify-between  px-6 py-10 md:px-16 md:py-20">
   {/* Right Side Image */}
   <div className="md:w-1/2 mt-10 md:mt-0 flex -ml-20 justify-center">
-    <img src="https://sendmails.io/wp-content/uploads/2024/09/Embedded-Forms-1.png" alt="Email Design Preview" className="max-w-full h-auto rounded-md " />
+    <img src={i5} alt="Email Design Preview" className="max-w-full h-auto rounded-md " />
   </div>
 
   {/* Left Side Content */}
