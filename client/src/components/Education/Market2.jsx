@@ -5,11 +5,14 @@ import {
   faBullhorn,
   faReply,
   faGem,
+  faHeadphones,
+  faCalendar,
+  faChartLine,
 
 } from '@fortawesome/free-solid-svg-icons';
 
 import { faConfluence } from '@fortawesome/free-brands-svg-icons'; 
-import { faHandshake } from '@fortawesome/free-solid-svg-icons';
+import { faHandshake,faUser ,faTools  } from '@fortawesome/free-solid-svg-icons';
 
 const Card = ({ title, description, icon, isHovered }) => {
   return (
@@ -39,13 +42,13 @@ const Market2 = () => {
       title: 'Lead Management',
       description:
         'Engage and attract new students through targeted email campaigns  with your CRM to broadcast marketing messages effectively.',
-      icon: faCogs,
+      icon: faUser ,
     },
     {
       title: 'Instant Problem Resolution',
       description:
         'Provide quick answers with automated email responses and escalate to support teams when human intervention is needed.',
-      icon: faBullhorn,
+      icon: faTools ,
     },
     {
       title: 'Support for Admissions',
@@ -57,19 +60,19 @@ const Market2 = () => {
       title: 'Onboarding Support',
       description:
         'Provide instant information to assist students in completing your onboarding process easily through automated email sequences.',
-      icon: faGem,
+      icon: faHeadphones,
     },
     {
       title: 'Timely class Reminders',
       description:
         'Send students automated email reminders of timetables and classes, ensuring they never miss an important session.',
-      icon: faConfluence,  // Updated icon for WhatsApp
+      icon: faCalendar,  // Updated icon for WhatsApp
     },
     {
       title: 'Student Reports',
       description:
         'Instantly deliver reports and exam results to students and parents with automated email notifications.',
-      icon: faHandshake,  // Updated icon for engagement
+      icon: faChartLine,  // Updated icon for engagement
     },
     
   ];

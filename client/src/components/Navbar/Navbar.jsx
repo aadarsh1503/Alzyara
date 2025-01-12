@@ -65,7 +65,8 @@ const Navbar = () => {
       // Change the text color of the feature section to white
       document.querySelector('.pricing').style.color = 'gray';
     }
-    if (window.location.pathname.includes('/integration')) {
+    if (window.location.pathname.includes('/integration') || window.location.pathname.includes('/integration2')
+      || window.location.pathname.includes('/integration3') || window.location.pathname.includes('/integration4')) {
       // Change the text color of the feature section to white
       document.querySelector('.integration-section').style.color = 'gray';
     }
@@ -346,7 +347,7 @@ const Navbar = () => {
         </a>
 
         {/* Marketing Automation */}
-        <a href="/integration">
+        <a href="/integration2">
           <div className="flex items-center ml-20 w-[456px] hover:bg-gray-200 p-4 space-x-4">
             <img
               src="https://sendmails.io/wp-content/uploads/2024/09/Pabbly-Integration-6.png"
@@ -365,7 +366,7 @@ const Navbar = () => {
         </a>
 
         {/* Contact CIRM */}
-        <a href="/integration">
+        <a href="/integration3">
           <div className="flex items-center ml-72 w-[456px] hover:bg-gray-200 p-4 space-x-4">
             <img
               src="https://sendmails.io/wp-content/uploads/2024/09/Woo-Commerce-Integration-5.png"
@@ -384,7 +385,7 @@ const Navbar = () => {
         </a>
 
         {/* Popup Builder */}
-        <a href="/integration">
+        <a href="/integration4">
           <div className="flex items-center ml-20 w-[456px] hover:bg-gray-200 p-4 space-x-4">
             <img
               src="https://sendmails.io/wp-content/uploads/2024/09/API-Integration-5.png"

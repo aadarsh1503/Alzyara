@@ -1,4 +1,5 @@
 import React from 'react';
+import Tool4 from './Tool4';
 
 
 const PopupBuilder  = () => {
@@ -216,7 +217,7 @@ Increase Conversions
 </div>
 
 
-   
+   <Tool4 />
     </div>
   );
 };

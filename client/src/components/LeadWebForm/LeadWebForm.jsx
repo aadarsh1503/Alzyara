@@ -1,4 +1,5 @@
 import React from 'react';
+import Tool5 from './Tool5';
 
 
 const LeadWebForm = () => {
@@ -317,7 +318,8 @@ User-Friendly Interface
         <img src="https://sendmails.io/wp-content/uploads/2024/09/Instant-Preview.png" alt="Email Design Preview" className="max-w-full h-auto rounded-md " />
       </div>
     </div>
-  
+  <Tool5 />
+
     </div>
   );
 };

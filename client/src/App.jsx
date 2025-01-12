@@ -22,6 +22,10 @@ import EmailVerification from './components/EmailVerification/EmailVerification'
 import Education from './components/Education/Education';
 import SalesTeam from './components/SalesTeam/SalesTeam';
 import Ecommerce from './components/Ecommerce/Ecommerce';
+import Pabblyintegration from './components/Pabblyintegration/Pabblyintegration';
+import WooIntegration from './components/woointegration/woointegration';
+import Apiintegrations from './components/ApiIntegration/ApiIntegration';
+
 
 
 function App() {
@@ -50,6 +54,10 @@ function App() {
             <Route path="/solution2" element={<Education />} />
             <Route path="/solution3" element={<SalesTeam />} />
             <Route path="/solution4" element={<Ecommerce />} />
+            <Route path="/integration2" element={<Pabblyintegration />} />
+            <Route path="/integration3" element={<WooIntegration />} />
+            <Route path="/integration4" element={<Apiintegrations />} />
+         
      
             {/* Add more routes as needed */}
           </Routes>

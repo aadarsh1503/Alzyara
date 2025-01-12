@@ -5,9 +5,16 @@ import {
   faBullhorn,
   faReply,
   faGem,
+  faShoppingCart,
+  faHourglass,
+  faHandsHelping,
+  faTag,
+  faMoneyBillAlt,
+  faCheckCircle,
+  faShoppingBag,
 
 } from '@fortawesome/free-solid-svg-icons';
-
+import { IoIosPaper } from 'react-icons/io';
 import { faConfluence } from '@fortawesome/free-brands-svg-icons'; 
 import { faHandshake } from '@fortawesome/free-solid-svg-icons';
 
@@ -36,40 +43,40 @@ const Ecommerce2 = () => {
 
   const cards = [
     {
-      title: 'Lead Management',
+      title: 'Share Your Catalog',
       description:
-        'Engage and attract new students through targeted email campaigns  with your CRM to broadcast marketing messages effectively.',
-      icon: faCogs,
+        'Use email to showcase your products and keep your customers updated with the latest stock information.',
+      icon: faShoppingCart ,
     },
     {
-      title: 'Instant Problem Resolution',
+      title: 'Fast Responses to offers',
       description:
-        'Provide quick answers with automated email responses and escalate to support teams when human intervention is needed.',
-      icon: faBullhorn,
+        'Invite quick responses to your sales promotions, leveraging the high open rates of email marketing.',
+      icon: faHourglass  ,
     },
     {
-      title: 'Support for Admissions',
+      title: 'Confirmation and Support',
       description:
-        'Guide parents through your admissions process with personalized email workflows that ensure students sign up correctly.',
-      icon: faReply,
+        'Send automated order confirmations and billing updates, and provide support through automated email sequences.',
+      icon: faHandsHelping,
     },
     {
-      title: 'Onboarding Support',
+      title: 'Personalized Promotions',
       description:
-        'Provide instant information to assist students in completing your onboarding process easily through automated email sequences.',
-      icon: faGem,
+        'Send targeted email campaigns with personalized promotions based on customer purchase patterns or seasonal trends.',
+      icon: faMoneyBillAlt,
     },
     {
-      title: 'Timely class Reminders',
+      title: 'Loyalty Program Updates',
       description:
-        'Send students automated email reminders of timetables and classes, ensuring they never miss an important session.',
-      icon: faConfluence,  // Updated icon for WhatsApp
+        'Enroll customers in your loyalty programs and keep them informed about points schemes and personalized special offers through email.',
+      icon: faCheckCircle,  // Updated icon for WhatsApp
     },
     {
-      title: 'Student Reports',
+      title: 'In Stock & New Products',
       description:
-        'Instantly deliver reports and exam results to students and parents with automated email notifications.',
-      icon: faHandshake,  // Updated icon for engagement
+        'Immediately alert customers when items are back in stock, and promote new products, upsell, and cross-sell through timely email notifications.',
+      icon: faShoppingBag,  // Updated icon for engagement
     },
     
   ];

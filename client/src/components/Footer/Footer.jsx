@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
 
           {/* Subscription Section */}
-          <div className="md:col-span-3">
+          <div className="md:col-span-3 ">
             <p className="text-gray-300 mb-4">
               Get insights about Alzyara marketing automation and Alzyara
               news. No spam, ever!

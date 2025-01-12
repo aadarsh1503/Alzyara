@@ -1,15 +1,6 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faCogs,
-  faBullhorn,
-  faReply,
-  faGem,
-
-} from '@fortawesome/free-solid-svg-icons';
-
-import { faConfluence } from '@fortawesome/free-brands-svg-icons'; 
-import { faHandshake } from '@fortawesome/free-solid-svg-icons';
+import { FaBullhorn, FaReply, FaGem, FaHandshake, FaEnvelope, FaNetworkWired, FaPhone, FaCogs } from 'react-icons/fa';
+import { FaConfluence } from 'react-icons/fa'; 
 
 const Card = ({ title, description, icon, isHovered }) => {
   return (
@@ -23,7 +14,7 @@ const Card = ({ title, description, icon, isHovered }) => {
           isHovered ? 'bg-lgreen text-white' : 'bg-gray-100 text-lgreen'
         }`}
       >
-        <FontAwesomeIcon icon={icon} className="text-4xl " />
+        {icon}
       </div>
       <h3 className="text-lg font-semibold mb-2">{title}</h3>
       <p className="text-sm">{description}</p>
@@ -36,46 +27,45 @@ const Sales2 = () => {
 
   const cards = [
     {
-      title: 'Lead Management',
+      title: 'Email Sign-Up Forms',
       description:
-        'Engage and attract new students through targeted email campaigns  with your CRM to broadcast marketing messages effectively.',
-      icon: faCogs,
+        'Add an email sign-up form on your website, Facebook, and Instagram ads to capture queries from highly qualified leads.',
+      icon: <FaEnvelope className="text-4xl" />,
     },
     {
-      title: 'Instant Problem Resolution',
+      title: 'Automated Email Sequences',
       description:
-        'Provide quick answers with automated email responses and escalate to support teams when human intervention is needed.',
-      icon: faBullhorn,
+        'Initiate automated email conversations right after sign-up with SendMails’ easy-to-build email workflows using a drag-and-drop interface.',
+      icon: <FaNetworkWired  className="text-4xl" />,
     },
     {
-      title: 'Support for Admissions',
+      title: 'Build Relationships Fast',
       description:
         'Guide parents through your admissions process with personalized email workflows that ensure students sign up correctly.',
-      icon: faReply,
+      icon: <FaPhone className="text-4xl" />,
     },
     {
-      title: 'Onboarding Support',
+      title: 'Route Qualified Leads',
       description:
         'Provide instant information to assist students in completing your onboarding process easily through automated email sequences.',
-      icon: faGem,
+      icon: <FaGem className="text-4xl" />,
     },
     {
-      title: 'Timely class Reminders',
+      title: 'Personalized Promotions',
       description:
         'Send students automated email reminders of timetables and classes, ensuring they never miss an important session.',
-      icon: faConfluence,  // Updated icon for WhatsApp
+      icon: <FaHandshake  className="text-4xl" />,
     },
     {
-      title: 'Student Reports',
+      title: 'Integrate Your Tools',
       description:
         'Instantly deliver reports and exam results to students and parents with automated email notifications.',
-      icon: faHandshake,  // Updated icon for engagement
+      icon: <FaCogs  shake className="text-4xl" />,
     },
-    
   ];
 
   return (
-    <div className="grid grid-cols-1  max-w-5xl mx-auto md:grid-cols-2 gap-6 p-8  bg-gray-50">
+    <div className="grid grid-cols-1 max-w-5xl mx-auto md:grid-cols-2 gap-6 p-8 bg-gray-50">
       {cards.map((card, index) => (
         <div
           key={index}

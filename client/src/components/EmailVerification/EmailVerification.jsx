@@ -1,4 +1,5 @@
 import React from 'react';
+import Tool6 from './Tool6';
 
 
 const EmailVerification = () => {
@@ -316,7 +317,7 @@ Real-Time Updates
         <img src="https://sendmails.io/wp-content/uploads/2024/09/Copy-of-Glide-Campaign-AI-Chatbot.png" alt="Email Design Preview" className="max-w-full h-auto rounded-md " />
       </div>
     </div>
-
+<Tool6 />
     </div>
   );
 };
