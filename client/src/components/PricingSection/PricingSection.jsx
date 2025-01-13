@@ -21,7 +21,7 @@ const PricingSection = () => {
   <div className="relative   rounded-lg p-  shadow-lg w-44">
     {/* Sliding Background */}
     <div
-      className={`absolute top-0 left-0 h-full w-1/2  rounded-md bg-[#134e4a] shadow-xl transition-all duration-300 ${
+      className={`absolute top-0 left-0 h-full w-1/2  rounded-md bg-lgreen shadow-xl transition-all duration-300 ${
         isMonthly ? 'translate-x-full' : 'translate-x-0'
       }`}
     ></div>
@@ -69,7 +69,7 @@ const PricingSection = () => {
             ${isMonthly ? 15 : 12}<span className="text-lg">/month</span>
           </h2>
           <p className="text-base text-[#4b615f] mb-4"></p>
-          <button className="bg-[#134e4a] text-white text-base py-3 px-6 rounded-lg mb-4">
+          <button className="bg-lgreen text-white text-base py-3 px-6 rounded-lg mb-4">
             Give Me Instant Access →
           </button>
           <div className="text-left ml-10 space-y-6">
@@ -137,11 +137,11 @@ const PricingSection = () => {
             Advanced features and higher limits, ideal for growing businesses
             needing more capabilities
           </p>
-          <h2 className="text-5xl font-bold text-[#3b4b48] mb-1">
+          <h2 className="text-5xl text-left ml-10 font-bold text-[#3b4b48] mb-1">
             ${isMonthly ? 50 : 30}<span className="text-lg">/month</span>
           </h2>
           <p className="text-base text-[#4b615f] mb-4"></p>
-          <button className="bg-[#134e4a] text-white text-base py-3 px-6 rounded-lg mb-4">
+          <button className="bg-lgreen text-white text-base py-3 px-6 rounded-lg mb-4">
             Give Me Instant Access →
           </button>
           <div className="space-y-6 ml-10">
@@ -207,7 +207,7 @@ const PricingSection = () => {
           </h3>
           <p className="text-base text-left ml-4 text-[#4b615f] mb-4">Want more Subscribers?</p>
           <h2 className="text-2xl lg:text-5xl font-bold text-[#3b4b48] mb-4">Contact Us</h2>
-          <button className="bg-[#134e4a] text-white text-base py-3 px-16 rounded-lg mb-4">
+          <button className="bg-lgreen text-white text-base py-3 px-16 rounded-lg mb-4">
             Talk to Sales
           </button>
           <div className="space-y-6 ml-10">
