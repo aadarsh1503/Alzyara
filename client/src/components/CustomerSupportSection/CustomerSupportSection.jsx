@@ -56,10 +56,10 @@ const CustomerSupportSection = () => {
       </div>
 
       <div className="text-center  mt-10">
-        <button className="bg-lgreen hover:bg-hgreen text-white py-4 px-6 w-56 rounded-lg ">
+        <button className="bg-lgreen mb-4  hover:bg-hgreen text-white py-4 px-6 w-56 rounded-lg ">
           Start free
         </button>
-        <button className="ml-4 bg-transparent border border-black text-black py-4 px-4 w-56 rounded-lg hover:text-white hover:bg-black">
+        <button className="lg:ml-4 ml-0 bg-transparent border border-black text-black py-4 px-4 w-56 rounded-lg hover:text-white hover:bg-black">
           See our pricing plans
         </button>
       </div>

@@ -42,13 +42,13 @@ const Hero = () => {
       </div>
 
       {/* Right Section */}
-      <div className="lg:w-1/2 mt-8 lg:mt-0 flex justify-center">
-  <div className="w-32 h-32 lg:w-[420px] lg:h-[420px] rounded-full bg-gray-700 overflow-hidden flex items-center justify-center">
+      <div className="lg:w-1/2 lg:mt-0  flex justify-center">
+  <div className="w-72 h-72 lg:w-[420px] lg:h-[420px] rounded-full bg-gray-700 overflow-hidden flex items-center justify-center">
     {/* Image */}
     <img
       src="https://assets.entrepreneur.com/content/3x2/2000/20180726155253-GettyImages-860221048.jpeg"
       alt="Circular Display"
-      className="lg:w-full lg:h-full w-32 h-32 object-cover"
+      className="lg:w-full lg:h-full w-73 h-72 object-cover"
     />
   </div>
 </div>
