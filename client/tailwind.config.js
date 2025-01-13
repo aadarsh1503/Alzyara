@@ -8,6 +8,9 @@ export default {
     extend: {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
+        
+          roboto: ['Roboto', 'sans-serif'],
+        
       },
       fontSize: {
         '13px': '13px', // Custom font size
@@ -17,6 +20,8 @@ export default {
         dgreen:'#2f8481',
         parrot:'#a4f41c',
         lgreen:'#308484',
+        lblue:'#f8fcfc',
+        dgreen:'#2c8484',
       }
     },
   },

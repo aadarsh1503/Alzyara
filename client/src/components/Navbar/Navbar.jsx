@@ -118,17 +118,17 @@ const Navbar = () => {
   <div className="grid grid-cols-2  gap-4 bg-white -ml-32 h-[400px] p-12">
     {/* Email Marketing */}
     <a href="/feature1">
-      <div className="flex items-center w-[446px] ml-72 space-x-4 p-4 hover:bg-gray-200 rounded">
+      <div className="flex items-center w-[446px] ml-72 space-x-4 p-4 hover:bg-lblue hover:text-dgreen rounded">
         <img
           src="https://sendmails.io/wp-content/uploads/2024/09/email-marketing-3.png"
           alt="Email Marketing"
           className="w-12 h-12"
         />
         <div>
-          <div className="block hover:text-gray-800 text-lg font-semibold">
+          <div className="block  text-lg font-semibold">
             Email Marketing
           </div>
-          <p className="text-sm font-normal text-black">
+          <p className="text-sm font-roboto font-thin text-gray-400">
             Create and send stunning, personalized email campaigns to engage with your audience.
           </p>
         </div>
@@ -136,17 +136,17 @@ const Navbar = () => {
     </a>
     {/* Marketing Automation */}
     <a href="/feature2">
-      <div className="flex items-center ml-20 w-[446px] space-x-4 p-4 hover:bg-gray-200 rounded">
+      <div className="flex items-center ml-20 w-[446px] space-x-4 p-4 hover:bg-lblue hover:text-dgreen rounded">
         <img
           src="https://sendmails.io/wp-content/uploads/2024/09/marketing-automation-2.png"
           alt="Marketing Automation"
           className="w-12 h-12"
         />
         <div>
-          <div className="block hover:text-gray-800 text-lg font-semibold">
+          <div className="block  text-lg font-semibold">
             Marketing Automation
           </div>
-          <p className="text-sm font-normal  text-black">
+          <p className="text-sm font-roboto font-thin text-gray-400">
             Automate email workflows based on customer actions to nurture leads and drive sales.
           </p>
         </div>
@@ -154,17 +154,17 @@ const Navbar = () => {
     </a>
     {/* Contact CRM */}
     <a href="/feature3">
-      <div className="flex items-center ml-72 space-x-4 p-4 hover:bg-gray-200 rounded">
+      <div className="flex items-center ml-72 space-x-4 p-4 hover:bg-lblue hover:text-dgreen rounded">
         <img
           src="https://sendmails.io/wp-content/uploads/2024/09/Contact-CRM-2.png"
           alt="Contact CRM"
           className="w-12 h-12"
         />
         <div>
-          <div className="block hover:text-gray-800 text-lg font-semibold">
+          <div className="block  text-lg font-semibold">
             Contact CRM
           </div>
-          <p className="text-sm font-normal w-96 text-black">
+          <p className="text-sm font-roboto font-thin text-gray-400">
             Manage, segment, and optimize your contact list for targeted and effective communication.
           </p>
         </div>
@@ -172,17 +172,17 @@ const Navbar = () => {
     </a>
     {/* Popup Builder */}
     <a href="/feature4">
-      <div className="flex items-center ml-20 w-[456px] space-x-4 p-4 hover:bg-gray-200 rounded">
+      <div className="flex items-center ml-20 w-[456px] space-x-4 p-4 hover:bg-lblue hover:text-dgreen rounded">
         <img
           src="https://sendmails.io/wp-content/uploads/2024/09/Popup-builder-2.png"
           alt="Popup Builder"
           className="w-12 h-12"
         />
         <div>
-          <div className="block hover:text-gray-800 text-lg font-semibold">
+          <div className="block  text-lg font-semibold">
             Popup Builder
           </div>
-          <p className="text-sm font-normal w-96 text-black">
+          <p className="text-sm font-roboto font-thin text-gray-400">
             Design and implement popups to capture leads directly from your website seamlessly.
           </p>
         </div>
@@ -190,17 +190,17 @@ const Navbar = () => {
     </a>
     {/* Lead WebForm */}
     <a href="/feature5">
-      <div className="flex items-center ml-72  space-x-4 p-4 hover:bg-gray-200 rounded">
+      <div className="flex items-center ml-72  space-x-4 p-4 hover:bg-lblue hover:text-dgreen rounded">
         <img
           src="https://sendmails.io/wp-content/uploads/2024/09/Lead-Webform-2.png"
           alt="Lead WebForm"
           className="w-12 h-12"
         />
         <div>
-          <div className="block hover:text-gray-800 text-lg font-semibold">
+          <div className="block  text-lg font-semibold">
             Lead WebForm
           </div>
-          <p className="text-sm font-normal w-full text-black">
+          <p className="text-sm font-roboto font-thin text-gray-400">
             Create custom web forms to collect and manage leads effortlessly from various sources.
           </p>
         </div>
@@ -208,17 +208,17 @@ const Navbar = () => {
     </a>
     {/* Email Verification */}
     <a href="/feature6">
-      <div className="flex items-center ml-20 space-x-4 p-4 w-[456px] hover:bg-gray-200 rounded">
+      <div className="flex items-center ml-20 space-x-4 p-4 w-[456px] hover:bg-lblue hover:text-dgreen rounded">
         <img
           src="https://sendmails.io/wp-content/uploads/2024/09/Email-Verification-3.png"
           alt="Email Verification"
           className="w-12 h-12"
         />
         <div>
-          <div className="block hover:text-gray-800 text-lg font-semibold">
+          <div className="block  text-lg font-semibold">
             Email Verification
           </div>
-          <p className="text-sm font-normal w-96 text-black">
+          <p className="text-sm font-roboto font-thin text-gray-400">
             Ensure your email list is clean and deliverable with integrated email verification tools.
           </p>
         </div>
@@ -247,17 +247,17 @@ const Navbar = () => {
             <div className="grid grid-cols-2 gap-4 bg-white -ml-32 h-[300px] p-12">
               {/* Marketing Agencies */}
               <a href="/marketing">
-                <div className="flex items-center ml-72 p-4 w-[456px] hover:bg-gray-200 space-x-4">
+                <div className="flex items-center ml-72 p-4 w-[456px] hover:bg-lblue hover:text-dgreen space-x-4">
                   <img
                     src="https://sendmails.io/wp-content/uploads/2024/09/Marketing-agencies-3.png"
                     alt="Marketing Agencies"
                     className="w-12 h-12"
                   />
                   <div>
-                    <div className="block hover:text-gray-800 text-lg font-semibold">
+                    <div className="block  text-lg font-semibold">
                       Marketing Agencies
                     </div>
-                    <p className="text-sm font-normal w-96 text-black">
+                    <p className="text-sm font-roboto font-thin text-gray-400">
                       Boost client campaigns with powerful email marketing and automation tools
                     </p>
                   </div>
@@ -266,17 +266,17 @@ const Navbar = () => {
 
               {/* Education */}
               <a href="/solution2">
-                <div className="flex items-center ml-20 w-[456px] hover:bg-gray-200 p-4 space-x-4">
+                <div className="flex items-center ml-20 w-[456px] hover:bg-lblue hover:text-dgreen p-4 space-x-4">
                   <img
                     src="https://sendmails.io/wp-content/uploads/2024/09/Sales-teams-3.png"
                     alt="Education"
                     className="w-12 h-12"
                   />
                   <div>
-                    <div className="block hover:text-gray-800 text-lg font-semibold">
+                    <div className="block  text-lg font-semibold">
                       Education
                     </div>
-                    <p className="text-sm font-normal w-96 text-black">
+                    <p className="text-sm font-roboto font-thin text-gray-400">
                       Engage students and streamline admissions with data-driven email communication
                     </p>
                   </div>
@@ -284,21 +284,21 @@ const Navbar = () => {
               </a>
                {/* Contact CIRM */}
     <a href="/solution3">
-    <div className="flex items-center ml-72 p-4 w-[456px] hover:bg-gray-200 space-x-4">
+    <div className="flex items-center ml-72 p-4 w-[456px] hover:bg-lblue hover:text-dgreen space-x-4">
       <img src="https://sendmails.io/wp-content/uploads/2024/09/Education-3.png" alt="Contact CIRM" className="w-12 h-12" />
       <div>
-        <div className="block hover:text-gray-800 text-lg font-semibold">Sales Teams</div>
-        <p className="text-sm font-normal w-96 text-black">Drive conversions with targeted email campaigns and lead management solutions</p>
+        <div className="block  text-lg font-semibold">Sales Teams</div>
+        <p className="text-sm font-roboto font-thin text-gray-400">Drive conversions with targeted email campaigns and lead management solutions</p>
       </div>
     </div>
     </a>
     {/* Popup Builder */}
     <a href="/solution4">
-    <div className="flex items-center ml-20 w-[456px] hover:bg-gray-200 p-4 space-x-4">
+    <div className="flex items-center ml-20 w-[456px] hover:bg-lblue hover:text-dgreen p-4 space-x-4">
       <img src="https://sendmails.io/wp-content/uploads/2024/09/E-commerce-2.png" alt="Popup Builder" className="w-12 h-12" />
       <div>
-        <div className="block hover:text-gray-800 text-lg font-semibold">E-Commerce</div>
-        <p className="text-sm font-normal w-96 text-black">Enhance online store sales with personalized and automated email marketing</p>
+        <div className="block  text-lg font-semibold">E-Commerce</div>
+        <p className="text-sm font-roboto font-thin text-gray-400">Enhance online store sales with personalized and automated email marketing</p>
       </div>
     </div>
     </a>
@@ -329,17 +329,17 @@ const Navbar = () => {
       <div className="grid grid-cols-2 gap-4 bg-white -ml-32 h-[300px] p-12">
         {/* Email Marketing */}
         <a href="/integration">
-          <div className="flex items-center ml-72 w-[456px] hover:bg-gray-200 p-4 space-x-4">
+          <div className="flex items-center ml-72 w-[456px] hover:bg-lblue hover:text-dgreen p-4 space-x-4">
             <img
               src="https://sendmails.io/wp-content/uploads/2024/09/Zapier-Integration-6.png"
               alt="Email Marketing"
               className="w-12 h-12"
             />
             <div>
-              <div className="block hover:text-gray-800 text-lg font-semibold">
+              <div className="block  text-lg font-semibold">
                 Zapier Integration
               </div>
-              <p className="text-sm font-normal w-96 text-black">
+              <p className="text-sm font-roboto font-thin text-gray-400">
                 Connect Send Mails with thousands of apps via Zapier for seamless data automation
               </p>
             </div>
@@ -348,17 +348,17 @@ const Navbar = () => {
 
         {/* Marketing Automation */}
         <a href="/integration2">
-          <div className="flex items-center ml-20 w-[456px] hover:bg-gray-200 p-4 space-x-4">
+          <div className="flex items-center ml-20 w-[456px] hover:bg-lblue hover:text-dgreen p-4 space-x-4">
             <img
               src="https://sendmails.io/wp-content/uploads/2024/09/Pabbly-Integration-6.png"
               alt="Marketing Automation"
               className="w-12 h-12"
             />
             <div>
-              <div className="block hover:text-gray-800 text-lg font-semibold">
+              <div className="block  text-lg font-semibold">
                 Pabbly Integration
               </div>
-              <p className="text-sm font-normal w-96 text-black">
+              <p className="text-sm font-roboto font-thin text-gray-400">
                 Integrate Pabbly to streamline your workflows and enhance email marketing efficiency
               </p>
             </div>
@@ -367,17 +367,17 @@ const Navbar = () => {
 
         {/* Contact CIRM */}
         <a href="/integration3">
-          <div className="flex items-center ml-72 w-[456px] hover:bg-gray-200 p-4 space-x-4">
+          <div className="flex items-center ml-72 w-[456px] hover:bg-lblue hover:text-dgreen p-4 space-x-4">
             <img
               src="https://sendmails.io/wp-content/uploads/2024/09/Woo-Commerce-Integration-5.png"
               alt="Contact CIRM"
               className="w-12 h-12"
             />
             <div>
-              <div className="block hover:text-gray-800 text-lg font-semibold">
+              <div className="block  text-lg font-semibold">
                 Woo Commerce Addon
               </div>
-              <p className="text-sm font-normal w-96 text-black">
+              <p className="text-sm font-roboto font-thin text-gray-400">
                 Sync WooCommerce data to target customers with tailored email campaigns effortlessly.
               </p>
             </div>
@@ -386,17 +386,17 @@ const Navbar = () => {
 
         {/* Popup Builder */}
         <a href="/integration4">
-          <div className="flex items-center ml-20 w-[456px] hover:bg-gray-200 p-4 space-x-4">
+          <div className="flex items-center ml-20 w-[456px] hover:bg-lblue hover:text-dgreen p-4 space-x-4">
             <img
               src="https://sendmails.io/wp-content/uploads/2024/09/API-Integration-5.png"
               alt="Popup Builder"
               className="w-12 h-12"
             />
             <div>
-              <div className="block hover:text-gray-800 text-lg font-semibold">
+              <div className="block  text-lg font-semibold">
                 Api Integration
               </div>
-              <p className="text-sm font-normal w-96 text-black">
+              <p className="text-sm font-roboto font-thin text-gray-400">
                 Utilize API endpoints to automate and manage your email marketing processes effectively.
               </p>
             </div>
@@ -422,62 +422,62 @@ const Navbar = () => {
       <div className="grid grid-cols-2 gap-4 bg-white -ml-32 h-[300px] p-12">
         {/* Knowledge Base */}
         <a href="/tutorials">
-          <div className="flex items-center ml-72 w-[456px] hover:bg-gray-200 p-6 space-x-4">
+          <div className="flex items-center ml-72 w-[456px] hover:bg-lblue hover:text-dgreen p-6 space-x-4">
             <img
               src="https://sendmails.io/wp-content/uploads/2024/09/Knowledge-Base-2.png"
               alt="Email Marketing"
               className="w-12 h-12"
             />
             <div>
-              <div className="block hover:text-gray-800 text-lg font-semibold">Knowledge Base</div>
-              <p className="text-sm font-normal w-96 text-black">Find guides for all our features.</p>
+              <div className="block  text-lg font-semibold">Knowledge Base</div>
+              <p className="text-sm font-roboto font-thin text-gray-400">Find guides for all our features.</p>
             </div>
           </div>
         </a>
 
         {/* Watch Tutorials */}
         <a href="/tutorials">
-          <div className="flex items-center ml-20 w-[456px] hover:bg-gray-200 p-6 space-x-4">
+          <div className="flex items-center ml-20 w-[456px] hover:bg-lblue hover:text-dgreen p-6 space-x-4">
             <img
               src="https://sendmails.io/wp-content/uploads/2024/09/Youtube-tutorials-1.png"
               alt="Marketing Automation"
               className="w-12 h-12"
             />
             <div>
-              <div className="block hover:text-gray-800 text-lg font-semibold">Watch Tutorial Videos</div>
-              <p className="text-sm font-normal w-96 text-black">Launch your first campaign with SendMails.</p>
+              <div className="block  text-lg font-semibold">Watch Tutorial Videos</div>
+              <p className="text-sm font-roboto font-thin text-gray-400">Launch your first campaign with SendMails.</p>
             </div>
           </div>
         </a>
 
         {/* Ultimate Guide */}
         <a href="/tutorials">
-          <div className="flex items-center ml-72 w-[524px] hover:bg-gray-200 p-6 space-x-4">
+          <div className="flex items-center ml-72 w-[524px] hover:bg-lblue hover:text-dgreen p-6 space-x-4">
             <img
               src="https://sendmails.io/wp-content/uploads/2024/09/Launch-first-campaign-1.png"
               alt="Contact CIRM"
               className="w-12 h-12"
             />
             <div>
-              <div className="block hover:text-gray-800 text-lg w-full font-semibold">
+              <div className="block  text-lg w-full font-semibold">
                 Ultimate Guide to Launch Your First Campaign
               </div>
-              <p className="text-sm font-normal text-black">See Sendmails in action</p>
+              <p className="text-sm font-roboto font-thin text-gray-400">See Sendmails in action</p>
             </div>
           </div>
         </a>
 
         {/* Join the Community */}
         <a href="/tutorials">
-          <div className="flex items-center ml-20 w-[456px] hover:bg-gray-200 p-6 space-x-4">
+          <div className="flex items-center ml-20 w-[456px] hover:bg-lblue hover:text-dgreen p-6 space-x-4">
             <img
               src="https://sendmails.io/wp-content/uploads/2024/09/Community-2.png"
               alt="Popup Builder"
               className="w-12 h-12"
             />
             <div>
-              <div className="block hover:text-gray-800 text-lg font-semibold">Join The Community</div>
-              <p className="text-sm font-normal text-black">Unlock SOPs, blueprints, and email marketing hacks</p>
+              <div className="block  text-lg font-semibold">Join The Community</div>
+              <p className="text-sm font-roboto font-thin text-gray-400">Unlock SOPs, blueprints, and email marketing hacks</p>
             </div>
           </div>
         </a>
