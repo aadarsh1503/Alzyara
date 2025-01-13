@@ -21,10 +21,10 @@ import { faRobot,faWandMagicSparkles,faChartBar,faBolt,faCog,faFileSignature,faE
 
 const Tool6 = () => {
   return (
-    <div className="bg-white ml-20 lg:ml-20  py-16 px-8">
-      <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-12 items-center">
+    <div className="bg-white ml-20 lg:ml-20  py-16">
+      <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-1 items-center">
         {/* Left Side: Blocks */}
-        <div className="grid lg:grid-cols-3 sm:grid-cols-1 gap-2">
+        <div className="grid lg:grid-cols-3 sm:grid-cols-1 gap-4">
           {/* Subject Analyzer */}
           <a href="/feature6" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
           <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
@@ -131,7 +131,7 @@ const Tool6 = () => {
   </div>
   <h3 className="text-lg font-semibold mb-2">Manage Lists and Subscribers</h3>
   <p className="text-gray-600">
-  Manage and segment lists & subscribers easily with SendMails
+  Manage and segment lists & subscribers easily with Alzyara
   </p>
 </a>
 <a href="/feature6" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
@@ -170,9 +170,9 @@ const Tool6 = () => {
 
         {/* Right Side: Text */}
         <div className="text-left mt-0 ml-0 lg:ml-20 lg:-mt-[1500px]">
-          <h2 className="lg:text-5xl text-3xl font-bold mb-4">All the Tools You <br />Need</h2>
+          <h2 className="lg:text-4xl text-3xl font-bold mb-4">All the Tools You <br />Need</h2>
           <p className="text-gray-600 text-lg">
-          Enhance your marketing strategy with <br />SendMails' powerful lead webforms.
+          Enhance your marketing strategy with <br />Alzyara' powerful lead webforms.
           </p>
         </div>
       </div>

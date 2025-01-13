@@ -36,9 +36,9 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-grow px-4 py-2 rounded-l-md bg-gray-800 text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="flex-grow px-4 py-2 rounded-l-md bg-gray-800 text-gray-300 placeholder-gray-500 focus:outline-none  "
               />
-              <button className="bg-green-500 text-white px-6 py-2 rounded-r-md hover:bg-green-600">
+              <button className="bg-lgreen text-white px-6 py-2 rounded-r-md hover:bg-hgreen">
                 Subscribe
               </button>
             </div>
@@ -108,7 +108,7 @@ const Footer = () => {
               <li>Contact us</li>
               <li>
                 Careers{" "}
-                <span className="text-xs bg-green-600 text-white py-1 px-2 ml-2 rounded">
+                <span className="text-xs bg-lgreen text-white py-1 px-2 ml-2 rounded">
                   HIRING
                 </span>
               </li>

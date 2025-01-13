@@ -16,7 +16,7 @@ const EmailMarketingSection = () => {
       <p className="text-black lg:text-lg  bg-white sm:text-base mb-8 max-w-md mx-auto">
         Create your free Alzyara account and unlock the power of email marketing, automation, analytics, and seamless integrations.
       </p>
-      <button className="bg-[#134e4a] hover:bg-[#0f3e3c] text-white text-sm sm:text-base py-3 px-6 rounded-lg">
+      <button className="bg-lgreen hover:bg-hgreen text-white text-sm sm:text-base py-3 px-6 rounded-lg">
         Create A FREE Account
       </button>
       <p className="text-black text-xs mt-4 mb-0 lg:mb-10">

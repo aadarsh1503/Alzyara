@@ -22,6 +22,7 @@ export default {
         lgreen: '#308484',
         lblue: '#f8fcfc',
         dgreen: '#2c8484',
+        hgreen:'#054747',
       },
     },
   },

@@ -41,7 +41,7 @@ const SearchSection = () => {
           <option value="amazon">Amazon SES</option>
           <option value="send">Send</option>
         </select>
-        <button className="bg-green-500 text-white px-4 py-2 rounded-lg">
+        <button className="bg-lgreen text-white px-4 py-2 rounded-lg">
           SEARCH
         </button>
       </div>

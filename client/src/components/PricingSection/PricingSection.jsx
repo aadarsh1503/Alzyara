@@ -12,36 +12,44 @@ const PricingSection = () => {
 
   return (
     <>
-    <div className=" font-poppins py-16 mt-20 px-4 text-center">
+    <div className=" font-poppins bg-white py-16 mt-20 px-4 text-center">
         <h1 className="font-bold">Plans & Pricing</h1>
-<h2 className="text-2xl font-bold lg:text-5xl">Choose a pricing plan that works for you</h2>
+<h2 className="text-2xl font-bold lg:text-4xl">Choose a pricing plan that works for you</h2>
 <p className="text-xl mt-3 mb-8">Whether you're an individual, a small team, or a growing<br /> enterprise, we have a plan that aligns perfectly with your goals.</p>
-<div className="flex justify-center items-center mb-8">
-  <div className="border-2 border-gray-500 rounded-lg p-1 bg-white shadow-lg w-full max-w-sm">
-    <div className="flex flex-row space-x-2">
+<div className="flex justify-center  items-center mb-8">
+  <div className="outline outline-1 outline-lgreen p-1 rounded-md ">
+  <div className="relative   rounded-lg p-  shadow-lg w-44">
+    {/* Sliding Background */}
+    <div
+      className={`absolute top-0 left-0 h-full w-1/2  rounded-md bg-[#134e4a] shadow-xl transition-all duration-300 ${
+        isMonthly ? 'translate-x-full' : 'translate-x-0'
+      }`}
+    ></div>
+    {/* Buttons */}
+    <div className="relative flex flex-row  space-x-2">
       <button
-        className={`flex-1 px-4 py-3 text-base font-semibold transition-all duration-300 rounded-md ${
-          !isMonthly
-            ? 'bg-[#134e4a] text-white shadow-xl'
-            : 'bg-white text-[#134e4a] hover:bg-green-100'
+        className={`flex-1 py-2 text-base p-1 font-semibold transition-all duration-300 rounded-md z-10 ${
+          isMonthly ? 'text-black' : 'text-white'
         }`}
         onClick={() => setIsMonthly(false)}
       >
         Annually
       </button>
       <button
-        className={`flex-1 px-4 py-3 text-base font-semibold transition-all duration-300 rounded-md ${
-          isMonthly
-            ? 'bg-[#134e4a] text-white shadow-xl'
-            : 'bg-white  text-[#134e4a] hover:bg-green-100'
+        className={`flex-1 py-2 text-base font-semibold transition-all duration-300 rounded-md z-10 ${
+          isMonthly ? 'text-white' : 'text-black'
         }`}
         onClick={() => setIsMonthly(true)}
       >
         Monthly
       </button>
     </div>
+    </div>
   </div>
 </div>
+
+
+
 
       <p className="text-base mt-6 text-[#4b615f] mb-8">
         🔥 Get 20% off with annual subscription
@@ -199,7 +207,7 @@ const PricingSection = () => {
           </h3>
           <p className="text-base text-left ml-4 text-[#4b615f] mb-4">Want more Subscribers?</p>
           <h2 className="text-2xl lg:text-5xl font-bold text-[#3b4b48] mb-4">Contact Us</h2>
-          <button className="bg-[#134e4a] text-white text-base py-4 px-5 w-56 h- rounded-lg mb-4">
+          <button className="bg-[#134e4a] text-white text-base py-3 px-16 rounded-lg mb-4">
             Talk to Sales
           </button>
           <div className="space-y-6 ml-10">

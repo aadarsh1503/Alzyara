@@ -1,0 +1,50 @@
+
+
+
+
+
+.one {
+    float: left;
+    line-height: 40px;
+    color: white;
+    text-decoration: none;
+    transition: 1.0s;
+}
+
+.two {
+    float: left;
+    text-decoration: none;
+    line-height: 40px;
+    color: #a6afbf;
+}
+
+.bg {
+    background-color: #e67e22;
+    height: 60px;
+    width: 190px;
+    position: absolute;
+    top: 0;
+    margin-left: -260px;
+    z-index: -1;
+    transition: 1.0s;
+    border-radius: 5px;
+}
+
+span:hover + .bg {
+    width: 200px;
+    margin-left: -40px;
+    background: #27ae60;
+}
+
+.two > span:hover {
+    color: white;
+}
+
+.two:hover ~ .one {
+    color: #fff;
+}
+
+span {
+    padding: 10px 0;
+    transition: 1.0s;
+}

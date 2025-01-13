@@ -17,7 +17,7 @@ const Thirdsegment = () => {
         </p>
         <hr className="border-t border-gray-300 mt-4" />
         <div className=" items-center gap-2 mt-6">
-          <span className="text-green-500 text-3xl font-bold">↑ 62.2%
+          <span className="text-lgreen text-3xl font-bold">↑ 62.2%
 
 </span>
           <span className="text-gray-900 text-sm">

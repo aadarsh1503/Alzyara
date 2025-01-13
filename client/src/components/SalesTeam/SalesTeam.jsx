@@ -11,11 +11,11 @@ const SalesTeam = () => {
       {/* Left Side Content */}
       <div className="md:w-1/2 mt-0 lg:mt-10 text-left">
       <h1 className='font-semibold mb-2'>Lead Generation and Nurturing 🎯</h1>
-        <h1 className="text-3xl font-semibold text-gray-900 leading-tight md:leading-snug">
+        <h1 className="text-3xl lg:text-4xl font-semibold text-gray-900 leading-tight md:leading-snug">
         Convert Leads into <br />Customers with <br />Automated Workflows
         </h1>
         <p className="mt-4 text-lg text-gray-700">
-        Empower your sales teams to generate and nurture <br />leads more effectively with SendMails’ powerful <br />automation features.
+        Empower your sales teams to generate and nurture <br />leads more effectively with Alzyara’ powerful <br />automation features.
 
 
         </p>
@@ -61,7 +61,7 @@ const SalesTeam = () => {
             </span>
           </li>
         </ul>
-        <button className="mt-8 bg-lgreen text-white px-6 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-green-700">
+        <button className="mt-8 bg-lgreen text-white px-6 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-hgreen">
           Create A FREE Account
         </button>
         <div className="mt-6 grid grid-cols-2  text-gray-800">
@@ -170,7 +170,7 @@ const SalesTeam = () => {
         </span>
       </li>
     </ul>
-    <button className="mt-8 bg-lgreen text-white px-6 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-green-700">
+    <button className="mt-8 bg-lgreen text-white px-6 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-hgreen">
       Create A FREE Account
     </button>
     <div className="mt-6 grid grid-cols-2 text-gray-800">
@@ -225,7 +225,7 @@ const SalesTeam = () => {
 
         </h1>
         <p className="mt-4 text-lg text-gray-700">
-        Use SendMails’ advanced analytics to measure and improve your sales team’s performance.
+        Use Alzyara’ advanced analytics to measure and improve your sales team’s performance.
         </p>
         <ul className="mt-6 space-y-4">
           <li className="flex items-start">
@@ -269,7 +269,7 @@ const SalesTeam = () => {
             </span>
           </li>
         </ul>
-        <button className="mt-8 bg-lgreen text-white px-6 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-green-700">
+        <button className="mt-8 bg-lgreen text-white px-6 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-hgreen">
           Create A FREE Account
         </button>
         <div className="mt-6 grid grid-cols-2  text-gray-800">

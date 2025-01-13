@@ -23,7 +23,7 @@ const Join = () => {
 
         {/* Rating */}
         <div className="mt-4 text-left">
-          <span className="flex items-center justify-start gap-2 text-yellow-400">
+          <span className="flex items-center justify-start gap-2 text-parrot">
             {[...Array(5)].map((_, index) => (
               <svg
                 key={index}

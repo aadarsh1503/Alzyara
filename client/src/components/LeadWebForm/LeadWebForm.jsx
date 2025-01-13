@@ -59,7 +59,7 @@ const LeadWebForm = () => {
             
           </li>
         </ul>
-        <button className="mt-8 bg-lgreen text-white px-6 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-green-700">
+        <button className="mt-8 bg-lgreen text-white px-6 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-hgreen">
           Create A FREE Account
         </button>
         <div className="mt-6 grid grid-cols-2  text-gray-800">
@@ -169,7 +169,7 @@ User-Friendly Interface
         </span>
       </li>
     </ul>
-    <button className="mt-8 bg-lgreen text-white px-6 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-green-700">
+    <button className="mt-8 bg-lgreen text-white px-6 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-hgreen">
       Create A FREE Account
     </button>
     <div className="mt-6 grid grid-cols-2 text-gray-800">
@@ -226,7 +226,7 @@ User-Friendly Interface
 
         </h1>
         <p className="mt-4 text-lg text-gray-700">
-        With SendMails' Instant Preview feature, you <br />can view your forms as you create them,<br />ensuring they look perfect before going live.
+        With Alzyara' Instant Preview feature, you <br />can view your forms as you create them,<br />ensuring they look perfect before going live.
         </p>
         <ul className="mt-6 space-y-4">
           <li className="flex items-start">
@@ -270,7 +270,7 @@ User-Friendly Interface
             </span>
           </li>
         </ul>
-        <button className="mt-8 bg-lgreen text-white px-6 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-green-700">
+        <button className="mt-8 bg-lgreen text-white px-6 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-hgreen">
           Create A FREE Account
         </button>
         <div className="mt-6 grid grid-cols-2  text-gray-800">

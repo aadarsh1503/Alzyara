@@ -38,7 +38,7 @@ const FAQSection = () => {
   return (
     <div className="bg-gray-50 py-10 mt-10 px-6 md:px-16">
       <div className="text-center mb-8">
-        <p className="text-green-600 font-medium">Frequently Asked Questions</p>
+        <p className="text-lgreen font-medium">Frequently Asked Questions</p>
         <h2 className="text-2xl md:text-4xl font-bold">
           All the answers you're looking for
         </h2>

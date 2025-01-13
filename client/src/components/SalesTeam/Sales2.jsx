@@ -35,7 +35,7 @@ const Sales2 = () => {
     {
       title: 'Automated Email Sequences',
       description:
-        'Initiate automated email conversations right after sign-up with SendMails’ easy-to-build email workflows using a drag-and-drop interface.',
+        'Initiate automated email  right after sign-up with Alzyara easy-to-build email workflows using a drag-and-drop interface.',
       icon: <FaNetworkWired  className="text-4xl" />,
     },
     {

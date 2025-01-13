@@ -8,10 +8,10 @@ const Section = ({ title, icon, items, count }) => {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <span className="text-blue-500 text-2xl">{icon}</span>
+          <span className="text-lgreen text-2xl">{icon}</span>
           <h2 className="text-lg font-bold text-gray-900">{title}</h2>
         </div>
-        <span className="bg-blue-100 text-blue-500 rounded-full h-8 w-8 flex items-center justify-center font-bold">
+        <span className="bg-lgreen text-white rounded-full h-8 w-8 flex items-center justify-center font-bold">
           {count}
         </span>
       </div>
@@ -19,7 +19,7 @@ const Section = ({ title, icon, items, count }) => {
       <ul className="list-none space-y-2">
         {items.map((item, index) => (
           <li key={index} className="flex items-center gap-2 text-gray-700">
-            <span className="text-blue-400">
+            <span className="text-lgreen">
               <AiOutlineRight />
             </span>
             {item}
@@ -27,7 +27,7 @@ const Section = ({ title, icon, items, count }) => {
         ))}
       </ul>
       <div className="text-center mt-4">
-        <button className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+        <button className="px-4 py-2 bg-lgreen text-white rounded-lg hover:bg-hgreen">
           Explore More
         </button>
       </div>
@@ -48,15 +48,15 @@ const TutorialPage = () => {
       icon: <i className="fas fa-book"></i>,
       count: 10,
       items: [
-        "The Ultimate Guide to Launch your First Campaign with SendMails.io",
-        "How to import contacts inside SendMails.io?",
-        "How to add subscribers to your blacklist in SendMails.io?",
-        "How to connect any email provider/SMTP server with SendMails.io?",
+        "The Ultimate Guide to Launch your First Campaign with Alzyara.io",
+        "How to import contacts inside Alzyara.io?",
+        "How to add subscribers to your blacklist in Alzyara.io?",
+        "How to connect any email provider/SMTP server with Alzyara.io?",
         "How to Create an Amazon SES API Key?",
-        "How to clean your email list inside SendMails.io?",
-        "How to capture leads from your website using web forms with SendMails.io?",
+        "How to clean your email list inside Alzyara.io?",
+        "How to capture leads from your website using web forms with Alzyara.io?",
         "How to create popup forms/web popups to Capture Leads?",
-        "How to create a regular email campaign in SendMails.io?",
+        "How to create a regular email campaign in Alzyara.com?",
         "How to create an automated email journey/drip email campaign?",
       ],
     },
@@ -65,12 +65,12 @@ const TutorialPage = () => {
       icon: <i className="fas fa-users"></i>,
       count: 10,
       items: [
-        "Introduction to SendMails.io Audience List | Add, Import & Export Subscribers or Create Segmentation",
+        "Introduction to Alzyara.io Audience List | Add, Import & Export Subscribers or Create Segmentation",
         "How to Create a New Audience List",
         "How to Add a New Subscriber to an AudienceList",
         "How to Import Subscribers in Bulk from a CSV File",
-        "How to Map Imported CSV Fields with SendMails Audience List?",
-        "How to Export your SendMails.io Audience Subscriber into a CSV File",
+        "How to Map Imported CSV Fields with Alzyara Audience List?",
+        "How to Export your Alzyara.io Audience Subscriber into a CSV File",
         "Email Custom Fields: How to Create a Personalized Email Using Custom Fields",
         "Email Segmentation: How to Segment your Email List",
         "How to Use Tags to Segment Your Audience in Your List",
@@ -82,12 +82,12 @@ const TutorialPage = () => {
       icon: <i className="fas fa-envelope"></i>,
       count: 6,
       items: [
-        "Monitor Email Campaign Performance Easily with SendMails.io",
-        "Introduction to Email Campaigns by SendMails.io",
-        "How to Import Custom HTML Email Templates in SendMails.io",
-        "How to Customize Your Imported Email HTML Templates in SendMails.io",
-        "Design Beautiful HTML Email Templates with SendMails.io’s Drag & Drop Email Designer",
-        "How to Launch an Effective Email Marketing Campaign with SendMails.io",
+        "Monitor Email Campaign Performance Easily with Alzyara.io",
+        "Introduction to Email Campaigns by Alzyara.io",
+        "How to Import Custom HTML Email Templates in Alzyara.io",
+        "How to Customize Your Imported Email HTML Templates in Alzyara.io",
+        "Design Beautiful HTML Email Templates with Alzyara.io’s Drag & Drop Email Designer",
+        "How to Launch an Effective Email Marketing Campaign with Alzyara.io",
       ],
     },
   ];
@@ -156,7 +156,7 @@ const TutorialPage = () => {
             <option value="amazon">Amazon SES</option>
             <option value="send">Send</option>
           </select>
-          <button className="bg-green-500 text-white px-4 py-2 rounded-lg">
+          <button className="bg-lgreen text-white px-4 py-2 rounded-lg">
             SEARCH
           </button>
         </div>

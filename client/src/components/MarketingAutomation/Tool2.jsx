@@ -16,8 +16,8 @@ import "./m.css";
 
 const Tool2 = () => {
   return (
-    <div className="bg-white ml-0 lg:ml-20 py-16 px-8">
-      <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-12 items-center">
+    <div className="bg-white ml-0 lg:ml-20 py-16 ">
+      <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-1 items-center">
         {/* Left Side: Blocks */}
         <div className="grid lg:grid-cols-3 sm:grid-cols-1 gap-4">
           {/* Subject Analyzer */}
@@ -88,7 +88,7 @@ const Tool2 = () => {
             </div>
             <h3 className="text-lg font-semibold mb-2">Zapier Integration</h3>
             <p className="text-gray-600">
-              Connect your favorite app with SendMails using Zapier
+              Connect your favorite app with Alzyara using Zapier
             </p>
           </a>
 
@@ -102,7 +102,7 @@ const Tool2 = () => {
             </div>
             <h3 className="text-lg font-semibold mb-2">Pabbly Integration</h3>
             <p className="text-gray-600">
-              Connect your favorite app with SendMails using Pabbly
+              Connect your favorite app with Alzyara using Pabbly
             </p>
           </a>
 
@@ -133,11 +133,11 @@ const Tool2 = () => {
 
         {/* Right Side: Text */}
         <div className="text-left ml-0 lg:ml-20 mt-0 lg:-mt-[700px]">
-          <h2 className="lg:text-3xl  text-3xl font-semibold mb-4">
+          <h2 className="lg:text-4xl  text-3xl font-semibold mb-4">
             Effortless Automation for<br /> Complex Workflows 🤖
           </h2>
           <p className="text-gray-600 text-lg">
-            With SendMails, easily automate your entire customer<br /> journey while keeping control over every<br /> detail.
+            With Alzyara, easily automate your entire customer<br /> journey while keeping control over every<br /> detail.
           </p>
         </div>
       </div>

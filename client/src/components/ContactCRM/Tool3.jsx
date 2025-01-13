@@ -18,8 +18,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRobot,faWandMagicSparkles,faChartBar,faBolt,faCog ,faFilter ,faInfoCircle   } from '@fortawesome/free-solid-svg-icons';
 const Tool3 = () => {
   return (
-    <div className="bg-white ml-0 lg:ml-20  py-16 px-8">
-      <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-12 items-center">
+    <div className="bg-white ml-0 lg:ml-20  py-16 ">
+      <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-1 items-center">
         {/* Left Side: Blocks */}
         <div className="grid lg:grid-cols-3 sm:grid-cols-1 gap-4">
           {/* Subject Analyzer */}

@@ -20,8 +20,8 @@ import { faRobot,faWandMagicSparkles,faChartBar,faBolt,faCog,faFileSignature  ,f
 
 const Tool5 = () => {
   return (
-    <div className="bg-white ml-0 lg:ml-20  py-16 px-8">
-      <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-12 items-center">
+    <div className="bg-white ml-0 lg:ml-20  py-16 ">
+      <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-1 items-center">
         {/* Left Side: Blocks */}
         <div className="grid lg:grid-cols-3 sm:grid-cols-1 gap-4">
           {/* Subject Analyzer */}
@@ -47,7 +47,7 @@ const Tool5 = () => {
           {/* Email Validation */}
           <a href="/feature5" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
           <div className="w-20 aspect-square flex items-center justify-center text-lgreen text-3xl mb-4 bg-gray-200 rounded-lg group-hover:bg-lgreen group-hover:text-white">
-            <FontAwesomeIcon icon={faImage} />
+            <FaChartPie />
             </div>
             <h3 className="text-lg font-semibold mb-2">Detailed Analytics</h3>
             <p className="text-gray-600">
@@ -124,10 +124,10 @@ const Tool5 = () => {
         </div>
 
         {/* Right Side: Text */}
-        <div className="text-left mt-0 lg:ml-20 ml-0 lg:-mt-[900px]">
+        <div className="text-left mt-0 lg:ml-20 ml-0 lg:-mt-[700px]">
           <h2 className="lg:text-5xl text-3xl font-bold mb-4">All the Tools You <br />Need</h2>
           <p className="text-gray-600 text-lg">
-          Enhance your marketing strategy with <br />SendMails' powerful lead webforms.
+          Enhance your marketing strategy with <br />Alzyara powerful lead webforms.
           </p>
         </div>
       </div>

@@ -12,11 +12,11 @@ const Ecommerce = () => {
       {/* Left Side Content */}
       <div className="md:w-1/2 mt-0 lg:mt-10 text-left">
       <h1 className='font-semibold mb-2'>Abandoned Cart Recovery 🛒</h1>
-        <h1 className="text-3xl font-semibold text-gray-900 leading-tight md:leading-snug">
+        <h1 className="text-4xl font-semibold text-gray-900 leading-tight md:leading-snug">
         Recover Lost Sales with <br />Automated Cart Recovery <br />Emails
         </h1>
         <p className="mt-4 text-lg text-gray-700">
-        SendMails helps e-commerce businesses recover <br />lost sales by automating follow-up emails to <br />customers who abandon their carts.
+        Alzyara helps e-commerce businesses recover <br />lost sales by automating follow-up emails to <br />customers who abandon their carts.
 
 
         </p>
@@ -63,7 +63,7 @@ const Ecommerce = () => {
             </span>
           </li>
         </ul>
-        <button className="mt-8 bg-lgreen text-white px-6 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-green-700">
+        <button className="mt-8 bg-lgreen text-white px-6 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-hgreen">
           Create A FREE Account
         </button>
         <div className="mt-6 grid grid-cols-2  text-gray-800">
@@ -176,7 +176,7 @@ Recovery Analytics
         </span>
       </li>
     </ul>
-    <button className="mt-8 bg-lgreen text-white px-6 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-green-700">
+    <button className="mt-8 bg-lgreen text-white px-6 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-hgreen">
       Create A FREE Account
     </button>
     <div className="mt-6 grid grid-cols-2 text-gray-800">
@@ -275,7 +275,7 @@ Recovery Analytics
             </span>
           </li>
         </ul>
-        <button className="mt-8 bg-lgreen text-white px-6 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-green-700">
+        <button className="mt-8 bg-lgreen text-white px-6 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-hgreen">
           Create A FREE Account
         </button>
         <div className="mt-6 grid grid-cols-2  text-gray-800">

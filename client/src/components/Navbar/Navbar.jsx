@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useRef } from "react";
 import { Link } from "react-router-dom"; // Import Link for React Router navigation
 import { AiOutlineSearch } from "react-icons/ai";
 import { FaBars, FaTimes } from "react-icons/fa"; // Import icons for menu
@@ -8,12 +8,51 @@ import { RiArrowDropDownLine } from 'react-icons/ri';
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false); // State to track scroll\
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false); // State for Solutions dropdown
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
-  const [searchText, setSearchText] = useState(""); // State to manage search input text
+  const [searchText, setSearchText] = useState("");
 
+  const dropdownRef = useRef(null);
+
+  // Effect to handle scroll and close dropdown
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+      closeAllDropdowns();
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // Effect to handle click outside dropdown
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target)
+      ) {
+        closeAllDropdowns();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const closeAllDropdowns = () => {
+    setIsDropdownOpen(false);
+    setOpenDropdown(null);
+    setIsSolutionsOpen(false);
+  };
   // Handle scroll event
   useEffect(() => {
     const handleScroll = () => {
@@ -105,7 +144,7 @@ const Navbar = () => {
           <div className="relative">
       {/* Features button */}
       <div
-        className="hover:text-black p-8  flex feature-section items-center cursor-pointer"
+        className="hover:text-parrot p-8  flex feature-section items-center cursor-pointer"
         onClick={toggleFeaturesDropdown}
       >
         Features
@@ -230,9 +269,9 @@ const Navbar = () => {
 
       )}
     </div>
-            <div className="group relative">
+            <div className="group relative hover:text-parrot">
             <div
-  className="hover:text-black p-8 market-section flex items-center cursor-pointer"
+  className="hover:text-parrot p-8 market-section flex items-center cursor-pointer"
   onClick={toggleSolutionsDropdown}
 >
   {/* Dropdown Icon */}
@@ -310,7 +349,7 @@ const Navbar = () => {
       </div>
 <div className=" pricing ">
   <a href="/pricing">
-            <div className="hover:text-black p-8">
+            <div className="hover:text-parrot p-8">
               Pricing
             </div>
             </a>
@@ -319,7 +358,7 @@ const Navbar = () => {
 
 <div className="relative">
   <div
-    className="hover:text-black p-8 integration-section flex items-center cursor-pointer"
+    className="hover:text-parrot p-8 integration-section flex items-center cursor-pointer"
     onClick={toggleIntegrationDropdown}
   >
     Integration
@@ -410,7 +449,7 @@ const Navbar = () => {
 
 <div className="relative">
   <div
-    className="hover:text-black p-8 resource-section flex items-center cursor-pointer"
+    className="hover:text-parrot p-8 resource-section flex items-center cursor-pointer"
     onClick={toggleresourcesDropdown}
   >
     Resources

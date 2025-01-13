@@ -60,7 +60,7 @@ const MarketingAutomation = () => {
             
           </li>
         </ul>
-        <button className="mt-8 bg-lgreen text-white px-6 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-green-700">
+        <button className="mt-8 bg-lgreen text-white px-6 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-hgreen">
           Create A FREE Account
         </button>
         <div className="mt-6 grid grid-cols-2  text-gray-800">
@@ -169,7 +169,7 @@ const MarketingAutomation = () => {
         </span>
       </li>
     </ul>
-    <button className="mt-8 bg-lgreen text-white px-6 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-green-700">
+    <button className="mt-8 bg-lgreen text-white px-6 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-hgreen">
       Create A FREE Account
     </button>
     <div className="mt-6 grid grid-cols-2 text-gray-800">
@@ -269,7 +269,7 @@ Automatic Trigger Setup
             </span>
           </li>
         </ul>
-        <button className="mt-8 bg-lgreen text-white px-6 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-green-700">
+        <button className="mt-8 bg-lgreen text-white px-6 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-hgreen">
           Create A FREE Account
         </button>
         <div className="mt-6 grid grid-cols-2  text-gray-800">

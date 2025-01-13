@@ -43,7 +43,7 @@ const CustomerSupportSection = () => {
 
         <div className="md:w-1/2 ml-0 lg:-ml-[200px] mt-4 md:mt-0">
           <h2 className="text-5xl font-bold">
-            Get <span className="text-green-800">award-winning</span> customer support
+            Get <span className="text-lgreen ">award-winning</span> customer support
           </h2>
           <p className="text-gray-700 text-lg mt-6">
             With a Stevie Award for fantastic customer support and more than 5,300 five-star reviews on Shopify, we know how to get support right. Get top-notch 24/7 customer support to help your business grow.
@@ -56,7 +56,7 @@ const CustomerSupportSection = () => {
       </div>
 
       <div className="text-center  mt-10">
-        <button className="bg-green-500 text-white py-4 px-6 w-56 rounded-lg hover:bg-green-600">
+        <button className="bg-lgreen hover:bg-hgreen text-white py-4 px-6 w-56 rounded-lg ">
           Start free
         </button>
         <button className="ml-4 bg-transparent border border-black text-black py-4 px-4 w-56 rounded-lg hover:text-white hover:bg-black">
