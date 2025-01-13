@@ -89,11 +89,11 @@ const Navbar = () => {
   return (
     <div>
       <nav
-        className={`fixed hidden lg:flex top-0 w-full  z-50 transition-all duration-300 ${
+        className={`fixed hidden lg:flex  top-0 w-full  z-50 transition-all duration-300 ${
           isScrolled ? "bg-[#0f2027] text-white" : "bg-[#0f2027]  text-white"
         }`}
       >
-        <div className="container mx-auto font-poppins flex max-w-7xl items-center justify-between px-6 py-">
+        <div className="container mx-auto flex max-w-7xl items-center justify-between px-6 py-">
           {/* Logo Section */}
           <div className="flex items-center space-x-">
             <a href="/">
@@ -125,12 +125,13 @@ const Navbar = () => {
           className="w-12 h-12"
         />
         <div>
-          <div className="block  text-lg font-semibold">
+          <div className="font-normal text-lg  ">
             Email Marketing
           </div>
-          <p className="text-sm font-roboto font-thin text-gray-400">
-            Create and send stunning, personalized email campaigns to engage with your audience.
-          </p>
+          <p className=" font-light  text-sm">
+  Create and send stunning, personalized email campaigns to engage with your audience.
+</p>
+
         </div>
       </div>
     </a>
@@ -143,10 +144,10 @@ const Navbar = () => {
           className="w-12 h-12"
         />
         <div>
-          <div className="block  text-lg font-semibold">
+          <div className=" font-normal text-lg ">
             Marketing Automation
           </div>
-          <p className="text-sm font-roboto font-thin text-gray-400">
+          <p className=" font-light  text-sm">
             Automate email workflows based on customer actions to nurture leads and drive sales.
           </p>
         </div>
@@ -161,10 +162,10 @@ const Navbar = () => {
           className="w-12 h-12"
         />
         <div>
-          <div className="block  text-lg font-semibold">
+          <div className="font-normal text-lg">
             Contact CRM
           </div>
-          <p className="text-sm font-roboto font-thin text-gray-400">
+          <p className="font-light  text-sm">
             Manage, segment, and optimize your contact list for targeted and effective communication.
           </p>
         </div>
@@ -179,10 +180,10 @@ const Navbar = () => {
           className="w-12 h-12"
         />
         <div>
-          <div className="block  text-lg font-semibold">
+          <div className="font-normal text-lg">
             Popup Builder
           </div>
-          <p className="text-sm font-roboto font-thin text-gray-400">
+          <p className="font-light  text-sm">
             Design and implement popups to capture leads directly from your website seamlessly.
           </p>
         </div>
@@ -197,10 +198,10 @@ const Navbar = () => {
           className="w-12 h-12"
         />
         <div>
-          <div className="block  text-lg font-semibold">
+          <div className="font-normal text-lg">
             Lead WebForm
           </div>
-          <p className="text-sm font-roboto font-thin text-gray-400">
+          <p className="font-light  text-sm">
             Create custom web forms to collect and manage leads effortlessly from various sources.
           </p>
         </div>
@@ -215,10 +216,10 @@ const Navbar = () => {
           className="w-12 h-12"
         />
         <div>
-          <div className="block  text-lg font-semibold">
+          <div className="font-normal text-lg">
             Email Verification
           </div>
-          <p className="text-sm font-roboto font-thin text-gray-400">
+          <p className="font-light  text-sm">
             Ensure your email list is clean and deliverable with integrated email verification tools.
           </p>
         </div>
@@ -254,10 +255,10 @@ const Navbar = () => {
                     className="w-12 h-12"
                   />
                   <div>
-                    <div className="block  text-lg font-semibold">
+                    <div className="font-normal text-lg">
                       Marketing Agencies
                     </div>
-                    <p className="text-sm font-roboto font-thin text-gray-400">
+                    <p className="font-light  text-sm">
                       Boost client campaigns with powerful email marketing and automation tools
                     </p>
                   </div>
@@ -273,10 +274,10 @@ const Navbar = () => {
                     className="w-12 h-12"
                   />
                   <div>
-                    <div className="block  text-lg font-semibold">
+                    <div className="font-normal text-lg">
                       Education
                     </div>
-                    <p className="text-sm font-roboto font-thin text-gray-400">
+                    <p className="font-light  text-sm">
                       Engage students and streamline admissions with data-driven email communication
                     </p>
                   </div>
@@ -287,8 +288,8 @@ const Navbar = () => {
     <div className="flex items-center ml-72 p-4 w-[456px] hover:bg-lblue hover:text-dgreen space-x-4">
       <img src="https://sendmails.io/wp-content/uploads/2024/09/Education-3.png" alt="Contact CIRM" className="w-12 h-12" />
       <div>
-        <div className="block  text-lg font-semibold">Sales Teams</div>
-        <p className="text-sm font-roboto font-thin text-gray-400">Drive conversions with targeted email campaigns and lead management solutions</p>
+        <div className="font-normal text-lg">Sales Teams</div>
+        <p className="font-light  text-sm">Drive conversions with targeted email campaigns and lead management solutions</p>
       </div>
     </div>
     </a>
@@ -297,8 +298,8 @@ const Navbar = () => {
     <div className="flex items-center ml-20 w-[456px] hover:bg-lblue hover:text-dgreen p-4 space-x-4">
       <img src="https://sendmails.io/wp-content/uploads/2024/09/E-commerce-2.png" alt="Popup Builder" className="w-12 h-12" />
       <div>
-        <div className="block  text-lg font-semibold">E-Commerce</div>
-        <p className="text-sm font-roboto font-thin text-gray-400">Enhance online store sales with personalized and automated email marketing</p>
+        <div className="font-normal text-lg">E-Commerce</div>
+        <p className="font-light  text-sm">Enhance online store sales with personalized and automated email marketing</p>
       </div>
     </div>
     </a>
@@ -336,10 +337,10 @@ const Navbar = () => {
               className="w-12 h-12"
             />
             <div>
-              <div className="block  text-lg font-semibold">
+              <div className="font-normal text-lg">
                 Zapier Integration
               </div>
-              <p className="text-sm font-roboto font-thin text-gray-400">
+              <p className="font-light  text-sm">
                 Connect Send Mails with thousands of apps via Zapier for seamless data automation
               </p>
             </div>
@@ -355,10 +356,10 @@ const Navbar = () => {
               className="w-12 h-12"
             />
             <div>
-              <div className="block  text-lg font-semibold">
+              <div className="font-normal text-lg">
                 Pabbly Integration
               </div>
-              <p className="text-sm font-roboto font-thin text-gray-400">
+              <p className="font-light  text-sm">
                 Integrate Pabbly to streamline your workflows and enhance email marketing efficiency
               </p>
             </div>
@@ -374,10 +375,10 @@ const Navbar = () => {
               className="w-12 h-12"
             />
             <div>
-              <div className="block  text-lg font-semibold">
+              <div className="font-normal text-lg">
                 Woo Commerce Addon
               </div>
-              <p className="text-sm font-roboto font-thin text-gray-400">
+              <p className="font-light  text-sm">
                 Sync WooCommerce data to target customers with tailored email campaigns effortlessly.
               </p>
             </div>
@@ -393,10 +394,10 @@ const Navbar = () => {
               className="w-12 h-12"
             />
             <div>
-              <div className="block  text-lg font-semibold">
+              <div className="font-normal text-lg">
                 Api Integration
               </div>
-              <p className="text-sm font-roboto font-thin text-gray-400">
+              <p className="font-light  text-sm">
                 Utilize API endpoints to automate and manage your email marketing processes effectively.
               </p>
             </div>
@@ -429,8 +430,8 @@ const Navbar = () => {
               className="w-12 h-12"
             />
             <div>
-              <div className="block  text-lg font-semibold">Knowledge Base</div>
-              <p className="text-sm font-roboto font-thin text-gray-400">Find guides for all our features.</p>
+              <div className="font-normal text-lg">Knowledge Base</div>
+              <p className="font-light  text-sm">Find guides for all our features.</p>
             </div>
           </div>
         </a>
@@ -444,8 +445,8 @@ const Navbar = () => {
               className="w-12 h-12"
             />
             <div>
-              <div className="block  text-lg font-semibold">Watch Tutorial Videos</div>
-              <p className="text-sm font-roboto font-thin text-gray-400">Launch your first campaign with SendMails.</p>
+              <div className="font-normal text-lg">Watch Tutorial Videos</div>
+              <p className="font-light  text-sm">Launch your first campaign with SendMails.</p>
             </div>
           </div>
         </a>
@@ -459,10 +460,10 @@ const Navbar = () => {
               className="w-12 h-12"
             />
             <div>
-              <div className="block  text-lg w-full font-semibold">
+              <div className="font-normal text-lg">
                 Ultimate Guide to Launch Your First Campaign
               </div>
-              <p className="text-sm font-roboto font-thin text-gray-400">See Sendmails in action</p>
+              <p className="font-light  text-sm">See Sendmails in action</p>
             </div>
           </div>
         </a>
@@ -476,8 +477,8 @@ const Navbar = () => {
               className="w-12 h-12"
             />
             <div>
-              <div className="block  text-lg font-semibold">Join The Community</div>
-              <p className="text-sm font-roboto font-thin text-gray-400">Unlock SOPs, blueprints, and email marketing hacks</p>
+              <div className="font-normal text-lg">Join The Community</div>
+              <p className="font-light  text-sm">Unlock SOPs, blueprints, and email marketing hacks</p>
             </div>
           </div>
         </a>

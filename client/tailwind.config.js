@@ -8,22 +8,22 @@ export default {
     extend: {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
-        
-          roboto: ['Roboto', 'sans-serif'],
-        
+        roboto: ['Roboto', 'sans-serif'],
+        faktum: ['Faktum', 'sans-serif'], // Add Faktum font
       },
       fontSize: {
         '13px': '13px', // Custom font size
         '12px': '12px',
+        '14px': '14px', // Added 14px font size
       },
-      colors:{
-        dgreen:'#2f8481',
-        parrot:'#a4f41c',
-        lgreen:'#308484',
-        lblue:'#f8fcfc',
-        dgreen:'#2c8484',
-      }
+      colors: {
+        dgreen: '#2f8481',
+        parrot: '#a4f41c',
+        lgreen: '#308484',
+        lblue: '#f8fcfc',
+        dgreen: '#2c8484',
+      },
     },
   },
   plugins: [],
-}
+};
