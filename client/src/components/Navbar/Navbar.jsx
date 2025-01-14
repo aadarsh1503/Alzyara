@@ -3,6 +3,8 @@ import { Link } from "react-router-dom"; // Import Link for React Router navigat
 import { AiOutlineSearch } from "react-icons/ai";
 import { FaBars, FaTimes } from "react-icons/fa"; // Import icons for menu
 import g1 from "./g1.png";
+import i1 from "./i1.png";
+import i2 from "./i2.png";
 import { RiArrowDropDownLine } from 'react-icons/ri';
 
 const Navbar = () => {
@@ -144,36 +146,39 @@ const Navbar = () => {
           <div className="relative">
       {/* Features button */}
       <div
-        className="hover:text-parrot p-8  flex feature-section items-center cursor-pointer"
-        onClick={toggleFeaturesDropdown}
-      >
-        Features
-        <RiArrowDropDownLine className="ml-1 text-xl text-white" />
-      </div>
+  className="hover:text-parrot p-8 flex feature-section items-center cursor-pointer"
+  onClick={toggleFeaturesDropdown}
+>
+  Features
+  <RiArrowDropDownLine className="ml-1 text-xl text-white" />
+</div>
 
-      {/* Dropdown for Features */}
-      {openDropdown === 'features' && (
-        <div className="absolute lg:-left-[420px] w-screen top-[68px] pt-3 text-black">
-  <div className="grid grid-cols-2  gap-4 bg-white -ml-32 h-[400px] p-12">
-    {/* Email Marketing */}
-    <a href="/feature1">
-      <div className="flex items-center w-[446px] ml-72 space-x-4 p-4 hover:bg-lblue hover:text-dgreen rounded">
-        <img
-          src="https://sendmails.io/wp-content/uploads/2024/09/email-marketing-3.png"
-          alt="Email Marketing"
-          className="w-12 h-12"
-        />
-        <div>
-          <div className="font-normal text-lg  ">
-            Email Marketing
-          </div>
-          <p className=" font-light  text-sm">
-  Create and send stunning, personalized email campaigns to engage with your audience.
-</p>
-
-        </div>
+{/* Dropdown for Features */}
+{openDropdown === 'features' && (
+  <div className="fixed top-20 left-0 w-full h-[500px] bg-white pt-3 text-black z-10">
+    <div className="grid grid-cols-1 -ml-32  lg:grid-cols-2 gap-4  h-full p-12">
+  
+      {/* Email Marketing */}
+      <a href="/feature1">
+        <div className="flex items-center w-[446px] ml-72 space-x-4 p-4 hover:text-dgreen group">
+          <div className="w-20 h-16 bg-transparent rounded-xl p-3 group-hover:bg-lblue flex items-center justify-center">
+      <img
+        src={i1}
+        alt="Email Marketing"
+        class="w-full h-full "
+      />
+    </div>
+    <div>
+      <div class="font-normal text-lg">
+        Email Marketing
       </div>
-    </a>
+      <p class="font-light text-sm">
+        Create and send stunning, personalized email campaigns to engage with your audience.
+      </p>
+    </div>
+  </div>
+</a>
+
     {/* Marketing Automation */}
     <a href="/feature2">
       <div className="flex items-center ml-20 w-[446px] space-x-4 p-4 hover:bg-lblue hover:text-dgreen rounded">
@@ -194,22 +199,27 @@ const Navbar = () => {
     </a>
     {/* Contact CRM */}
     <a href="/feature3">
-      <div className="flex items-center ml-72 space-x-4 p-4 hover:bg-lblue hover:text-dgreen rounded">
-        <img
-          src="https://sendmails.io/wp-content/uploads/2024/09/Contact-CRM-2.png"
-          alt="Contact CRM"
-          className="w-12 h-12"
-        />
-        <div>
-          <div className="font-normal text-lg">
-            Contact CRM
-          </div>
-          <p className="font-light  text-sm">
-            Manage, segment, and optimize your contact list for targeted and effective communication.
-          </p>
-        </div>
+  <div class="flex items-center w-[446px] ml-72 space-x-4 p-4 hover:text-dgreen group">
+
+    <div class="w-20 h-16 bg-transparent rounded-xl p-3 group-hover:bg-lblue flex items-center justify-center">
+      <img
+        src={i2}
+        alt="Contact CRM"
+        class="w-full h-full"
+      />
+    </div>
+   
+    <div>
+      <div class="font-normal text-lg">
+        Contact CRM
       </div>
-    </a>
+      <p class="font-light text-sm">
+        Manage, segment, and optimize your contact list for targeted and effective communication.
+      </p>
+    </div>
+  </div>
+</a>
+
     {/* Popup Builder */}
     <a href="/feature4">
       <div className="flex items-center ml-20 w-[456px] space-x-4 p-4 hover:bg-lblue hover:text-dgreen rounded">
@@ -234,13 +244,13 @@ const Navbar = () => {
         <img
           src="https://sendmails.io/wp-content/uploads/2024/09/Lead-Webform-2.png"
           alt="Lead WebForm"
-          className="w-12 h-12"
+          className="w-12  h-12"
         />
         <div>
-          <div className="font-normal text-lg">
+          <div className="font-normal ml-2 text-lg">
             Lead WebForm
           </div>
-          <p className="font-light  text-sm">
+          <p className="font-light ml-2  text-sm">
             Create custom web forms to collect and manage leads effortlessly from various sources.
           </p>
         </div>
