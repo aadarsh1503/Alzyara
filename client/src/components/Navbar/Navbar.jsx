@@ -178,7 +178,7 @@ const Navbar = () => {
   
       {/* Email Marketing */}
       <a href="/feature1">
-        <div className="flex items-center w-[446px] ml-72 hover:bg-bkg space-x-4 p-4 hover:text-dgreen group rounded-lg">
+        <div className="flex items-center w-[446px] ml-72 hover:bg-bkg space-x-2 p-4 hover:text-dgreen group rounded-lg">
           <div className="w-24 h-18 bg-transparent rounded-xl p-3 group-hover:bg-gray-50  flex items-center justify-center">
       <img
         src={i1}
@@ -217,7 +217,7 @@ const Navbar = () => {
     </a>
     {/* Contact CRM */}
     <a href="/feature3">
-  <div class="flex items-center w-[446px] ml-72 space-x-4 p-4 hover:bg-bkg hover:text-dgreen group rounded-lg">
+  <div class="flex items-center w-[446px] ml-72 space-x-2 p-4 hover:bg-bkg hover:text-dgreen group rounded-lg">
 
     <div class="w-24 h-18  bg-transparent rounded-xl p-3 group-hover:bg-gray-50 flex items-center justify-center">
       <img
@@ -258,7 +258,7 @@ const Navbar = () => {
     </a>
     {/* Lead WebForm */}
     <a href="/feature5">
-      <div className="flex items-center ml-72  space-x-4 p-4 hover:bg-bkg hover:text-dgreen rounded-lg">
+      <div className="flex items-center ml-72  space-x-2 p-4 hover:bg-bkg hover:text-dgreen rounded-lg">
         <img
           src={a5}
           alt="Lead WebForm"
