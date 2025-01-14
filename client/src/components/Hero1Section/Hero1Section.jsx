@@ -1,8 +1,16 @@
 import React from 'react';
 import { AiFillStar, AiOutlineTrophy } from 'react-icons/ai';
-
+import MarketingSection from "../MarketingSection/MarketingSection";
+import Slide from "../Slide/Slide";
+import CustomerSupportSection from "../CustomerSupportSection/CustomerSupportSection";
+import Automation from "../Automation/Automation";
+import Thirdsegment from "../thirdsegment/thirdsegment";
+import EcommercePlatformSection from "../EcommercePlatformSection/EcommercePlatformSection";
+import WhySwitch from "../WhySwitch/WhySwitch";
+import Join from "../Join/Join";
 const Hero1Section = () => {
   return (
+    <div>
     <section className="bg-[#f8f8f6] py-20 mt-20 sm:py-16 px-4 sm:px-8">
       <div className="max-w-5xl mx-auto text-center">
         <div className="flex justify-center space-x-8 mb-6">
@@ -50,6 +58,15 @@ const Hero1Section = () => {
         </div>
       </div>
     </section>
+        <MarketingSection />
+        <Slide />
+        <CustomerSupportSection />
+        <Automation />
+        <Thirdsegment />
+    
+        <WhySwitch />
+        <Join />
+        </div>
   );
 };
 
