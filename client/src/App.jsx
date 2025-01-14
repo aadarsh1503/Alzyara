@@ -26,6 +26,7 @@ import Pabblyintegration from './components/Pabblyintegration/Pabblyintegration'
 import WooIntegration from './components/woointegration/woointegration';
 import Apiintegrations from './components/ApiIntegration/ApiIntegration';
 import MobileNavbar from './components/MobileNavbar/MobileNavbar';
+import Hero1Section from './components/Hero1Section/Hero1Section';
 
 
 
@@ -40,7 +41,7 @@ function App() {
           <Navbar />
           <Routes>
             {/* Define route paths for different components */}
-            <Route path="/" element={<Hero />} />\
+            <Route path="/" element={<Hero1Section />} />\
             <Route path="/feature1" element={<EmailSection />} />
             <Route path="/marketing" element={<Solutions />} />
             <Route path="/pricing" element={<PricingSection />} />

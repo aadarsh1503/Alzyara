@@ -23,6 +23,7 @@ export default {
         lblue: '#f8fcfc',
         dgreen: '#2c8484',
         hgreen:'#054747',
+        bkg:'#F7F9F9'
       },
     },
   },
