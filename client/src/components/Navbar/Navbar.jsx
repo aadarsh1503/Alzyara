@@ -155,13 +155,13 @@ const Navbar = () => {
 
 {/* Dropdown for Features */}
 {openDropdown === 'features' && (
-  <div className="fixed top-20 left-0 w-full h-[500px] bg-white pt-3 text-black z-10">
-    <div className="grid grid-cols-1 -ml-32  lg:grid-cols-2 gap-4  h-full p-12">
+  <div className="fixed top-24 left-0 w-full h-[456px] bg-white pt-3 text-black z-10">
+    <div className="grid grid-cols-1 -ml-32  lg:grid-cols-2 gap-  h-full p-12">
   
       {/* Email Marketing */}
       <a href="/feature1">
-        <div className="flex items-center w-[446px] ml-72 space-x-4 p-4 hover:text-dgreen group">
-          <div className="w-20 h-16 bg-transparent rounded-xl p-3 group-hover:bg-lblue flex items-center justify-center">
+        <div className="flex items-center w-[446px] ml-72 hover:bg-lblue space-x-4 p-4 hover:text-dgreen group">
+          <div className="w-24 h-18 bg-transparent rounded-xl p-3 group-hover:bg-gray-50  flex items-center justify-center">
       <img
         src={i1}
         alt="Email Marketing"
@@ -181,7 +181,7 @@ const Navbar = () => {
 
     {/* Marketing Automation */}
     <a href="/feature2">
-      <div className="flex items-center ml-20 w-[446px] space-x-4 p-4 hover:bg-lblue hover:text-dgreen rounded">
+      <div className="flex  items-center ml-20 w-[446px] space-x-4 p-4 hover:bg-lblue hover:text-dgreen rounded">
         <img
           src="https://sendmails.io/wp-content/uploads/2024/09/marketing-automation-2.png"
           alt="Marketing Automation"
@@ -199,9 +199,9 @@ const Navbar = () => {
     </a>
     {/* Contact CRM */}
     <a href="/feature3">
-  <div class="flex items-center w-[446px] ml-72 space-x-4 p-4 hover:text-dgreen group">
+  <div class="flex items-center w-[446px] ml-72 space-x-4 p-4 hover:bg-lblue hover:text-dgreen group">
 
-    <div class="w-20 h-16 bg-transparent rounded-xl p-3 group-hover:bg-lblue flex items-center justify-center">
+    <div class="w-24 h-18  bg-transparent rounded-xl p-3 group-hover:bg-gray-50 flex items-center justify-center">
       <img
         src={i2}
         alt="Contact CRM"
@@ -244,7 +244,7 @@ const Navbar = () => {
         <img
           src="https://sendmails.io/wp-content/uploads/2024/09/Lead-Webform-2.png"
           alt="Lead WebForm"
-          className="w-12  h-12"
+          className="w-12 ml-2  h-12"
         />
         <div>
           <div className="font-normal ml-2 text-lg">
@@ -293,7 +293,7 @@ const Navbar = () => {
 
         {/* Dropdown for Solutions */}
         {openDropdown === 'solutions' && (
-          <div className="absolute lg:-left-[550px] w-screen  bg-white  top-[80px] text-black">
+          <div className="fixed top-24 left-0 w-full h-[300px] bg-white pt-3 text-black z-10">
             <div className="grid grid-cols-2 gap-4 bg-white -ml-32 h-[300px] p-12">
               {/* Marketing Agencies */}
               <a href="/marketing">
@@ -375,7 +375,7 @@ const Navbar = () => {
     <RiArrowDropDownLine className="ml-1 text-xl text-white" />
   </div>
   {openDropdown === 'integration' && (
-    <div className="absolute lg:-left-[769px] w-screen bg-white  top-[80px] text-black">
+    <div className="fixed top-24 left-0 w-full h-[200px] bg-white pt-3 text-black z-10">
       <div className="grid grid-cols-2 gap-4 bg-white -ml-32 h-[300px] p-12">
         {/* Email Marketing */}
         <a href="/integration">
@@ -468,7 +468,7 @@ const Navbar = () => {
 
   {/* Dropdown for Resources */}
   {openDropdown === 'resources' && (
-    <div className="absolute lg:-left-[895px] w-screen bg-white  top-[80px] text-black">
+    <div className="fixed top-24 left-0 w-full h-[200px] bg-white pt-3 text-black z-10">
       <div className="grid grid-cols-2 gap-4 bg-white -ml-32 h-[300px] p-12">
         {/* Knowledge Base */}
         <a href="/tutorials">
