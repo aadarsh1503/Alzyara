@@ -18,10 +18,10 @@ const PricingSection = () => {
 <p className="text-xl mt-3 mb-8">Whether you're an individual, a small team, or a growing<br /> enterprise, we have a plan that aligns perfectly with your goals.</p>
 <div className="flex justify-center  items-center mb-8">
   <div className="outline outline-1 outline-lgreen p-1 rounded-md ">
-  <div className="relative   rounded-lg p-  shadow-lg w-44">
+  <div className="relative   rounded-lg p-   w-44">
     {/* Sliding Background */}
     <div
-      className={`absolute top-0 left-0 h-full w-1/2  rounded-md bg-lgreen shadow-xl transition-all duration-300 ${
+      className={`absolute top-0 left-0 h-full w-1/2  rounded-md bg-lgreen  transition-all duration-300 ${
         isMonthly ? 'translate-x-full' : 'translate-x-0'
       }`}
     ></div>
