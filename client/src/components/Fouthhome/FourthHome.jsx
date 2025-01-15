@@ -1,11 +1,11 @@
 import React from 'react'
-
+import i1 from "./i1.webp"
 const FourthHome = () => {
   return (
     <div className="flex flex-col md:flex-row items-center max-w-7xl mx-auto justify-between  px-6 py-10 md:px-16 md:py-20">
     {/* Right Side Image */}
     <div className="md:w-1/2 mt-10 md:mt-0 flex -ml-2 justify-center">
-      <img src="https://sendmails.io/wp-content/uploads/2024/09/Engagement-Tracking-%F0%9F%93%88.png" alt="Email Design Preview" className="max-w-full h-auto rounded-md " />
+      <img src={i1} alt="Email Design Preview" className="max-w-full h-auto rounded-md " />
     </div>
   
     {/* Left Side Content */}

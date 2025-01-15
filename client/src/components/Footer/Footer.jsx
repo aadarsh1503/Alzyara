@@ -21,14 +21,22 @@ const Footer = () => {
   Alzyara makes email<br /> marketing and marketing<br /> automation easy for<br /> businesses of all sizes.
 </p>
 
-  <div className="flex items-center cursor-pointer justify-start space-x-4 -ml-6">
-    <AiOutlineInstagram className="text-gray-400 hover:text-gray-800 text-2xl" />
-    <AiOutlineYoutube className="text-gray-400 hover:text-gray-800 text-2xl" />
-    <AiOutlineFacebook className="text-gray-400 hover:text-gray-800 text-2xl" />
-    <FontAwesomeIcon icon={faXTwitter} className="text-gray-400 hover:text-gray-800 text-2xl" />
-    <AiOutlineLinkedin className="text-gray-400 hover:text-gray-800 text-2xl" />
-  </div>
-  <h1 className=" ml-0 lg:-ml-5 font-bold text-md mt-4">Join Our Facebook Community</h1>
+<div className="flex items-center cursor-pointer justify-start space-x-4 -ml-6">
+  <a href="https://www.instagram.com/alzyarasoftwares/" target="_blank" rel="noopener noreferrer">
+    <AiOutlineInstagram className="text-gray-400 hover:text-parrot text-2xl" />
+  </a>
+  <AiOutlineYoutube className="text-gray-400 hover:text-parrot text-2xl" />
+  <a href="https://www.facebook.com/Alzyarasoftwares" target="_blank" rel="noopener noreferrer">
+    <AiOutlineFacebook className="text-gray-400 hover:text-parrot text-2xl" />
+  </a>
+  <a href="https://x.com/Alzyara_Tech" target="_blank" rel="noopener noreferrer">
+    <FontAwesomeIcon icon={faXTwitter} className="text-gray-400  hover:text-parrot text-2xl" />
+  </a>
+  <AiOutlineLinkedin className="text-gray-400 hover:text-parrot text-2xl" />
+</div>
+<a href="https://www.facebook.com/Alzyarasoftwares" target="_blank" rel="noopener noreferrer">
+  <h1 className=" ml-0 lg:-ml-5 font-bold text-md hover:text-parrot mt-4">Join Our Facebook Community</h1>
+  </a>
 </div>
 
           {/* Subscription Section */}
