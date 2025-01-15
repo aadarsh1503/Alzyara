@@ -12,10 +12,10 @@ function MobileNavbar() {
   return (
     <nav className="lg:hidden bg-gray-900 text-white px-6 py-4">
       <div className="flex items-center justify-between">
-        <div className="flex items-center">
+        <a href="/" className="flex items-center">
           <img src={g1} alt="Logo" className="h-8 w-8 mr-2" />
           <h1 className="text-lg font-bold"></h1>
-        </div>
+        </a>
         <button
           className="text-white focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}

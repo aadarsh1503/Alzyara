@@ -1,30 +1,35 @@
 import React from "react";
 import g1 from "./g1.png"
 import g2 from "./g2.png"
+import { AiOutlineInstagram, AiOutlineYoutube, AiOutlineFacebook, AiOutlineTwitter, AiOutlineLinkedin } from 'react-icons/ai'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-13px text-white py-10">
+    <footer className="bg-gray-900 z-50 text-13px  text-white py-10">
       <div className="max-w-6xl mx-auto px-6">
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Alzyara Section */}
           <div className="md:col-span-2">
-            <img
-              src={g1}
-              alt="Alzyara Logo"
-              className="mb-4 w-32"
-            />
-            <p className="text-gray-400 text-center ml-0 lg:-ml-72 text-12px mb-6">
-              The top-rated marketing <br />automation platform <br />for ecommerce.
-            </p>
-            <div className="flex items-start">
-              <img
-                src={g2}
-                alt="Leader Fall 2024"
-                className="-ml-6 w-44"
-              />
-            </div>
-          </div>
+  <img
+    src={g1}
+    alt="Alzyara Logo"
+    className="mb-4 w-32"
+  />
+  <p className="text-gray-400 text-left relative ml-0 right-0 lg:ml-36 lg:right-36 text-14px mb-6">
+  Alzyara makes email<br /> marketing and marketing<br /> automation easy for<br /> businesses of all sizes.
+</p>
+
+  <div className="flex items-center cursor-pointer justify-start space-x-4 -ml-6">
+    <AiOutlineInstagram className="text-gray-400 hover:text-gray-800 text-2xl" />
+    <AiOutlineYoutube className="text-gray-400 hover:text-gray-800 text-2xl" />
+    <AiOutlineFacebook className="text-gray-400 hover:text-gray-800 text-2xl" />
+    <FontAwesomeIcon icon={faXTwitter} className="text-gray-400 hover:text-gray-800 text-2xl" />
+    <AiOutlineLinkedin className="text-gray-400 hover:text-gray-800 text-2xl" />
+  </div>
+  <h1 className=" ml-0 lg:-ml-5 font-bold text-md mt-4">Join Our Facebook Community</h1>
+</div>
 
           {/* Subscription Section */}
           <div className="md:col-span-3 ">
@@ -46,92 +51,102 @@ const Footer = () => {
         </div>
 
         {/* Links Section */}
-        <div className="mt-4 lg:-mt-56 ml-0 lg:ml-56 grid grid-cols-2 md:grid-cols-5 gap-6">
+        <div className="mt-4 lg:-mt-56 ml-0 lg:ml-64 grid grid-cols-2 md:grid-cols-6 gap-6">
           <div>
-            <h5 className="font-semibold mb-4">Product</h5>
+            <h5 className="font-semibold mb-4">Quick Links</h5>
             <ul className="space-y-2 text-gray-400 text-13px">
+              <li>Getting Started</li>
+              <li>Login</li>
+              <li> <a href="/pricing" class="hover:underline">Pricing</a></li>
               <li>Features</li>
-              <li>Pricing</li>
-              <li>Multi-store accounts</li>
-              <li>Reviews</li>
-              <li>Help Center</li>
-              <li>App market</li>
+              <li>Affiliates</li>
+              
             </ul>
           </div>
           <div>
-            <h5 className="font-semibold mb-4">Platforms</h5>
+            <h5 className="font-semibold mb-4">Resources</h5>
             <ul className="space-y-2 text-gray-400 text-13px">
-              <li>Shopify</li>
-              <li>Shopify Plus</li>
-              <li>BigCommerce</li>
-              <li>WordPress</li>
-              <li>WooCommerce</li>
-              <li>Wix</li>
-              <li>Shoplazza</li>
-              <li>Ecwid</li>
+              <li>Support Centre</li>
+              <li>Documentation</li>
+              <li>Community</li>
+              <li>FAQs</li>
+
             </ul>
           </div>
           <div>
-            <h5 className="font-semibold mb-4">Comparisons</h5>
+            <h5 className="font-semibold mb-4">Features</h5>
             <ul className="space-y-2 text-gray-400 text-13px">
-              <li>Mailchimp alternatives</li>
-              <li>Aweber alternatives</li>
-              <li>Constant Contact alternatives</li>
-              <li>Klaviyo alternatives</li>
-              <li>ActiveCampaign alternatives</li>
-              <li>Brevo alternatives</li>
-              <li>MailerLite alternatives</li>
-              <li>Best email marketing software</li>
+           
+  <li><a href="/feature1" class="hover:underline">Email Marketing</a></li>
+  <li><a href="/feature2" class=" hover:underline">Marketing Automation</a></li>
+  <li><a href="/feature3" class=" hover:underline">Contact CRM</a></li>
+  <li><a href="/feature4" class=" hover:underline">Popup Builder</a></li>
+  <li><a href="/feature5" class=" hover:underline">Lead WebForm</a></li>
+  <li><a href="/feature6" class=" hover:underline">Email Verification</a></li>
+
+
+      
+
             </ul>
           </div>
           <div>
-            <h5 className="font-semibold mb-4">Partners</h5>
+            <h5 className="font-semibold mb-4">Solutions</h5>
             <ul className="space-y-2 text-gray-400 text-13px">
-              <li>Partner programs</li>
-              <li>Affiliate partners</li>
-              <li>Technology partners</li>
-              <li>Agency partners</li>
-              <li>
-                Partner portal{" "}
-                <span className="text-xs bg-gray-800 py-1 px-2 ml-2 rounded">
-                  LOG IN
-                </span>
-              </li>
-              <li>Special offers</li>
-              <li>Agency directory</li>
+            <li> <a href="/marketing" class="hover:underline">Marketing Agencies</a></li>
+              <li> <a href="/solution2" class="hover:underline">Sales Teams</a></li>
+              <li> <a href="/solution3" class="hover:underline">Education</a></li>
+              <li> <a href="/solution4" class="hover:underline">Ecommerce</a></li>
+              
             </ul>
           </div>
           <div>
-            <h5 className="font-semibold mb-4">Alzyara</h5>
+            <h5 className="font-semibold mb-4">Integrations</h5>
             <ul className="space-y-2 text-gray-400 text-13px">
-              <li>About us</li>
-              <li>Contact us</li>
-              <li>
-                Careers{" "}
-                <span className="text-xs bg-lgreen text-white py-1 px-2 ml-2 rounded">
-                  HIRING
-                </span>
-              </li>
-              <li>Blog</li>
-              <li>Developer center</li>
-              <li>Customer Support</li>
-              <li>Bug Bounty</li>
+            <li><a href="/integration" class="hover:underline">Zapier</a></li>
+              <li><a href="/integration2" class="hover:underline">Pabbly</a></li>
+              <li><a href="/integration3" class="hover:underline">Woo Commerce Addon</a></li>
+              <li><a href="/integration4" class="hover:underline">Api Integration</a></li>
             </ul>
+            
+          </div>
+          <div>
+            <h5 className="font-semibold mb-4">Integrations</h5>
+            <ul className="space-y-2 text-gray-400 text-13px">
+              <li>Refund Policy</li>
+              <li>GDPR</li>
+              <li>Affiliate Terms</li>
+
+            </ul>
+            
           </div>
         </div>
 
-        {/* Disclaimer Section */}
-        <div className="mt-10 border-t border-gray-700 pt-6 text-13px text-gray-400">
-          <p>
-            *The average return of $73 for every dollar spent is based on our
-            internal analysis. This figure is an estimate based on ecommerce
-            revenue attributed to Alzyara US merchants using paid plans for
-            email, 13pxS, and push campaigns & automations between January 1 and
-            December 31, 2023. Actual results may vary depending on individual
-            circumstances, market conditions, region, and other factors. Past
-            performance is not indicative of future results.
-          </p>
-        </div>
+       {/* Disclaimer Section */}
+<div className="mt-10 border-t border-gray-700 pt-6 text-13px text-gray-400 flex items-center justify-between">
+  {/* Left-aligned paragraph */}
+  <p className="text-left">
+    © Copyright 2019-2025 Alzyara. All rights reserved.
+  </p>
+  {/* Right-aligned links */}
+  <ul className="flex space-x-4">
+    <li>
+      <a href="/contact" className="hover:underline">
+        Contact Us
+      </a>
+    </li>
+    <li>
+      <a href="/termsofService" className="hover:underline">
+        Terms & Conditions
+      </a>
+    </li>
+    <li>
+      <a href="/privacy" className="hover:underline">
+        Privacy Policy
+      </a>
+    </li>
+  </ul>
+</div>
+
       </div>
     </footer>
   );

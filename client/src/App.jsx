@@ -27,6 +27,9 @@ import WooIntegration from './components/woointegration/woointegration';
 import Apiintegrations from './components/ApiIntegration/ApiIntegration';
 import MobileNavbar from './components/MobileNavbar/MobileNavbar';
 import Hero1Section from './components/Hero1Section/Hero1Section';
+import ContactSection from './components/ContactSection/ContactSection';
+import PrivacySection from './components/PrivacyPolicy/PrivacyPolicy';
+import TermsofServic from './components/TermsofServic/TermsofServic';
 
 
 
@@ -59,6 +62,9 @@ function App() {
             <Route path="/integration2" element={<Pabblyintegration />} />
             <Route path="/integration3" element={<WooIntegration />} />
             <Route path="/integration4" element={<Apiintegrations />} />
+            <Route path="/contact" element={<ContactSection />} />
+            <Route path="/privacy" element={<PrivacySection />} />
+            <Route path="/termsofService" element={<TermsofServic />} />
          
      
             {/* Add more routes as needed */}

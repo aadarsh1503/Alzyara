@@ -7,6 +7,8 @@ import Thirdsegment from "../thirdsegment/thirdsegment";
 import EcommercePlatformSection from "../EcommercePlatformSection/EcommercePlatformSection";
 import WhySwitch from "../WhySwitch/WhySwitch";
 import Join from "../Join/Join";
+import EmailMarketingSection from "../Solutions/EmailMarketingSection";
+import FourthHome from "../Fouthhome/FourthHome";
 
 const Hero = () => {
   return (
@@ -25,7 +27,7 @@ const Hero = () => {
         {/* Buttons */}
         <div className="flex flex-col lg:flex-row items-center gap-4">
           <button className="bg-parrot  hover:outline-parrot outline hover:bg-black hover:text-parrot text-black w-[200px] py-2 rounded-lg font-bold text-sm ">
-            Start free
+            Create A FREE Account
           </button>
           <a href="/pricing">
           <button className="bg-transparent border-2 border-white w-[200px] py-2 rounded-lg font-bold text-sm hover:bg-white hover:text-black">
@@ -35,7 +37,7 @@ const Hero = () => {
         </div>
         {/* Integration Icons */}
         <div className=" items-center gap-4 mt-8  justify-center lg:justify-start">
-  <div className="text-gray-400 mb-4 text-sm block">Connect Alzyara to your platform</div>
+  <div className="text-gray-400 mb-4 font-semibold text-sm block">No Credit Card Required | Forever FREE Account</div>
 
 </div>
 
@@ -60,8 +62,10 @@ const Hero = () => {
     <CustomerSupportSection />
     <Automation />
     <Thirdsegment />
+    <FourthHome />
+   
+        <EmailMarketingSection />
 
-    <WhySwitch />
     <Join />
     
     </div>

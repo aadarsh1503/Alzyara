@@ -10,13 +10,13 @@ const EmailMarketingSection = () => {
           FOREVER FREE ACCOUNT
         </span>
       </div>
-      <h1 className="lg:text-5xl sm:text-3xl bg-white font-semibold text-[#3b4b48] mb-4">
+      <h1 className="lg:text-5xl sm:text-3xl bg-white font-semibold text-black] mb-4">
         Ready to step up your email<br /> marketing game?
       </h1>
       <p className="text-black lg:text-lg  bg-white sm:text-base mb-8 max-w-md mx-auto">
         Create your free Alzyara account and unlock the power of email marketing, automation, analytics, and seamless integrations.
       </p>
-      <button className="bg-lgreen hover:bg-hgreen text-white text-sm sm:text-base py-3 px-6 rounded-lg">
+      <button className="bg-lgreen font-semibold hover:bg-hgreen text-white text-sm sm:text-base py-3 px-6 rounded-lg">
         Create A FREE Account
       </button>
       <p className="text-black text-xs mt-4 mb-0 lg:mb-10">
