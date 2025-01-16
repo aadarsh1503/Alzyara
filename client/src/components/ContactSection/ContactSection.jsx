@@ -64,18 +64,15 @@ const ContactSection = () => {
       </div>
 
       {/* Right Map Section */}
-      <div className="w-full md:w-1/2">
+      <div className="w-full relative right-10 md:w-1/2">
       <iframe
-      className="w-full rounded-b-lg pointer-events-none"
-      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14435.236249565674!2d50.5237206!3d26.1868843!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49afd0213a19d3%3A0x2f892ffe9e6f0385!2sGlobal%20Vision%20Solutions!5e0!3m2!1sen!2sin!4v1731936574918!5m2!1sen!2sin"
-      width="100%"
-      height="600"
-      style={{ border: 0 }}
-      allowFullScreen=""
-      loading="lazy"
-      referrerPolicy="no-referrer-when-downgrade"
-      title="Location Map Bahrain"
-    ></iframe>
+          title="Google Map"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14435.236249565674!2d50.5237206!3d26.1868843!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49afd0213a19d3%3A0x2f892ffe9e6f0385!2sGlobal%20Vision%20Solutions!5e0!3m2!1sen!2sin!4v1731936574918!5m2!1sen!2sin"
+          width="80%"
+          height="400"
+          className="rounded-lg shadow-lg w-full max-w-4xl"
+          allowFullScreen
+        ></iframe>
 </div>
 
 

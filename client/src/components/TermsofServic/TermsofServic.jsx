@@ -8,7 +8,7 @@ const TermsofServic = () => {
       <h1 className="font-bold mb-2">Introduction</h1>
         <p className="text-gray-700 mb-6">
         
-All use of the website, information, services, and content distributed through or in conjunction with or made available on the website is offered to you subject to your acceptance of these Terms & Conditions, our Privacy Policy, and Permitted and Prohibited Uses Policy. By purchasing any goods or services from this website, you agree to be bound by this site’s Service Agreement. The following terms and conditions incorporate a legal agreement between you (“You”) and GrowMeOrganic LLC (“SendMails,” “https://sendmails.io”), which sets forth the terms and conditions by which SendMails will make the SendMails services available to you.
+All use of the website, information, services, and content distributed through or in conjunction with or made available on the website is offered to you subject to your acceptance of these Terms & Conditions, our Privacy Policy, and Permitted and Prohibited Uses Policy. By purchasing any goods or services from this website, you agree to be bound by this site’s Service Agreement. The following terms and conditions incorporate a legal agreement between you (“You”) and GrowMeOrganic LLC (Alzyara,” “https://alzyara.io”), which sets forth the terms and conditions by which Alzyara will make the Alzyara services available to you.
         </p>
         
       
@@ -22,10 +22,10 @@ All use of the website, information, services, and content distributed through o
             <p className="text-gray-700">
               <span className="font-semibold"></span>{" "}
               <a
-                href="mailto:support@sendmails.io"
+                href="mailto:info@alzyara.com"
                 className="text-lgreen text-14px font-bold"
               >
-                support@sendmails.io
+                info@alzyara.com
               </a>
             </p>
             <p className="text-gray-700 text-14px">

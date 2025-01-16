@@ -79,10 +79,10 @@ const PrivacySection = () => {
             <p className="text-gray-700">
               <span className="font-semibold"></span>{" "}
               <a
-                href="mailto:support@sendmails.io"
+                href="mailto:info@alzyara.com"
                 className="text-lgreen text-14px font-bold"
               >
-                support@sendmails.io
+                info@alzyara.com
               </a>
             </p>
             <p className="text-gray-700 text-14px">

@@ -66,7 +66,6 @@ const Hero = () => {
    
         <EmailMarketingSection />
 
-    <Join />
     
     </div>
   );
