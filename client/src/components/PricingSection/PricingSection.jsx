@@ -85,8 +85,8 @@ const PricingSection = () => {
   <p className="flex items-center text-base text-[#4b615f]">
     <AiOutlineCheck className="mr-2" /> Unlimited SMTP Servers
   </p>
-  <p className="flex items-center text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> Unlimited Workflow Automations
+  <p className="flex items-center text-left text-base text-[#4b615f]">
+    <AiOutlineCheck className="mr-2 shrink-0" /> Unlimited Workflow Automations
   </p>
   <p className="flex items-center text-base text-[#4b615f]">
     <AiOutlineCheck className="mr-2" /> Unlimited Segmentation
@@ -94,7 +94,7 @@ const PricingSection = () => {
   <p className="flex items-center text-base text-[#4b615f]">
     <AiOutlineCheck className="mr-2" /> Unlimited Custom Fields
   </p>
-  <p className="flex items-center text-base text-[#4b615f]">
+  <p className="flex items-center text-base text-left text-[#4b615f]">
     <AiOutlineCheck className="mr-2" /> Unlimited Lead Capture Popups
   </p>
   <p className="flex items-center text-base text-[#4b615f]">
@@ -157,7 +157,7 @@ const PricingSection = () => {
   <p className="flex items-center text-base text-[#4b615f]">
     <AiOutlineCheck className="mr-2" /> Unlimited SMTP Servers
   </p>
-  <p className="flex items-center text-base text-[#4b615f]">
+  <p className="flex items-center text-left text-base text-[#4b615f]">
     <AiOutlineCheck className="mr-2" /> Unlimited Workflow Automations
   </p>
   <p className="flex items-center text-base text-[#4b615f]">
@@ -166,7 +166,7 @@ const PricingSection = () => {
   <p className="flex items-center text-base text-[#4b615f]">
     <AiOutlineCheck className="mr-2" /> Unlimited Custom Fields
   </p>
-  <p className="flex items-center text-base text-[#4b615f]">
+  <p className="flex items-center text-left text-base text-[#4b615f]">
     <AiOutlineCheck className="mr-2" /> Unlimited Lead Capture Popups
   </p>
   <p className="flex items-center text-base text-[#4b615f]">
@@ -223,7 +223,7 @@ const PricingSection = () => {
 <p className="flex items-center text-base text-[#4b615f]">
   <AiOutlineCheck className="mr-2" /> Unlimited SMTP Servers
 </p>
-<p className="flex items-center text-base text-[#4b615f]">
+<p className="flex items-center  text-left text-base text-[#4b615f]">
   <AiOutlineCheck className="mr-2" /> Unlimited Workflow Automations
 </p>
 <p className="flex items-center text-base text-[#4b615f]">
@@ -232,7 +232,7 @@ const PricingSection = () => {
 <p className="flex items-center text-base text-[#4b615f]">
   <AiOutlineCheck className="mr-2" /> Unlimited Custom Fields
 </p>
-<p className="flex items-center text-base text-[#4b615f]">
+<p className="flex items-center text-left text-base text-[#4b615f]">
   <AiOutlineCheck className="mr-2" /> Unlimited Lead Capture Popups
 </p>
 <p className="flex items-center text-base text-[#4b615f]">
