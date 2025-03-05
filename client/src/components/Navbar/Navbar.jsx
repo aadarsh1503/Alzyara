@@ -24,8 +24,15 @@ import a4 from "./a4.png";
 import a5 from "./a5.png";
 import a6 from "./a6.png";
 import { RiArrowDropDownLine } from 'react-icons/ri';
+import LanguageToggle from "../../LanguageToggle";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
+  const { t, i18n } = useTranslation();
+  const [isRTL, setIsRTL] = useState(i18n.language === 'ar');
+  useEffect(() => {
+    setIsRTL(i18n.language === 'ar');
+  }, [i18n.language]);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -156,7 +163,7 @@ const Navbar = () => {
           {/* Logo Section */}
           <div className="flex items-center space-x-">
             <a href="/">
-              <img src={g1} alt="Logo" className="h-16 w-16" />
+              <img src={g1} alt="Logo" className={`h-16  w-16`} />
             </a>
           </div>
           {/* Desktop Menu Items */}
@@ -167,7 +174,7 @@ const Navbar = () => {
   className="hover:text-parrot p-8 flex feature-section items-center cursor-pointer"
   onClick={toggleFeaturesDropdown}
 >
-  Features
+{t('features')}
   <RiArrowDropDownLine className="ml-1 text-xl text-white" />
 </div>
 
@@ -177,295 +184,250 @@ const Navbar = () => {
     <div className="grid grid-cols-1 -ml-32  lg:grid-cols-2 gap-  h-full p-12">
   
       {/* Email Marketing */}
-      <a href="/feature1">
-        <div className="flex items-center w-[446px] ml-72 hover:bg-bkg space-x-2 p-4 hover:text-dgreen group rounded-lg">
-          <div className="w-24 h-18 bg-transparent rounded-xl p-3 group-hover:bg-gray-50  flex items-center justify-center">
-      <img
-        src={i1}
-        alt="Email Marketing"
-        class="w-full h-full "
-      />
-    </div>
-    <div>
-      <div class="font-normal text-lg">
-        Email Marketing
+      <div className={`${i18n.language === 'ar' ? 'relative right-44' : 'text-left'}`}>
+  <a href="/feature1">
+    <div className="flex items-center w-[446px] ml-72 hover:bg-bkg space-x-2 p-4 hover:text-dgreen group rounded-lg">
+      <div className="w-24 h-18 bg-transparent rounded-xl p-3 group-hover:bg-gray-50 flex items-center justify-center">
+        <img src={i1} alt={t('email_marketing')} className={` ${i18n.language === 'ar' ? 'relative w-12' : 'w-full h-full'} `} />
       </div>
-      <p class="font-light text-sm">
-        Create and send stunning, personalized email campaigns to engage with your audience.
-      </p>
+      <div>
+        <div className="font-normal text-lg">{t('email_marketing')}</div>
+        <p className="font-light text-sm">{t('email_marketing_desc')}</p>
+      </div>
+    </div>
+  </a>
+</div>
+
+<a href="/feature2">
+  <div className="flex relative z-50 shrink-0 items-center ml-20 w-[446px] space-x-4 p-4 hover:bg-bkg hover:text-dgreen rounded-lg">
+    <img src={a2} alt={t('marketing_automation')} className="w-12 h-12" />
+    <div>
+      <div className="font-normal mr-2 text-lg">{t('marketing_automation')}</div>
+      <p className="font-light mr-2 text-sm">{t('marketing_automation_desc')}</p>
     </div>
   </div>
 </a>
 
-    {/* Marketing Automation */}
-    <a href="/feature2">
-      <div className="flex  items-center ml-20 w-[446px] space-x-4 p-4 hover:bg-bkg hover:text-dgreen rounded-lg">
-        <img
-          src={a2}
-          alt="Marketing Automation"
-          className="w-12 h-12"
-        />
-        <div>
-          <div className=" font-normal text-lg ">
-            Marketing Automation
-          </div>
-          <p className=" font-light  text-sm">
-            Automate email workflows based on customer actions to nurture leads and drive sales.
-          </p>
-        </div>
+<div className={`${i18n.language === 'ar' ? 'relative right-44 shrink-0' : 'text-left'}`}>
+  <a href="/feature3">
+    <div className="flex items-center w-[446px] ml-72 space-x-2 p-4 hover:bg-bkg hover:text-dgreen group rounded-lg">
+      <div className="w-24 h-18 bg-transparent rounded-xl p-3 group-hover:bg-gray-50 flex items-center justify-center">
+        <img src={i2} alt={t('contact_crm')} className="w-full h-full" />
       </div>
-    </a>
-    {/* Contact CRM */}
-    <a href="/feature3">
-  <div class="flex items-center w-[446px] ml-72 space-x-2 p-4 hover:bg-bkg hover:text-dgreen group rounded-lg">
-
-    <div class="w-24 h-18  bg-transparent rounded-xl p-3 group-hover:bg-gray-50 flex items-center justify-center">
-      <img
-        src={i2}
-        alt="Contact CRM"
-        class="w-full h-full"
-      />
+      <div>
+        <div className="font-normal text-lg">{t('contact_crm')}</div>
+        <p className="font-light text-sm">{t('contact_crm_desc')}</p>
+      </div>
     </div>
-   
+  </a>
+</div>
+
+<a href="/feature4">
+  <div className="flex items-center relative z-50 ml-20 w-[456px] space-x-4 p-4 hover:bg-bkg hover:text-dgreen rounded-lg">
+    <img src={a4} alt={t('popup_builder')} className="w-12 h-12" />
     <div>
-      <div class="font-normal text-lg">
-        Contact CRM
-      </div>
-      <p class="font-light text-sm">
-        Manage, segment, and optimize your contact list for targeted and effective communication.
-      </p>
+      <div className="font-normal mr-2 text-lg">{t('popup_builder')}</div>
+      <p className="font-light mr-2 text-sm">{t('popup_builder_desc')}</p>
     </div>
   </div>
 </a>
 
-    {/* Popup Builder */}
-    <a href="/feature4">
-      <div className="flex items-center ml-20 w-[456px] space-x-4 p-4 hover:bg-bkg hover:text-dgreen rounded-lg">
-        <img
-          src={a4}
-          alt="Popup Builder"
-          className="w-12 h-12"
-        />
-        <div>
-          <div className="font-normal text-lg">
-            Popup Builder
-          </div>
-          <p className="font-light  text-sm">
-            Design and implement popups to capture leads directly from your website seamlessly.
-          </p>
-        </div>
+<div className={`${i18n.language === 'ar' ? 'relative right-48 shrink-0' : 'text-left'}`}>
+  <a href="/feature5">
+    <div className="flex items-center ml-72 space-x-2 p-4 hover:bg-bkg hover:text-dgreen rounded-lg">
+      <img src={a5} alt={t('lead_webform')} className="w-12 shrink-0 ml-2 h-12" />
+      <div>
+        <div className="font-normal ml-2 text-lg">{t('lead_webform')}</div>
+        <p className="font-light ml-2 text-sm">{t('lead_webform_desc')}</p>
       </div>
-    </a>
-    {/* Lead WebForm */}
-    <a href="/feature5">
-      <div className="flex items-center ml-72  space-x-2 p-4 hover:bg-bkg hover:text-dgreen rounded-lg">
-        <img
-          src={a5}
-          alt="Lead WebForm"
-          className="w-12 ml-2  h-12"
-        />
-        <div>
-          <div className="font-normal ml-2 text-lg">
-            Lead WebForm
-          </div>
-          <p className="font-light ml-2  text-sm">
-            Create custom web forms to collect and manage leads effortlessly from various sources.
-          </p>
-        </div>
-      </div>
-    </a>
+    </div>
+  </a>
+</div>
+
     {/* Email Verification */}
     <a href="/feature6">
-      <div className="flex items-center ml-20 space-x-4 p-4 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg">
-        <img
-          src={a6}
-          alt="Email Verification"
-          className="w-12 h-12"
-        />
-        <div>
-          <div className="font-normal text-lg">
-            Email Verification
-          </div>
-          <p className="font-light  text-sm">
-            Ensure your email list is clean and deliverable with integrated email verification tools.
-          </p>
-        </div>
+  <div class="flex items-center relative z-50 ml-20 space-x-4 p-4 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg">
+    <img
+      src={a6}
+      alt="{t('email_verification_alt')}"
+      class="w-12 h-12"
+    />
+    <div>
+      <div class="font-normal mr-2 text-lg">
+        {t('email_verification_title')}
       </div>
-    </a>
+      <p class="font-light mr-2 text-sm">
+        {t('email_verification_description')}
+      </p>
+    </div>
+  </div>
+</a>
   </div>
 </div>
 
       )}
     </div>
-            <div className="group relative hover:text-parrot">
-            <div
-  className="hover:text-parrot p-8 market-section flex items-center cursor-pointer"
-  onClick={toggleSolutionsDropdown}
->
-  {/* Dropdown Icon */}
- 
-  Solutions
-  <RiArrowDropDownLine className="ml-1 text-xl text-white" />
-</div>
+    <div className="group relative hover:text-parrot">
+  <div
+    className="hover:text-parrot p-8 market-section flex items-center cursor-pointer"
+    onClick={toggleSolutionsDropdown}
+  >
+    {t('solutions')}
+    <RiArrowDropDownLine className="ml-1 text-xl text-white" />
+  </div>
 
+  {openDropdown === 'solutions' && (
+    <div className="fixed top-24 left-0 w-full h-[300px] bg-white pt-3 text-black z-10">
+      <div className="grid grid-cols-2 gap-4 bg-white -ml-32 h-[300px] p-12">
 
-        {/* Dropdown for Solutions */}
-        {openDropdown === 'solutions' && (
-          <div className="fixed top-24 left-0 w-full h-[300px] bg-white pt-3 text-black z-10">
-            <div className="grid grid-cols-2 gap-4 bg-white -ml-32 h-[300px] p-12">
-              {/* Marketing Agencies */}
-              <a href="/marketing">
-                <div className="flex items-center ml-72 p-4 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg space-x-4">
-                  <img
-                    src={b4}
-                    alt="Marketing Agencies"
-                    className="w-12 h-12"
-                  />
-                  <div>
-                    <div className="font-normal text-lg">
-                      Marketing Agencies
-                    </div>
-                    <p className="font-light  text-sm">
-                      Boost client campaigns with powerful email marketing and automation tools
-                    </p>
-                  </div>
-                </div>
-              </a>
+        {/* Marketing Agencies */}
+        <div className={`${i18n.language === 'ar' ? 'relative right-44' : 'text-left'}`}>
+          <a href="/marketing">
+            <div className="flex items-center ml-72 p-4 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg space-x-4">
+              <img src={b4} alt={t('marketing_agencies')} className="w-12 h-12 ml-4" />
+              <div>
+                <div className="font-normal text-lg">{t('marketing_agencies')}</div>
+                <p className="font-light text-sm">{t('marketing_agencies_desc')}</p>
+              </div>
+            </div>
+          </a>
+        </div>
 
-              {/* Education */}
-              <a href="/solution2">
-                <div className="flex items-center ml-20 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg p-4 space-x-4">
-                  <img
-                    src={b2}
-                    alt="Education"
-                    className="w-12 h-12"
-                  />
-                  <div>
-                    <div className="font-normal text-lg">
-                      Education
-                    </div>
-                    <p className="font-light  text-sm">
-                      Engage students and streamline admissions with data-driven email communication
-                    </p>
-                  </div>
-                </div>
-              </a>
-               {/* Contact CIRM */}
-    <a href="/solution3">
-    <div className="flex items-center ml-72 p-4 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg space-x-4">
-      <img src={b3} alt="Contact CIRM" className="w-12 h-12" />
-      <div>
-        <div className="font-normal text-lg">Sales Teams</div>
-        <p className="font-light  text-sm">Drive conversions with targeted email campaigns and lead management solutions</p>
-      </div>
-    </div>
-    </a>
-    {/* Popup Builder */}
-    <a href="/solution4">
-    <div className="flex items-center ml-20 w-[456px] hover:bg-bkg hover:text-dgreen p-4 rounded-lg space-x-4">
-      <img src={b1} alt="Popup Builder" className="w-12 h-12" />
-      <div>
-        <div className="font-normal text-lg">E-Commerce</div>
-        <p className="font-light  text-sm">Enhance online store sales with personalized and automated email marketing</p>
-      </div>
-    </div>
-    </a>
-              {/* Add the rest of your solutions links here */}
+        {/* Education */}
+        <a href="/solution2">
+          <div className="flex items-center relative z-50 ml-20 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg p-4 space-x-4">
+            <img src={b2} alt={t('education')} className="w-12 h-12 ml-4" />
+            <div>
+              <div className="font-normal text-lg">{t('education')}</div>
+              <p className="font-light text-sm">{t('education_desc')}</p>
             </div>
           </div>
-        )}
+        </a>
+
+        {/* Sales Teams */}
+        <div className={`${i18n.language === 'ar' ? 'relative right-44' : 'text-left'}`}>
+          <a href="/solution3">
+            <div className="flex items-center ml-72 p-4 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg space-x-4">
+              <img src={b3} alt={t('sales_teams')} className="w-12 h-12 ml-4" />
+              <div>
+                <div className="font-normal text-lg">{t('sales_teams')}</div>
+                <p className="font-light text-sm">{t('sales_teams_desc')}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        {/* E-Commerce */}
+        <a href="/solution4">
+          <div className="flex items-center relative z-50 ml-20 w-[456px] hover:bg-bkg hover:text-dgreen p-4 rounded-lg space-x-4">
+            <img src={b1} alt={t('ecommerce')} className="w-12 h-12 ml-4" />
+            <div>
+              <div className="font-normal text-lg">{t('ecommerce')}</div>
+              <p className="font-light text-sm">{t('ecommerce_desc')}</p>
+            </div>
+          </div>
+        </a>
+
       </div>
+    </div>
+  )}
+</div>
+
 <div className=" pricing ">
   <a href="/pricing">
             <div className="hover:text-parrot p-8">
-              Pricing
+            {t('pricing')}
             </div>
             </a>
             </div>
  
 
-<div className="relative">
+            <div className="relative">
   <div
     className="hover:text-parrot p-8 integration-section flex items-center cursor-pointer"
     onClick={toggleIntegrationDropdown}
   >
-    Integration
+    {t('integration')}
     <RiArrowDropDownLine className="ml-1 text-xl text-white" />
   </div>
   {openDropdown === 'integration' && (
     <div className="fixed top-24 left-0 w-full h-[200px] bg-white pt-3 text-black z-10">
       <div className="grid grid-cols-2 gap-4 bg-white -ml-32 h-[300px] p-12">
-        {/* Email Marketing */}
-        <a href="/integration">
-          <div className="flex items-center ml-72 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg p-4 space-x-4">
-            <img
-              src={c3}
-              alt="Email Marketing"
-              className="w-12 h-12"
-            />
-            <div>
-              <div className="font-normal text-lg">
-                Zapier Integration
+        <div className={`${i18n.language === 'ar' ? 'relative right-44' : 'text-left'}`}>
+          {/* Email Marketing */}
+          <a href="/integration">
+            <div className="flex items-center ml-72 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg p-4 space-x-4">
+              <img
+                src={c3}
+                alt="Email Marketing"
+                className="w-12 h-12"
+              />
+              <div>
+                <div className="font-normal mr-2 text-lg">
+                  {t('zapier_integration')}
+                </div>
+                <p className="font-light mr-2 text-sm">
+                  {t('zapier_description')}
+                </p>
               </div>
-              <p className="font-light  text-sm">
-                Connect Send Mails with thousands of apps via Zapier for seamless data automation
-              </p>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
 
         {/* Marketing Automation */}
         <a href="/integration2">
-          <div className="flex items-center ml-20 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg p-4 space-x-4">
+          <div className="flex items-center relative z-50 ml-20 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg p-4 space-x-4">
             <img
               src={c4}
               alt="Marketing Automation"
               className="w-12 h-12"
             />
             <div>
-              <div className="font-normal text-lg">
-                Pabbly Integration
+              <div className="font-normal mr-2 text-lg">
+                {t('pabbly_integration')}
               </div>
-              <p className="font-light  text-sm">
-                Integrate Pabbly to streamline your workflows and enhance email marketing efficiency
+              <p className="font-light mr-2 text-sm">
+                {t('pabbly_description')}
               </p>
             </div>
           </div>
         </a>
 
         {/* Contact CIRM */}
-        <a href="/integration3">
-          <div className="flex items-center ml-72 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg p-4 space-x-4">
-            <img
-              src={c2}
-              alt="Contact CIRM"
-              className="w-12 h-12"
-            />
-            <div>
-              <div className="font-normal text-lg">
-                Woo Commerce Addon
+        <div className={`${i18n.language === 'ar' ? 'relative right-44' : 'text-left'}`}>
+          <a href="/integration3">
+            <div className="flex items-center ml-72 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg p-4 space-x-4">
+              <img
+                src={c2}
+                alt="Contact CIRM"
+                className="w-12 h-12"
+              />
+              <div>
+                <div className="font-normal mr-2 text-lg">
+                  {t('woo_commerce_addon')}
+                </div>
+                <p className="font-light mr-2 text-sm">
+                  {t('woo_commerce_description')}
+                </p>
               </div>
-              <p className="font-light  text-sm">
-                Sync WooCommerce data to target customers with tailored email campaigns effortlessly.
-              </p>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
 
         {/* Popup Builder */}
         <a href="/integration4">
-          <div className="flex items-center ml-20 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg p-4 space-x-4">
+          <div className="flex items-center relative z-50 ml-20 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg p-4 space-x-4">
             <img 
               src={c1}
               alt="Popup Builder"
               className="w-12 h-12"
             />
             <div>
-              <div className="font-normal text-lg">
-                Api Integration
+              <div className="font-normal mr-2 text-lg">
+                {t('api_integration')}
               </div>
-              <p className="font-light  text-sm">
-                Utilize API endpoints to automate and manage your email marketing processes effectively.
+              <p className="font-light mr-2 text-sm">
+                {t('api_description')}
               </p>
             </div>
           </div>
@@ -480,15 +442,17 @@ const Navbar = () => {
     className="hover:text-parrot p-8 resource-section flex items-center cursor-pointer"
     onClick={toggleresourcesDropdown}
   >
-    Resources
+    {t('resources')}
     <RiArrowDropDownLine className="ml-1 text-xl text-white" />
   </div>
 
   {/* Dropdown for Resources */}
   {openDropdown === 'resources' && (
+
     <div className="fixed top-24 left-0 w-full h-[200px] bg-white pt-3 text-black z-10">
       <div className="grid grid-cols-2 gap-4 bg-white -ml-32 h-[300px] p-12">
         {/* Knowledge Base */}
+        <div className={`${i18n.language === 'ar' ? 'relative right-44' : 'text-left'}`}>
         <a href="/tutorials">
           <div className="flex items-center ml-72 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg p-6 space-x-4">
             <img
@@ -497,28 +461,29 @@ const Navbar = () => {
               className="w-12 h-12"
             />
             <div>
-              <div className="font-normal text-lg">Knowledge Base</div>
-              <p className="font-light  text-sm">Find guides for all our features.</p>
+              <div className="font-normal mr-2 text-lg">{t('knowledge_base')}</div>
+              <p className="font-light mr-2 text-sm">{t('knowledge_base_description')}</p>
             </div>
           </div>
         </a>
-
+</div>
         {/* Watch Tutorials */}
         <a href="/tutorials">
-          <div className="flex items-center ml-20 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg p-6 space-x-4">
+          <div className="flex items-center relative z-50 ml-20 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg p-6 space-x-4">
             <img
               src={d2}
               alt="Marketing Automation"
               className="w-12 h-12"
             />
             <div>
-              <div className="font-normal text-lg">Watch Tutorial Videos</div>
-              <p className="font-light  text-sm">Launch your first campaign with SendMails.</p>
+              <div className="font-normal mr-2 text-lg">{t('watch_tutorials')}</div>
+              <p className="font-light mr-2  text-sm">{t('watch_tutorials_description')}</p>
             </div>
           </div>
         </a>
 
         {/* Ultimate Guide */}
+        <div className={`${i18n.language === 'ar' ? 'relative right-44' : 'text-left'}`}>
         <a href="/tutorials">
           <div className="flex items-center ml-72 w-[524px] hover:bg-bkg hover:text-dgreen rounded-lg p-6 space-x-4">
             <img
@@ -527,25 +492,26 @@ const Navbar = () => {
               className="w-12 h-12"
             />
             <div>
-              <div className="font-normal text-lg">
-                Ultimate Guide to Launch Your First Campaign
+              <div className="font-normal mr-2 text-lg">
+                {t('ultimate_guide')}
               </div>
-              <p className="font-light  text-sm">See Sendmails in action</p>
+              <p className="font-light mr-2 text-sm">{t('ultimate_guide_description')}</p>
             </div>
           </div>
         </a>
+        </div>
 
         {/* Join the Community */}
         <a href="/tutorials">
-          <div className="flex items-center ml-20 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg p-6 space-x-4">
+          <div className="flex items-center relative z-50 ml-20 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg p-6 space-x-4">
             <img
               src={d1}
               alt="Popup Builder"
               className="w-12 h-12"
             />
             <div>
-              <div className="font-normal text-lg">Join The Community</div>
-              <p className="font-light  text-sm">Unlock SOPs, blueprints, and email marketing hacks</p>
+              <div className="font-normal mr-2 text-lg">{t('join_community')}</div>
+              <p className="font-light mr-2  text-sm">{t('join_community_description')}</p>
             </div>
           </div>
         </a>
@@ -554,31 +520,33 @@ const Navbar = () => {
   )}
 </div>
 
+
             {/* Three Buttons */}
             <div className="flex space-x-4 p-8">
-              <button
-                className={`w-32 h-8 text-xs hover:outline-parrot rounded-md ${
-                  isScrolled
-                    ? "text-black bg-parrot hover:text-white hover:outline-white outline hover:bg-[#0f2027]"
-                    : "text-black bg-parrot hover:text-white hover:outline-white outline hover:bg-[#0f2027]"
-                }`}
-              >
-                Request Demo
-              </button>
-              <a href="/signup">
-              <button
-                className={`w-20 h-8 bg-parrot hover:outline-parrot rounded-md ${
-                  isScrolled
-                    ? "text-black bg-parrot hover:text-white hover:outline-white outline hover:bg-[#0f2027]"
-                    : "text-black bg-parrot hover:text-white hover:outline-white outline hover:bg-[#0f2027]"
-                }`}
-              >
-                Log in
-              </button>
-              </a>
-            </div>
+        <button
+          className={`w-32 h-8 text-xs hover:outline-parrot rounded-md ${
+            isScrolled
+              ? "text-black bg-parrot hover:text-white hover:outline-white outline hover:bg-[#0f2027]"
+              : "text-black bg-parrot hover:text-white hover:outline-white outline hover:bg-[#0f2027]"
+          }`}
+        >
+          {t('request_demo')}
+        </button>
+        <a href="/signup">
+          <button
+            className={`w-20 h-8 mr-4 bg-parrot hover:outline-parrot rounded-md ${
+              isScrolled
+                ? "text-black bg-parrot hover:text-white hover:outline-white outline hover:bg-[#0f2027]"
+                : "text-black bg-parrot hover:text-white hover:outline-white outline hover:bg-[#0f2027]"
+            }`}
+          >
+            {t('login')}
+          </button>
+        </a>
+      </div>
+            <LanguageToggle />
           </div>
-
+       
           {/* Hamburger Menu Icon */}
           <div className="md:hidden">
             {!isMobileMenuOpen ? (

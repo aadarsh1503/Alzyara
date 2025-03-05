@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AiOutlineCheck  } from 'react-icons/ai';
 import PaymentSection from "./PaymentSection";
 import FAQSection from "./FAQSection";
+import { useTranslation } from "react-i18next";
 
 const PricingSection = () => {
+  const { t, i18n } = useTranslation();
+  const [isRTL, setIsRTL] = useState(i18n.language === 'ar');
+  useEffect(() => {
+    setIsRTL(i18n.language === 'ar');
+  }, [i18n.language]);
   const [isMonthly, setIsMonthly] = useState(false);
 
   const handleToggle = () => {
@@ -16,17 +22,18 @@ const PricingSection = () => {
         <h1 className="font-bold">Plans & Pricing</h1>
 <h2 className="text-2xl font-bold lg:text-4xl">Choose a pricing plan that works for you</h2>
 <p className="text-xl mt-3 mb-8">Whether you're an individual, a small team, or a growing<br /> enterprise, we have a plan that aligns perfectly with your goals.</p>
-<div className="flex justify-center  items-center mb-8">
+<div dir="ltr" className="flex justify-center  items-center mb-8">
   <div className="outline outline-1 outline-lgreen p-1 rounded-md ">
   <div className="relative   rounded-lg p-   w-44">
     {/* Sliding Background */}
     <div
-      className={`absolute top-0 left-0 h-full w-1/2  rounded-md bg-lgreen  transition-all duration-300 ${
+      className={`absolute top-0 left-0
+  ltr h-full w-1/2  rounded-md bg-lgreen  transition-all duration-300 ${
         isMonthly ? 'translate-x-full' : 'translate-x-0'
       }`}
     ></div>
     {/* Buttons */}
-    <div className="relative flex flex-row  space-x-2">
+    <div className="relative flex ltr flex-row  space-x-2">
       <button
         className={`flex-1 py-2 text-base p-1 font-semibold transition-all duration-300 rounded-md z-10 ${
           isMonthly ? 'text-black' : 'text-white'
@@ -65,7 +72,7 @@ const PricingSection = () => {
             Essential features for small<br /> businesses to get started with Email<br />
             Marketing
           </p>
-          <h2 className="text-5xl ml-10 text-left font-bold text-[#3b4b48] mb-1">
+          <h2 className={`text-5xl ml-10 ${i18n.language === 'ar' ? 'text-center' : 'text-left'} text-left font-bold text-[#3b4b48] mb-1`}>
             ${isMonthly ? 15 : 12}<span className="text-lg">/month</span>
           </h2>
           <p className="text-base text-[#4b615f] mb-4"></p>
@@ -137,7 +144,7 @@ const PricingSection = () => {
             Advanced features and higher limits, ideal for growing businesses
             needing more capabilities
           </p>
-          <h2 className="text-5xl text-left ml-10 font-bold text-[#3b4b48] mb-1">
+          <h2 className={`text-5xl ${i18n.language === 'ar' ? 'text-right' : 'text-left'}text-left ml-10 font-bold text-[#3b4b48] mb-1`}>
             ${isMonthly ? 50 : 30}<span className="text-lg">/month</span>
           </h2>
           <p className="text-base text-[#4b615f] mb-4"></p>

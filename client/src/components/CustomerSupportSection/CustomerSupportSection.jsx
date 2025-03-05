@@ -1,9 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa"; // Import icons
 import i1 from "./i1.webp";
+import { useTranslation } from "react-i18next";
 
 const CustomerSupportSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const { t, i18n } = useTranslation();
+  const [isRTL, setIsRTL] = useState(i18n.language === 'ar');
+  useEffect(() => {
+    setIsRTL(i18n.language === 'ar');
+  }, [i18n.language]);
+  
 
   // Sample images - Replace with your own src paths
   const teamMembers = [
@@ -35,40 +42,37 @@ const CustomerSupportSection = () => {
 
   return (
     <div>
-    <div className="py-10 bg-green-100 mx-auto max-w-5xl  px-4">
-      <div className="flex p-4 flex-col md:flex-row items-center text-center md:text-left mb-8">
-        <div className="md:w-1/2 ml-20 flex justify-center md:justify-start">
-          <img src={i1} alt="Award" className="h-72" />
-        </div>
+    <div className="py-10 bg-green-100 mx-auto max-w-5xl px-4">
+  <div className="flex p-4 flex-col md:flex-row items-center text-center md:text-left mb-8">
+    <div className="md:w-1/2 ml-20 flex justify-center md:justify-start">
+      <img src={i1} alt={t('award_image_alt')} className="h-72" />
+    </div>
 
-        <div className="md:w-1/2 ml-0 lg:-ml-[200px] mt-4 md:mt-0">
-          <h2 className="text-5xl font-bold">
-            Get <span className="text-lgreen ">award-winning</span> customer support
-          </h2>
-          <p className="text-gray-700 text-lg mt-6">
-            With a Stevie Award for fantastic customer support and more than 5,300 five-star reviews on Shopify, we know how to get support right. Get top-notch 24/7 customer support to help your business grow.
-          </p>
-        </div>
-      </div>
-     
+    <div className={`md:w-1/2 ml-0 lg:-ml-[200px] ${i18n.language === 'ar' ? 'lg:ml-0 relative lg:left-20 left-0' : ''} mt-4 md:mt-0`}>
+      <h2 className="text-5xl font-bold">
+        {t('get')} <span className="text-lgreen">{t('award_winning')}</span> {t('customer_support')}
+      </h2>
+      <p className="text-gray-700 text-lg mt-6">
+        {t('support_description')}
+      </p>
+    </div>
+  </div>
+</div>
 
+<div className="text-center mt-10">
+  <button className="bg-lgreen mb-4 hover:bg-hgreen text-white py-4 px-6 w-56 rounded-lg">
+    {t('start_free')}
+  </button>
+  <a href="/pricing">
+    <button className="lg:ml-4 mr-0 lg:mr-4 ml-0 bg-transparent border border-black text-black py-4 px-4 w-56 rounded-lg hover:text-white hover:bg-black">
+      {t('see_pricing')}
+    </button>
+  </a>
+</div>
 
-      </div>
-
-      <div className="text-center  mt-10">
-        <button className="bg-lgreen mb-4  hover:bg-hgreen text-white py-4 px-6 w-56 rounded-lg ">
-          Start free
-        </button>
-        <a href="/pricing">
-        <button className="lg:ml-4 ml-0 bg-transparent border border-black text-black py-4 px-4 w-56 rounded-lg hover:text-white hover:bg-black">
-          See our pricing plans
-        </button>
-        </a>
-      </div>
-
-      <div className="text-center mb-20 mt-4 text-sm text-gray-500">
-        <p>Over 5,300+ five-star Shopify reviews</p>
-      </div>
+<div className="text-center mb-20 mt-4 text-sm text-gray-500">
+  <p>{t('shopify_reviews')}</p>
+</div>
     </div>
   );
 };

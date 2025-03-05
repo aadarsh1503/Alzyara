@@ -1,22 +1,14 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faCogs,
-  faBullhorn,
-  faReply,
-  faGem,
   faShoppingCart,
   faHourglass,
   faHandsHelping,
-  faTag,
   faMoneyBillAlt,
   faCheckCircle,
   faShoppingBag,
-
 } from '@fortawesome/free-solid-svg-icons';
-import { IoIosPaper } from 'react-icons/io';
-import { faConfluence } from '@fortawesome/free-brands-svg-icons'; 
-import { faHandshake } from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from 'react-i18next'; // Importing translation hook
 
 const Card = ({ title, description, icon, isHovered }) => {
   return (
@@ -26,7 +18,7 @@ const Card = ({ title, description, icon, isHovered }) => {
       }`}
     >
       <div
-        className={`flex items-center  justify-center w-16 h-16 rounded-md mb-4 ${
+        className={`flex items-center justify-center w-16 h-16 rounded-md mb-4 ${
           isHovered ? 'bg-lgreen text-white' : 'bg-gray-100 text-lgreen'
         }`}
       >
@@ -39,50 +31,44 @@ const Card = ({ title, description, icon, isHovered }) => {
 };
 
 const Ecommerce2 = () => {
+  const { t } = useTranslation(); // Hook for translation
   const [hoveredIndex, setHoveredIndex] = React.useState(null);
 
   const cards = [
     {
-      title: 'Share Your Catalog',
-      description:
-        'Use email to showcase your products and keep your customers updated with the latest stock information.',
-      icon: faShoppingCart ,
+      title: t('share_your_catalog'), // Translated key for title
+      description: t('share_catalog_description'), // Translated key for description
+      icon: faShoppingCart,
     },
     {
-      title: 'Fast Responses to offers',
-      description:
-        'Invite quick responses to your sales promotions, leveraging the high open rates of email marketing.',
-      icon: faHourglass  ,
+      title: t('fast_responses_to_offers'),
+      description: t('fast_responses_description'),
+      icon: faHourglass,
     },
     {
-      title: 'Confirmation and Support',
-      description:
-        'Send automated order confirmations and billing updates, and provide support through automated email sequences.',
+      title: t('confirmation_and_support'),
+      description: t('confirmation_support_description'),
       icon: faHandsHelping,
     },
     {
-      title: 'Personalized Promotions',
-      description:
-        'Send targeted email campaigns with personalized promotions based on customer purchase patterns or seasonal trends.',
+      title: t('personalized_promotions'),
+      description: t('personalized_promotions_description'),
       icon: faMoneyBillAlt,
     },
     {
-      title: 'Loyalty Program Updates',
-      description:
-        'Enroll customers in your loyalty programs and keep them informed about points schemes and personalized special offers through email.',
-      icon: faCheckCircle,  // Updated icon for WhatsApp
+      title: t('loyalty_program_updates'),
+      description: t('loyalty_program_description'),
+      icon: faCheckCircle,
     },
     {
-      title: 'In Stock & New Products',
-      description:
-        'Immediately alert customers when items are back in stock, and promote new products, upsell, and cross-sell through timely email notifications.',
-      icon: faShoppingBag,  // Updated icon for engagement
+      title: t('in_stock_new_products'),
+      description: t('in_stock_description'),
+      icon: faShoppingBag,
     },
-    
   ];
 
   return (
-    <div className="grid grid-cols-1  max-w-5xl mx-auto md:grid-cols-2 gap-6 p-8  bg-gray-50">
+    <div className="grid grid-cols-1 max-w-5xl mx-auto md:grid-cols-2 gap-6 p-8 bg-gray-50">
       {cards.map((card, index) => (
         <div
           key={index}

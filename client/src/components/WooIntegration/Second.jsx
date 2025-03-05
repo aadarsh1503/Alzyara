@@ -17,7 +17,7 @@ const Second = () => {
       </div>
 
       {/* Right Section */}
-      <div className="lg:w-2/3 mt-8 lg:-ml-[300px] lg:mt-0 flex justify-center">
+      <div className="lg:w-2/3 mt-8  lg:mt-0 flex justify-center">
   <div className="w-full h-auto rounded-lg flex items-center justify-center">
     {/* Placeholder for the right side */}
     <img src={i5} className="w-[500px] h-auto lg:w-[500px] lg:h-auto" alt="Right Side Image" />

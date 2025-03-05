@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   FaChartPie,
   FaNetworkWired,
@@ -14,8 +15,14 @@ import {
 } from "react-icons/fa";
 
 const ToolsSection = () => {
+  const { t, i18n } = useTranslation();
+  const [isRTL, setIsRTL] = useState(i18n.language === 'ar');
+  useEffect(() => {
+    setIsRTL(i18n.language === 'ar');
+  }, [i18n.language]);
+  
   return (
-    <div className="bg-white ml-0 lg:ml-20  py-16 ">
+    <div className={`bg-white ml-0 lg:ml-20 ${i18n.language === 'ar' ? 'lg:mr-20' : ''}  py-16 `}>
       <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-1 items-center">
         {/* Left Side: Blocks */}
         <div className="grid lg:grid-cols-3 sm:grid-cols-1 gap-4">

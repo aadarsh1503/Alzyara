@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { FaBullhorn, FaReply, FaGem, FaHandshake, FaEnvelope, FaNetworkWired, FaPhone, FaCogs } from 'react-icons/fa';
 import { FaConfluence } from 'react-icons/fa'; 
 
@@ -10,7 +11,7 @@ const Card = ({ title, description, icon, isHovered }) => {
       }`}
     >
       <div
-        className={`flex items-center  justify-center w-16 h-16 rounded-md mb-4 ${
+        className={`flex items-center justify-center w-16 h-16 rounded-md mb-4 ${
           isHovered ? 'bg-lgreen text-white' : 'bg-gray-100 text-lgreen'
         }`}
       >
@@ -23,44 +24,45 @@ const Card = ({ title, description, icon, isHovered }) => {
 };
 
 const Sales2 = () => {
+  const { t, i18n } = useTranslation();
+  const [isRTL, setIsRTL] = useState(i18n.language === 'ar');
+  useEffect(() => {
+    setIsRTL(i18n.language === 'ar');
+  }, [i18n.language]);
+
+  
   const [hoveredIndex, setHoveredIndex] = React.useState(null);
 
   const cards = [
     {
-      title: 'Email Sign-Up Forms',
-      description:
-        'Add an email sign-up form on your website, Facebook, and Instagram ads to capture queries from highly qualified leads.',
+      title: t('email_sign_up_forms'),
+      description: t('email_signup_description'),
       icon: <FaEnvelope className="text-4xl" />,
     },
     {
-      title: 'Automated Email Sequences',
-      description:
-        'Initiate automated email  right after sign-up with Alzyara easy-to-build email workflows using a drag-and-drop interface.',
+      title: t('automated_email_sequences'),
+      description: t('automated_email_description'),
       icon: <FaNetworkWired  className="text-4xl" />,
     },
     {
-      title: 'Build Relationships Fast',
-      description:
-        'Guide parents through your admissions process with personalized email workflows that ensure students sign up correctly.',
+      title: t('build_relationships_fast'),
+      description: t('build_relationships_description'),
       icon: <FaPhone className="text-4xl" />,
     },
     {
-      title: 'Route Qualified Leads',
-      description:
-        'Provide instant information to assist students in completing your onboarding process easily through automated email sequences.',
+      title: t('route_qualified_leads'),
+      description: t('route_qualified_leads_description'),
       icon: <FaGem className="text-4xl" />,
     },
     {
-      title: 'Personalized Promotions',
-      description:
-        'Send students automated email reminders of timetables and classes, ensuring they never miss an important session.',
+      title: t('personalized_promotions'),
+      description: t('personalized_promotions_description'),
       icon: <FaHandshake  className="text-4xl" />,
     },
     {
-      title: 'Integrate Your Tools',
-      description:
-        'Instantly deliver reports and exam results to students and parents with automated email notifications.',
-      icon: <FaCogs  shake className="text-4xl" />,
+      title: t('integrate_your_tools'),
+      description: t('integrate_your_tools_description'),
+      icon: <FaCogs shake className="text-4xl" />,
     },
   ];
 

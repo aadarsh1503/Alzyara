@@ -1,105 +1,111 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Tool6 from './Tool6';
+import { useTranslation } from 'react-i18next';
 
 
 const EmailVerification = () => {
+  const { t, i18n } = useTranslation();
+  const [isRTL, setIsRTL] = useState(i18n.language === 'ar');
+  useEffect(() => {
+    setIsRTL(i18n.language === 'ar');
+  }, [i18n.language]);
   return (
     <div>
     <div className="flex flex-col md:flex-row items-center max-w-7xl mx-auto justify-between  px-6 py-10 md:px-16 md:py-20">
       {/* Left Side Content */}
-      <div className="md:w-1/2 mt-0 lg:mt-10 text-left">
-      <h1 className='font-semibold mb-2'>Real-Time Verification ⏱️</h1>
-        <h1 className="text-4xl font-semibold text-gray-900 leading-tight md:leading-snug">
-        Ensure Email Accuracy<br />Instantly
-        </h1>
-        <p className="mt-4 text-lg text-gray-700">
-        Validate email addresses in real-time as they <br />are entered, ensuring your list is accurate and<br /> deliverable.
-        </p>
-        <ul className="mt-6 space-y-4">
-          <li className="flex items-start">
-            <span className="text-white mr-3 mt-2 p-xs rounded-full  bg-lgreen">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-            </span>
-            <span className="text-black font-medium">
-              <span className='font-bold'>
-              Customizable Workflows: </span><span className='font-normal'> Build complex workflows with a visual editor.</span> 
-            </span>
-          </li>
-          <li className="flex items-start">
-            <span className="text-white mr-3 mt-2 p-xs rounded-full  bg-lgreen">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-            </span>
-            <span className="text-black font-medium">
-              <strong>Trigger-Based Automation: </strong> <span className="font-normal">Automate emails based on user actions like<br />sign-ups and purchases.</span>
-            </span>
-          </li>
-          <li className="flex items-start">
-            <span className="text-white mr-3 mt-2 p-xs rounded-full  bg-lgreen">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 " fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-            </span>
-            <span className="text-gray-800 font-medium">
-              <strong>Efficiency Boost:</strong><span className="font-normal text-base"> Save time by automating repetitive tasks.</span>
-            </span>
-          </li>
-          <li className="flex items-start">
-            <span className="text-white mr-3 mt-2 p-xs rounded-full  bg-lgreen">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 " fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-            </span>
-            <span className="text-gray-800 font-medium">
-              <strong>Seamless Integration:</strong><span className="font-normal text-base"> Easily integrate real-time verification with your <br /> existing forms.</span>
-            </span>
-            
-          </li>
-        </ul>
-        <button className="mt-8 bg-lgreen text-white px-6 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-hgreen">
-          Create A FREE Account
-        </button>
-        <div className="mt-6 grid grid-cols-2  text-gray-800">
-          <ul className="space-y-2">
-            <li className="flex items-start">
-              <span className="text-lgreen mr-2">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
-              </span>
-              Immediate Validation
-            </li>
-            <li className="flex items-start">
-              <span className="text-lgreen mr-2">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
-              </span>
-              Reduce Bounces
-            </li>
-          </ul>
-          <ul className="space-y-2">
-            <li className="flex items-start">
-              <span className="text-lgreen mr-2">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
-              </span>
-              Improve Deliverability
-            </li>
-            <li className="flex items-start">
-              <span className="text-lgreen mr-2">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
-              </span>
-              Seamless Integration
-            </li>
-          </ul>
-        </div>
+      <div className={`md:w-1/2 mt-0 lg:mt-10 ${i18n.language === 'ar' ? 'text-right' : 'text-left'}`}>
+      <h1 className='font-semibold mb-2'>{t('real_time_verification')}</h1>
+<h1 className="text-4xl font-semibold text-gray-900 leading-tight md:leading-snug">
+  {t('ensure_email_accuracy')}<br />{t('instantly')}
+</h1>
+<p className="mt-4 text-lg text-gray-700">
+  {t('validate_email_real_time')}<br />{t('ensure_accurate_deliverable')}
+</p>
+<ul className="mt-6 space-y-4">
+  <li className="flex items-start">
+    <span className="text-white mr-3 mt-2 p-xs rounded-full bg-lgreen">
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+      </svg>
+    </span>
+    <span className="text-black  font-medium mr-2">
+      <span className='font-bold'>{t('customizable_workflows')}</span>: <span className='font-normal'>{t('build_complex_workflows')}</span>
+    </span>
+  </li>
+  <li className="flex items-start">
+    <span className="text-white mr-3 mt-2 p-xs rounded-full bg-lgreen">
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+      </svg>
+    </span>
+    <span className="text-black  font-medium mr-2">
+      <strong>{t('trigger_based_automation')}</strong>: <span className="font-normal">{t('automate_emails_user_actions')}</span>
+    </span>
+  </li>
+  <li className="flex items-start">
+    <span className="text-white mr-3 mt-2 p-xs rounded-full bg-lgreen">
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+      </svg>
+    </span>
+    <span className="text-gray-800  font-medium mr-2">
+      <strong>{t('efficiency_boost')}</strong>: <span className="font-normal text-base">{t('save_time_automation')}</span>
+    </span>
+  </li>
+  <li className="flex items-start">
+    <span className="text-white mr-3 mt-2 p-xs rounded-full bg-lgreen">
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+      </svg>
+    </span>
+    <span className="text-gray-800  font-medium mr-2">
+      <strong>{t('seamless_integration')}</strong>: <span className="font-normal text-base">{t('integrate_real_time_forms')}</span>
+    </span>
+  </li>
+</ul>
+<button className="mt-8 bg-lgreen text-white px-6 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-hgreen">
+  {t('create_free_account')}
+</button>
+
+<div className="mt-6 grid grid-cols-2 text-gray-800">
+  <ul className="space-y-2">
+    <li className="flex items-start">
+      <span className="text-lgreen mr-2">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      </span>
+      {t('immediate_validation')}
+    </li>
+    <li className="flex items-start">
+      <span className="text-lgreen mr-2">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      </span>
+      {t('reduce_bounces')}
+    </li>
+  </ul>
+  <ul className="space-y-2">
+    <li className="flex items-start">
+      <span className="text-lgreen mr-2">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      </span>
+      {t('improve_deliverability')}
+    </li>
+    <li className="flex items-start">
+      <span className="text-lgreen mr-2">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      </span>
+      {t('seamless_integration')}
+    </li>
+  </ul>
+</div>
+
       </div>
 
       {/* Right Side Image */}
@@ -117,99 +123,109 @@ const EmailVerification = () => {
   </div>
 
   {/* Left Side Content */}
-  <div className="md:w-1/2 mt-0 lg:mt-10 text-left">
-    <h1 className='font-semibold mb-2'>Bulk Verification 📋</h1>
-    <h1 className="text-4xl font-semibold text-gray-900 leading-tight md:leading-snug">
-    Clean Your Entire Email<br />List Efficiently
-    </h1>
-    <p className="mt-4 text-lg text-gray-700">
-    Verify large volumes of email addresses in<br />one go to keep your email list clean and up-<br />to-date.
-    </p>
-    <ul className="mt-6 space-y-4">
-      <li className="flex items-start">
-        <span className="text-white mr-3 mt-2 p-xs rounded-full bg-lgreen">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-          </svg>
-        </span>
-        <span className="text-black font-medium">
-          <span className='font-bold'>
-          Batch Processing:</span><span className='font-normal'> Verify thousands of emails at once for maximum efficiency.</span>
-        </span>
-      </li>
-      <li className="flex items-start">
-        <span className="text-white mr-3 mt-2 p-xs rounded-full bg-lgreen">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-          </svg>
-        </span>
-        <span className="text-black font-medium">
-          <strong>High Accuracy: </strong> <span className="font-normal">Detect and remove invalid or risky email addresses.</span>
-        </span>
-      </li>
-      <li className="flex items-start">
-        <span className="text-white mr-3 mt-2 p-xs rounded-full bg-lgreen">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-          </svg>
-        </span>
-        <span className="text-gray-800 font-medium">
-          <strong>Cost-Effective Solution: </strong><span className="font-normal text-base"> Save costs associated with sending to invalid emails.</span>
-        </span>
-      </li>
-      <li className="flex items-start">
-        <span className="text-white mr-3 mt-2 p-xs rounded-full bg-lgreen">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-          </svg>
-        </span>
-        <span className="text-gray-800 font-medium">
-          <strong>Improved Campaign Performance:  </strong><span className="font-normal text-base"> Boost your email campaign results with a clean list.</span>
-        </span>
-      </li>
-    </ul>
-    <button className="mt-8 bg-lgreen text-white px-6 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-hgreen">
-      Create A FREE Account
-    </button>
-    <div className="mt-6 grid grid-cols-2 text-gray-800">
-      <ul className="space-y-2">
-        <li className="flex items-start">
-          <span className="text-lgreen mr-2">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-          </span>
-          Batch Processing
-        </li>
-        <li className="flex items-start">
-          <span className="text-lgreen mr-2">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-          </span>
-         
-          Cost-Effective Solution
-        </li>
-      </ul>
-      <ul className="space-y-2">
-        <li className="flex items-start">
-          <span className="text-lgreen mr-2">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-          </span>
-          High Accuracy
-        </li>
-        <li className="flex items-start">
-          <span className="text-lgreen mr-2">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-          </span>
-          Improved Campaign Performance
-        </li>
-      </ul>
-    </div>
+  <div className={`md:w-1/2 mt-0 lg:mt-10 ${i18n.language === 'ar' ? 'text-right relative right-20' : 'text-left'}`}>
+  <h1 className="font-semibold mb-2">{t('bulk_verification')} 📋</h1>
+<h1 className="text-4xl font-semibold text-gray-900 leading-tight md:leading-snug">
+  {t('clean_email_list')}
+</h1>
+<p className="mt-4 text-lg text-gray-700">
+  {t('verify_large_volumes')}
+</p>
+
+<ul className="mt-6 space-y-4">
+  <li className="flex items-start">
+    <span className="text-white mr-3 mt-2 p-xs rounded-full bg-lgreen">
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+      </svg>
+    </span>
+    <span className="text-black  font-medium mr-2">
+      <span className="font-bold">{t('batch_processing')}</span>
+      <span className="font-normal"> {t('batch_processing_desc')}</span>
+    </span>
+  </li>
+
+  <li className="flex items-start">
+    <span className="text-white mr-3 mt-2 p-xs rounded-full bg-lgreen">
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+      </svg>
+    </span>
+    <span className="text-black  font-medium mr-2">
+      <strong>{t('high_accuracy')}</strong>
+      <span className="font-normal"> {t('high_accuracy_desc')}</span>
+    </span>
+  </li>
+
+  <li className="flex items-start">
+    <span className="text-white mr-3 mt-2 p-xs rounded-full bg-lgreen">
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+      </svg>
+    </span>
+    <span className="text-gray-800  font-medium mr-2">
+      <strong>{t('cost_effective')}</strong>
+      <span className="font-normal text-base"> {t('cost_effective_desc')}</span>
+    </span>
+  </li>
+
+  <li className="flex items-start">
+    <span className="text-white mr-3 mt-2 p-xs rounded-full bg-lgreen">
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+      </svg>
+    </span>
+    <span className="text-gray-800  font-medium mr-2">
+      <strong>{t('improved_performance')}</strong>
+      <span className="font-normal text-base"> {t('improved_performance_desc')}</span>
+    </span>
+  </li>
+</ul>
+
+<button className="mt-8 bg-lgreen text-white px-6 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-hgreen">
+  {t('create_account')}
+</button>
+
+<div className="mt-6 grid grid-cols-2 text-gray-800">
+  <ul className="space-y-2">
+    <li className="flex items-start">
+      <span className="text-lgreen mr-2">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      </span>
+      {t('batch_processing')}
+    </li>
+    <li className="flex items-start">
+      <span className="text-lgreen mr-2">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      </span>
+      {t('cost_effective')}
+    </li>
+  </ul>
+
+  <ul className="space-y-2">
+    <li className="flex items-start">
+      <span className="text-lgreen mr-2">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      </span>
+      {t('high_accuracy')}
+    </li>
+    <li className="flex items-start">
+      <span className="text-lgreen mr-2">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      </span>
+      {t('improved_performance')}
+    </li>
+  </ul>
+</div>
+
   </div>
 </div>
 
@@ -217,99 +233,101 @@ const EmailVerification = () => {
 {/*third */}
 <div className="flex flex-col md:flex-row items-center max-w-7xl mx-auto justify-between  px-6 py-10 md:px-16 md:py-20">
       {/* Left Side Content */}
-      <div className="md:w-1/2 mt-0 lg:mt-10 text-left">
-      <h1 className='font-semibold mb-2'>Bounce Management 📉</h1>
-        <h1 className="text-4xl font-semibold text-gray-900 leading-tight md:leading-snug">
-        Keep Your Email List<br />Healthy
+      <div className={`md:w-1/2 mt-0 lg:mt-10 ${i18n.language === 'ar' ? 'text-right' : 'text-left'}`}>
+      <h1 className="font-semibold mb-2">{t('bounce_management')} 📉</h1>
 
-        </h1>
-        <p className="mt-4 text-lg text-gray-700">
-        Automatically handle bounced emails to <br />maintain a clean and effective email list.
-        </p>
-        <ul className="mt-6 space-y-4">
-          <li className="flex items-start">
-            <span className="text-white mr-3 mt-2 p-xs rounded-full  bg-lgreen">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-            </span>
-            <span className="text-black font-medium">
-              <span className='font-bold'>Enhanced Deliverability: </span><span className='font-normal'>  Improve your email campaign success by reducing bounces.</span> 
-            </span>
-          </li>
-          <li className="flex items-start">
-            <span className="text-white mr-3 mt-2 p-xs rounded-full  bg-lgreen">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-            </span>
-            <span className="text-black font-medium">
-              <strong>Automatic Handling: </strong> <span className="font-normal">Bounced emails are automatically flagged and managed.</span>
-            </span>
-          </li>
-          <li className="flex items-start">
-            <span className="text-white mr-3 mt-2 p-xs rounded-full  bg-lgreen">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 " fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-            </span>
-            <span className="text-gray-800 font-medium">
-              <strong>Real-Time Updates: </strong><span className="font-normal text-base"> Get real-time updates on bounce statuses .</span>
-            </span>
-          </li>
-          <li className="flex items-start">
-            <span className="text-white mr-3 mt-2 p-xs rounded-full  bg-lgreen">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 " fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-            </span>
-            <span className="text-gray-800 font-medium">
-              <strong>Maintain List Quality: </strong><span className="font-normal text-base"> Ensure your email list remains clean and deliverable.</span>
-            </span>
-          </li>
-        </ul>
-        <button className="mt-8 bg-lgreen text-white px-6 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-hgreen">
-          Create A FREE Account
-        </button>
-        <div className="mt-6 grid grid-cols-2  text-gray-800">
-          <ul className="space-y-2">
-            <li className="flex items-start">
-              <span className="text-lgreen mr-2">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
-              </span>
-              Automatic Handling
-            </li>
-            <li className="flex items-start">
-              <span className="text-lgreen mr-2">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
-              </span>
-              Maintain List Quality
-            </li>
-          </ul>
-          <ul className="space-y-2">
-            <li className="flex items-start">
-              <span className="text-lgreen mr-2">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
-              </span>
-              Enhanced Deliverability
-            </li>
-            <li className="flex items-start">
-              <span className="text-lgreen mr-2">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
-              </span>
-              
-Real-Time Updates
-            </li>
-          </ul>
-        </div>
+  <h1 className="text-4xl font-semibold text-gray-900 leading-tight md:leading-snug">
+    {t('keep_email_list')}
+  </h1>
+
+  <p className="mt-4 text-lg text-gray-700">
+    {t('bounce_description')}
+  </p>
+
+
+  <ul className="mt-6 space-y-4">
+    {[
+      {
+        title: t('enhanced_deliverability_title'),
+        description: t('enhanced_deliverability_desc'),
+      },
+      {
+        title: t('automatic_handling_title'),
+        description: t('automatic_handling_desc'),
+      },
+      {
+        title: t('real_time_updates_title'),
+        description: t('real_time_updates_desc'),
+      },
+      {
+        title: t('maintain_list_quality_title'),
+        description: t('maintain_list_quality_desc'),
+      },
+    ].map((item, index) => (
+      <li key={index} className="flex items-start">
+        <span className="text-white mr-3 mt-2 p-xs rounded-full bg-lgreen">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+        </span>
+        <span className="text-gray-800  font-medium mr-2 mr-2">
+          <strong>{item.title}</strong>
+          <span className="font-normal text-base"> {item.description}</span>
+        </span>
+      </li>
+    ))}
+  </ul>
+
+
+  <button className="mt-8 bg-lgreen text-white px-6 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-hgreen">
+    {t('create_free_account')}
+  </button>
+  <div className="mt-6 grid grid-cols-2 text-gray-800">
+  <ul className="space-y-2">
+    <li className="flex items-start">
+      <span className="text-lgreen mr-2">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      </span>
+      {t('automatic_handling')}
+    </li>
+    <li className="flex items-start">
+      <span className="text-lgreen mr-2">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      </span>
+      {t('maintain_list_quality')}
+    </li>
+  </ul>
+  <ul className="space-y-2">
+    <li className="flex items-start">
+      <span className="text-lgreen mr-2">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      </span>
+      {t('enhanced_deliverability')}
+    </li>
+    <li className="flex items-start">
+      <span className="text-lgreen mr-2">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      </span>
+      {t('real_time_updates')}
+    </li>
+  </ul>
+</div>
+
       </div>
 
       {/* Right Side Image */}

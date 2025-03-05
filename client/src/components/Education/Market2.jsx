@@ -1,3 +1,4 @@
+// src/Market2.js
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -8,11 +9,11 @@ import {
   faHeadphones,
   faCalendar,
   faChartLine,
-
 } from '@fortawesome/free-solid-svg-icons';
 
 import { faConfluence } from '@fortawesome/free-brands-svg-icons'; 
-import { faHandshake,faUser ,faTools  } from '@fortawesome/free-solid-svg-icons';
+import { faHandshake, faUser, faTools } from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from 'react-i18next';
 
 const Card = ({ title, description, icon, isHovered }) => {
   return (
@@ -35,46 +36,46 @@ const Card = ({ title, description, icon, isHovered }) => {
 };
 
 const Market2 = () => {
+  const { t } = useTranslation(); // hook to access translation function
   const [hoveredIndex, setHoveredIndex] = React.useState(null);
 
   const cards = [
     {
-      title: 'Lead Management',
+      title: t('lead_management'),
       description:
-        'Engage and attract new students through targeted email campaigns  with your CRM to broadcast marketing messages effectively.',
-      icon: faUser ,
+        t('lead_management_desc'),
+      icon: faUser,
     },
     {
-      title: 'Instant Problem Resolution',
+      title: t('instant_problem_resolution'),
       description:
-        'Provide quick answers with automated email responses and escalate to support teams when human intervention is needed.',
-      icon: faTools ,
+        t('instant_problem_resolution_desc'),
+      icon: faTools,
     },
     {
-      title: 'Support for Admissions',
+      title: t('support_for_admissions'),
       description:
-        'Guide parents through your admissions process with personalized email workflows that ensure students sign up correctly.',
+        t('support_for_admissions_desc'),
       icon: faReply,
     },
     {
-      title: 'Onboarding Support',
+      title: t('onboarding_support'),
       description:
-        'Provide instant information to assist students in completing your onboarding process easily through automated email sequences.',
+        t('onboarding_support_desc'),
       icon: faHeadphones,
     },
     {
-      title: 'Timely class Reminders',
+      title: t('timely_class_reminders'),
       description:
-        'Send students automated email reminders of timetables and classes, ensuring they never miss an important session.',
-      icon: faCalendar,  // Updated icon for WhatsApp
+        t('timely_class_reminders_desc'),
+      icon: faCalendar,
     },
     {
-      title: 'Student Reports',
+      title: t('student_reports'),
       description:
-        'Instantly deliver reports and exam results to students and parents with automated email notifications.',
-      icon: faChartLine,  // Updated icon for engagement
+        t('student_reports_desc'),
+      icon: faChartLine,
     },
-    
   ];
 
   return (

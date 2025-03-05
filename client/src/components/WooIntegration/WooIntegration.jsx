@@ -11,7 +11,7 @@ const WooIntegration = () => {
     <div>
     <div className="bg-white  mt-24 mx-auto flex flex-col lg:flex-row items-center justify-between px-8 lg:px-20 py-12 lg:py-12">
       {/* Left Section */}
-      <div className=" max-w-sm ml-20 mx-auto space-y-6">
+      <div className=" max-w-sm ml-20 mr-20 mx-auto space-y-6">
         <p className="text-sm text-gray-500 uppercase font-semibold tracking-wider">
         Enhance Your Campaigns with ALZYARA and Woo Commerce Addon
         </p>
@@ -27,7 +27,7 @@ const WooIntegration = () => {
       </div>
 
       {/* Right Section */}
-      <div className="lg:w-2/3 mt-8 lg:-ml-[300px] lg:mt-0 flex justify-center">
+      <div className="lg:w-2/3 mt-8  lg:mt-0 flex justify-center">
   <div className="w-full h-auto rounded-lg flex items-center justify-center">
     {/* Placeholder for the right side */}
     <img src={i1} className="w-[500px] h-auto lg:w-[500px] lg:h-auto" alt="Right Side Image" />

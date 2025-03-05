@@ -30,6 +30,7 @@ import Hero1Section from './components/Hero1Section/Hero1Section';
 import ContactSection from './components/ContactSection/ContactSection';
 import PrivacySection from './components/PrivacyPolicy/PrivacyPolicy';
 import TermsofServic from './components/TermsofServic/TermsofServic';
+import { DirectionProvider } from './components/DirectionContext';
 
 
 
@@ -39,7 +40,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-     
+     <DirectionProvider />
         <MobileNavbar />
           <Navbar />
           <Routes>

@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const ContactSection = () => {
+  const { t, i18n } = useTranslation();
+  const [isRTL, setIsRTL] = useState(i18n.language === 'ar');
+  useEffect(() => {
+    setIsRTL(i18n.language === 'ar');
+  }, [i18n.language]);
+  
   return (
     <div className="flex flex-col mt-32 md:flex-row items-center justify-between w-full min-h-screen ">
       {/* Left Form Section */}
-      <div className="w-full lg:max-w-xl ml-0 lg:ml-20 md:w-1/2 p-8 md:p-16 bg-white">
+      <div className="w-full lg:max-w-xl ml-0 lg:ml-20  lg:mr-20 md:w-1/2 p-8 md:p-16 bg-white">
         <div className="mb-4">
           <span className="bg-bkg p-2 rounded-md font-bold text-sm uppercase">Contact Us</span>
           <h1 className="text-4xl font-bold mt-2 relative">
@@ -64,7 +71,7 @@ const ContactSection = () => {
       </div>
 
       {/* Right Map Section */}
-      <div className="w-full relative right-10 md:w-1/2">
+      <div className={`w-full relative ${i18n.language === 'ar' ? 'lg:ml-0 relative lg:left-12 left-0' : 'right-10'}  md:w-1/2`}>
       <iframe
           title="Google Map"
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14435.236249565674!2d50.5237206!3d26.1868843!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49afd0213a19d3%3A0x2f892ffe9e6f0385!2sGlobal%20Vision%20Solutions!5e0!3m2!1sen!2sin!4v1731936574918!5m2!1sen!2sin"
