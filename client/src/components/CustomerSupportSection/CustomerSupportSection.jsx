@@ -58,7 +58,7 @@ const CustomerSupportSection = () => {
     </div>
   </div>
 </div>
-
+ 
 <div className="text-center mt-10">
   <button className="bg-lgreen mb-4 hover:bg-hgreen text-white py-4 px-6 w-56 rounded-lg">
     {t('start_free')}

@@ -58,7 +58,7 @@ function App() {
             <Route path="/feature5" element={<LeadWebForm />} />
             <Route path="/feature6" element={<EmailVerification />} />
             <Route path="/solution2" element={<Education />} />
-            <Route path="/solution3" element={<SalesTeam />} />
+            <Route path="/solution3" element={<SalesTeam />} />  
             <Route path="/solution4" element={<Ecommerce />} />
             <Route path="/integration2" element={<Pabblyintegration />} />
             <Route path="/integration3" element={<WooIntegration />} />

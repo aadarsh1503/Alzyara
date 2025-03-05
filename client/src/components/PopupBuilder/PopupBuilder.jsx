@@ -34,7 +34,7 @@ const PopupBuilder  = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </span>
-          <span className="text-black font-medium">
+          <span className="text-black  font-medium mr-2">
             <strong>{item.bold}: </strong>
             <span className="font-normal">{item.text}</span>
           </span>
@@ -128,7 +128,7 @@ const PopupBuilder  = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </span>
-          <span className="text-black font-medium">
+          <span className="text-black  font-medium mr-2">
             <span className='font-bold'>{t(item.title)}: </span>
             <span className='font-normal'>{t(item.description)}</span>
           </span>

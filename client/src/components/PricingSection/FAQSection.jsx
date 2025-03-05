@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const FAQBlock = ({ question, answer, isOpen, onToggle }) => {
   return (
@@ -20,15 +21,20 @@ const FAQBlock = ({ question, answer, isOpen, onToggle }) => {
 };
 
 const FAQSection = () => {
+  const { t, i18n } = useTranslation();
+  const [isRTL, setIsRTL] = useState(i18n.language === 'ar');
+  useEffect(() => {
+    setIsRTL(i18n.language === 'ar');
+  }, [i18n.language]);
   const [openQuestionIndex, setOpenQuestionIndex] = useState(null);
 
   const faqs = [
-    { question: "1. Is there a free trial available?", answer: "Yes, you can try us for free for 30 days. If you want, we'll provide you with a free 30-minute onboarding call to get you up and running." },
-    { question: "2. Can I change my plan later?", answer: "Of course you can! Our pricing scales with your company. Chat to our friendly team to find a solution that works for you as you grow." },
-    { question: "3. What is your cancellation policy?", answer: "We understand that things change. You can cancel your plan at any time and we'll refund you the difference already paid." },
-    { question: "4. Can info be added to an invoice?", answer: "At the moment, the only way to add additional information to invoices is to add the information to the workspace's name manually." },
-    { question: "5. How does billing work?", answer: "Plans are per workspace, not per account. You can upgrade one workspace, and still have any number of free workspaces." },
-    { question: "6. How do I change my account email?", answer: "You can change the email address associated with your account by going to untitled.com/account from a laptop or desktop." },
+    { question: t("faq_1_question"), answer: t("faq_1_answer") },
+    { question: t("faq_2_question"), answer: t("faq_2_answer") },
+    { question: t("faq_3_question"), answer: t("faq_3_answer") },
+    { question: t("faq_4_question"), answer: t("faq_4_answer") },
+    { question: t("faq_5_question"), answer: t("faq_5_answer") },
+    { question: t("faq_6_question"), answer: t("faq_6_answer") },
   ];
 
   const toggleQuestion = (index) => {
@@ -38,13 +44,12 @@ const FAQSection = () => {
   return (
     <div className="bg-gray-50 py-10 mt-10 px-6 md:px-16">
       <div className="text-center mb-8">
-        <p className="text-lgreen font-medium">Frequently Asked Questions</p>
+        <p className="text-lgreen font-medium">{t('faq_section_title')}</p>
         <h2 className="text-2xl md:text-4xl font-bold">
-          All the answers you're looking for
+          {t('faq_section_heading')}
         </h2>
         <p className="text-gray-600 mt-2">
-          If you're new or looking for answers to your questions, this guide will
-          help you learn more about our services and their features.
+          {t('faq_section_description')}
         </p>
       </div>
 

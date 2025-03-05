@@ -39,7 +39,7 @@ const MarketingSection = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </span>
-          <span className="text-black font-medium">
+          <span className="text-black  font-medium mr-2">
             <strong>{t('user_friendly_interface')}</strong> {t('user_friendly_desc')}
           </span>
         </li>
@@ -50,7 +50,7 @@ const MarketingSection = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </span>
-          <span className="text-black font-medium">
+          <span className="text-black  font-medium mr-2">
             <strong>{t('customizable_elements')}</strong> {t('customizable_desc')}
           </span>
         </li>
@@ -61,7 +61,7 @@ const MarketingSection = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </span>
-          <span className="text-gray-800 font-medium">
+          <span className="text-gray-800  font-medium mr-2">
             <strong>{t('mobile_responsive_designs')}</strong> {t('mobile_responsive_desc')}
           </span>
         </li>

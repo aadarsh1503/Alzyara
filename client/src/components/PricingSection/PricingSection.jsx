@@ -19,41 +19,42 @@ const PricingSection = () => {
   return (
     <>
     <div className=" font-poppins bg-white py-16 mt-20 px-4 text-center">
-        <h1 className="font-bold">Plans & Pricing</h1>
-<h2 className="text-2xl font-bold lg:text-4xl">Choose a pricing plan that works for you</h2>
-<p className="text-xl mt-3 mb-8">Whether you're an individual, a small team, or a growing<br /> enterprise, we have a plan that aligns perfectly with your goals.</p>
+    <h1 className="font-bold">{t('plans_and_pricing')}</h1>
+<h2 className="text-2xl font-bold lg:text-4xl">{t('choose_pricing_plan')}</h2>
+<p className="text-xl mt-3 mb-8">{t('pricing_plan_description')}</p>
 <div dir="ltr" className="flex justify-center  items-center mb-8">
-  <div className="outline outline-1 outline-lgreen p-1 rounded-md ">
-  <div className="relative   rounded-lg p-   w-44">
-    {/* Sliding Background */}
-    <div
-      className={`absolute top-0 left-0
-  ltr h-full w-1/2  rounded-md bg-lgreen  transition-all duration-300 ${
-        isMonthly ? 'translate-x-full' : 'translate-x-0'
-      }`}
-    ></div>
-    {/* Buttons */}
-    <div className="relative flex ltr flex-row  space-x-2">
-      <button
-        className={`flex-1 py-2 text-base p-1 font-semibold transition-all duration-300 rounded-md z-10 ${
-          isMonthly ? 'text-black' : 'text-white'
+  <div className="outline outline-1 outline-lgreen p-1 rounded-md">
+    <div className="relative   rounded-lg p-   w-44">
+      {/* Sliding Background */}
+      <div
+        className={`absolute top-0 left-0
+        ltr h-full w-1/2 rounded-md bg-lgreen  transition-all duration-300 ${
+          isMonthly ? 'translate-x-full' : 'translate-x-0'
         }`}
-        onClick={() => setIsMonthly(false)}
-      >
-        Annually
-      </button>
-      <button
-        className={`flex-1 py-2 text-base font-semibold transition-all duration-300 rounded-md z-10 ${
-          isMonthly ? 'text-white' : 'text-black'
-        }`}
-        onClick={() => setIsMonthly(true)}
-      >
-        Monthly
-      </button>
-    </div>
+      ></div>
+      {/* Buttons */}
+      <div className="relative flex ltr flex-row  space-x-2">
+        <button
+          className={`flex-1 py-2 text-base p-1 font-semibold transition-all duration-300 rounded-md z-10 ${
+            isMonthly ? 'text-black' : 'text-white'
+          }`}
+          onClick={() => setIsMonthly(false)}
+        >
+          {t('annually')}
+        </button>
+        <button
+          className={`flex-1 py-2 text-base font-semibold transition-all duration-300 rounded-md z-10 ${
+            isMonthly ? 'text-white' : 'text-black'
+          }`}
+          onClick={() => setIsMonthly(true)}
+        >
+          {t('monthly')}
+        </button>
+      </div>
     </div>
   </div>
 </div>
+
 
 
 
@@ -65,71 +66,70 @@ const PricingSection = () => {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {/* Basic Plan */}
         <div className="bg-white rounded-lg p-6 border outline outline-lgreen border-[#d6dedb]">
-          <h3 className="text-base text-left ml-4 font-semibold text-[#3b4b48] ">
-            Basic 💪
-          </h3>
-          <p className="text-base text-left p-4 text-[#4b615f] mb-4">
-            Essential features for small<br /> businesses to get started with Email<br />
-            Marketing
-          </p>
-          <h2 className={`text-5xl ml-10 ${i18n.language === 'ar' ? 'text-center' : 'text-left'} text-left font-bold text-[#3b4b48] mb-1`}>
-            ${isMonthly ? 15 : 12}<span className="text-lg">/month</span>
-          </h2>
-          <p className="text-base text-[#4b615f] mb-4"></p>
-          <button className="bg-lgreen text-white text-base py-3 px-6 rounded-lg mb-4">
-            Give Me Instant Access →
-          </button>
-          <div className="text-left ml-10 space-y-6">
-  <p className="flex items-center text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2 " /> 50,000 Subscribers
+        <h3 className="text-base text-left ml-4 font-semibold text-[#3b4b48]">
+  {t('basic')}
+</h3>
+<p className="text-base text-left p-4 text-[#4b615f] mb-4">
+  {t('essential_features')}
+</p>
+<h2 className={`text-5xl ml-10 ${i18n.language === 'ar' ? 'text-center' : 'text-center'} text-left font-bold text-[#3b4b48] mb-1`}>
+  ${isMonthly ? 15 : 12}<span className="text-lg">/{t('month')}</span>
+</h2>
+<p className="text-base text-[#4b615f] mb-4"></p>
+<button className="bg-lgreen text-white text-base py-3 px-6 rounded-lg mb-4">
+  {t('give_me_instant_access')}
+</button>
+<div className="text-left ml-10 space-y-6">
+  <p className="flex items-center  text-base text-[#4b615f]">
+    <AiOutlineCheck className="mr-2 ml-2 " /> {t('subscribers')}
   </p>
   <p className="flex items-center text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> Drag & Drop Email Builder
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('email_builder')}
   </p>
   <p className="flex items-center text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> Unlimited Email Campaigns
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('unlimited_campaigns')}
   </p>
   <p className="flex items-center text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> Unlimited SMTP Servers
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('unlimited_smtp')}
   </p>
   <p className="flex items-center text-left text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2 shrink-0" /> Unlimited Workflow Automations
+    <AiOutlineCheck className="mr-2 ml-2 shrink-0" /> {t('unlimited_automations')}
   </p>
   <p className="flex items-center text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> Unlimited Segmentation
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('unlimited_segmentation')}
   </p>
   <p className="flex items-center text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> Unlimited Custom Fields
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('unlimited_custom_fields')}
   </p>
-  <p className="flex items-center text-base text-left text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> Unlimited Lead Capture Popups
-  </p>
-  <p className="flex items-center text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> Unlimited Lead Webforms
+  <p className="flex items-center text-left text-base text-[#4b615f]">
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('unlimited_popups')}
   </p>
   <p className="flex items-center text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> Open & Click Tracking
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('unlimited_webforms')}
   </p>
   <p className="flex items-center text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> Import Bulk Contacts
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('open_click_tracking')}
+  </p>
+  <p className={`flex items-center  text-base text-[#4b615f] ${i18n.language === 'ar' ? 'whitespace-nowrap' : ''}`}>
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('import_contacts')}
   </p>
   <p className="flex items-center text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> Simple & Powerful Analytics
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('analytics')}
   </p>
   <p className="flex items-center text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> Email Validation Integration
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('email_validation')}
   </p>
   <p className="flex items-center text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> Custom Tracking Domains
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('custom_domains')}
   </p>
   <p className="flex items-center text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> Advance Filters
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('advance_filters')}
   </p>
   <p className="flex items-center text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> API Integrations
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('api_integrations')}
   </p>
   <p className="flex items-center text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> Outgoing Webhooks
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('outgoing_webhooks')}
   </p>
 </div>
 
@@ -137,139 +137,144 @@ const PricingSection = () => {
 
         {/* Pro Plan */}
         <div className="bg-white rounded-lg p-6 border outline outline-lgreen border-[#d6dedb]">
-          <h3 className="text-base font-semibold text-left ml-4 text-[#3b4b48] ">
-            Pro 🚀
-          </h3>
-          <p className="text-base text-left p-4 text-[#4b615f] mb-4">
-            Advanced features and higher limits, ideal for growing businesses
-            needing more capabilities
-          </p>
-          <h2 className={`text-5xl ${i18n.language === 'ar' ? 'text-right' : 'text-left'}text-left ml-10 font-bold text-[#3b4b48] mb-1`}>
-            ${isMonthly ? 50 : 30}<span className="text-lg">/month</span>
-          </h2>
-          <p className="text-base text-[#4b615f] mb-4"></p>
-          <button className="bg-lgreen text-white text-base py-3 px-6 rounded-lg mb-4">
-            Give Me Instant Access →
-          </button>
-          <div className="space-y-6 ml-10">
+        <h3 className="text-base font-semibold text-left ml-4 text-[#3b4b48] ">
+  {t('pro_title')}
+</h3>
+<p className="text-base text-left p-4 text-[#4b615f] mb-4">
+  {t('pro_description')}
+</p>
+<h2 className={`text-5xl ${i18n.language === 'ar' ? 'text-center' : 'text-center'} text-left ml-10 font-bold text-[#3b4b48] mb-1`}>
+  ${isMonthly ? 50 : 30}
+  <span className="text-lg">{t('monthly_price', { price: isMonthly ? "" : "" })}</span>
+</h2>
+<button className="bg-lgreen text-white text-base py-3 px-6 rounded-lg mb-4">
+  {t('give_me_access')}
+</button>
+<div className="space-y-6 ml-10">
   <p className="flex items-center text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> 250,000 Subscribers
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('feature_1')}
   </p>
   <p className="flex items-center text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> Drag & Drop Email Builder
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('feature_2')}
   </p>
   <p className="flex items-center text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> Unlimited Email Campaigns
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('feature_3')}
   </p>
   <p className="flex items-center text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> Unlimited SMTP Servers
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('feature_4')}
   </p>
   <p className="flex items-center text-left text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> Unlimited Workflow Automations
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('feature_5')}
   </p>
   <p className="flex items-center text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> Unlimited Segmentation
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('feature_6')}
   </p>
   <p className="flex items-center text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> Unlimited Custom Fields
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('feature_7')}
   </p>
   <p className="flex items-center text-left text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> Unlimited Lead Capture Popups
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('feature_8')}
   </p>
   <p className="flex items-center text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> Unlimited Lead Webforms
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('feature_9')}
   </p>
   <p className="flex items-center text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> Open & Click Tracking
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('feature_10')}
   </p>
   <p className="flex items-center text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> Import Bulk Contacts
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('feature_11')}
   </p>
   <p className="flex items-center text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> Simple & Powerful Analytics
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('feature_12')}
   </p>
   <p className="flex items-center text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> Email Validation Integration
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('feature_13')}
   </p>
   <p className="flex items-center text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> Custom Tracking Domains
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('feature_14')}
   </p>
   <p className="flex items-center text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> Advance Filters
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('feature_15')}
   </p>
   <p className="flex items-center text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> API Integrations
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('feature_16')}
   </p>
   <p className="flex items-center text-base text-[#4b615f]">
-    <AiOutlineCheck className="mr-2" /> Outgoing Webhooks
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('feature_17')}
   </p>
 </div>
+
 
         </div>
 
         {/* Enterprise Plan */}
         <div className="bg-white rounded-lg p-6 outline outline-lgreen border border-[#d6dedb]">
-          <h3 className="text-base text-left ml-4 font-semibold text-[#3b4b48] mb-2">
-            Enterprise 💎
-          </h3>
-          <p className="text-base text-left ml-4 text-[#4b615f] mb-4">Want more Subscribers?</p>
-          <h2 className="text-2xl lg:text-5xl font-bold text-[#3b4b48] mb-4">Contact Us</h2>
-          <button className="bg-lgreen text-white text-base py-3 px-16 rounded-lg mb-4">
-            Talk to Sales
-          </button>
-          <div className="space-y-6 ml-10">
-          <p className="flex items-center text-base text-[#4b615f]">
-  <AiOutlineCheck className="mr-2" /> Unlimited Subscribers
+        <h3 className="text-base text-left ml-4 font-semibold text-[#3b4b48] mb-2">
+  {t('enterprise_title')}
+</h3>
+<p className="text-base text-left ml-4 text-[#4b615f] mb-4">
+  {t('want_more_subscribers')}
 </p>
-<p className="flex items-center text-base text-[#4b615f]">
-  <AiOutlineCheck className="mr-2" /> Drag & Drop Email Builder
-</p>
-<p className="flex items-center text-base text-[#4b615f]">
-  <AiOutlineCheck className="mr-2" /> Unlimited Email Campaigns
-</p>
-<p className="flex items-center text-base text-[#4b615f]">
-  <AiOutlineCheck className="mr-2" /> Unlimited SMTP Servers
-</p>
-<p className="flex items-center  text-left text-base text-[#4b615f]">
-  <AiOutlineCheck className="mr-2" /> Unlimited Workflow Automations
-</p>
-<p className="flex items-center text-base text-[#4b615f]">
-  <AiOutlineCheck className="mr-2" /> Unlimited Segmentation
-</p>
-<p className="flex items-center text-base text-[#4b615f]">
-  <AiOutlineCheck className="mr-2" /> Unlimited Custom Fields
-</p>
-<p className="flex items-center text-left text-base text-[#4b615f]">
-  <AiOutlineCheck className="mr-2" /> Unlimited Lead Capture Popups
-</p>
-<p className="flex items-center text-base text-[#4b615f]">
-  <AiOutlineCheck className="mr-2" /> Unlimited Lead Webforms
-</p>
-<p className="flex items-center text-base text-[#4b615f]">
-  <AiOutlineCheck className="mr-2" /> Open & Click Tracking
-</p>
-<p className="flex items-center text-base text-[#4b615f]">
-  <AiOutlineCheck className="mr-2" /> Import Bulk Contacts
-</p>
-<p className="flex items-center text-base text-[#4b615f]">
-  <AiOutlineCheck className="mr-2" /> Simple & Powerful Analytics
-</p>
-<p className="flex items-center text-base text-[#4b615f]">
-  <AiOutlineCheck className="mr-2" /> Email Validation Integration
-</p>
-<p className="flex items-center text-base text-[#4b615f]">
-  <AiOutlineCheck className="mr-2" /> Custom Tracking Domains
-</p>
-<p className="flex items-center text-base text-[#4b615f]">
-  <AiOutlineCheck className="mr-2" /> Advance Filters
-</p>
-<p className="flex items-center text-base text-[#4b615f]">
-  <AiOutlineCheck className="mr-2" /> API Integrations
-</p>
-<p className="flex items-center text-base text-[#4b615f]">
-  <AiOutlineCheck className="mr-2" /> Outgoing Webhooks
-</p>
+<h2 className="text-2xl lg:text-5xl font-bold text-[#3b4b48] mb-4">
+  {t('contact_us')}
+</h2>
+<button className="bg-lgreen text-white text-base py-3 px-16 rounded-lg mb-4">
+  {t('talk_to_sales')}
+</button>
+<div className="space-y-6 ml-10">
+  <p className="flex items-center text-base text-[#4b615f]">
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('unlimited_subscribers')}
+  </p>
+  <p className="flex items-center text-base text-[#4b615f]">
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('drag_drop_email_builder')}
+  </p>
+  <p className="flex items-center text-base text-[#4b615f]">
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('unlimited_email_campaigns')}
+  </p>
+  <p className="flex items-center text-base text-[#4b615f]">
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('unlimited_smtp_servers')}
+  </p>
+  <p className="flex items-center text-left text-base text-[#4b615f]">
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('unlimited_workflow_automations')}
+  </p>
+  <p className="flex items-center text-base text-[#4b615f]">
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('unlimited_segmentation')}
+  </p>
+  <p className="flex items-center text-base text-[#4b615f]">
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('unlimited_custom_fields')}
+  </p>
+  <p className={`flex items-center text-left text-base  text-[#4b615f] ${i18n.language === 'ar' ? 'whitespace-nowrap' : ''}`}>
+    <AiOutlineCheck className="mr-2 ml-2 shrink-0" /> {t('unlimited_lead_capture_popups')}
+  </p>
+  <p className={`flex items-center text-base text-[#4b615f] ${i18n.language === 'ar' ? 'whitespace-nowrap' : ''}`}>
+    <AiOutlineCheck className="mr-2 ml-2 shrink-0" /> {t('unlimited_lead_webforms')}
+  </p>
+  <p className={`flex items-center text-base text-[#4b615f] ${i18n.language === 'ar' ? 'whitespace-nowrap' : ''}`}>
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('open_click_tracking')}
+  </p>
+  <p className="flex items-center text-base text-[#4b615f]">
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('import_bulk_contacts')}
+  </p>
+  <p className="flex items-center text-base text-[#4b615f]">
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('simple_powerful_analytics')}
+  </p>
+  <p className="flex items-center text-base text-[#4b615f]">
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('email_validation_integration')}
+  </p>
+  <p className="flex items-center text-base text-[#4b615f]">
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('custom_tracking_domains')}
+  </p>
+  <p className="flex items-center text-base text-[#4b615f]">
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('advance_filters')}
+  </p>
+  <p className="flex items-center text-base text-[#4b615f]">
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('api_integrations')}
+  </p>
+  <p className="flex items-center text-base text-[#4b615f]">
+    <AiOutlineCheck className="mr-2 ml-2" /> {t('outgoing_webhooks')}
+  </p>
 </div>
+
         </div>
       </div>
       

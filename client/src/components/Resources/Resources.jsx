@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { AiOutlineRight } from "react-icons/ai";
 import { useNavigate } from 'react-router-dom';
 
@@ -40,57 +41,59 @@ const TutorialPage = () => {
   const [selectedCategory, setSelectedCategory] = useState("All Categories"); // Category dropdown
   const [suggestions, setSuggestions] = useState([]); // To hold filtered suggestions
   const history = useNavigate(); // Using useHistory for navigation
+  const { t } = useTranslation();
 
   // List of predefined sections
   const sections = [
     {
-      title: "Basic Tutorials",
+      title: t('basic_tutorials'), // Translation key for title
       icon: <i className="fas fa-book"></i>,
       count: 10,
       items: [
-        "The Ultimate Guide to Launch your First Campaign with Alzyara.io",
-        "How to import contacts inside Alzyara.io?",
-        "How to add subscribers to your blacklist in Alzyara.io?",
-        "How to connect any email provider/SMTP server with Alzyara.io?",
-        "How to Create an Amazon SES API Key?",
-        "How to clean your email list inside Alzyara.io?",
-        "How to capture leads from your website using web forms with Alzyara.io?",
-        "How to create popup forms/web popups to Capture Leads?",
-        "How to create a regular email campaign in Alzyara.com?",
-        "How to create an automated email journey/drip email campaign?",
+        t('guide_to_launch_campaign'), // Translation keys for items
+        t('import_contacts'),
+        t('add_subscribers_to_blacklist'),
+        t('connect_email_provider'),
+        t('create_amazon_ses_key'),
+        t('clean_email_list'),
+        t('capture_leads_with_web_forms'),
+        t('create_popup_forms'),
+        t('create_regular_email_campaign'),
+        t('create_automated_email_journey'),
       ],
     },
     {
-      title: "Audience List",
+      title: t('audience_list'), // Translation key for title
       icon: <i className="fas fa-users"></i>,
       count: 10,
       items: [
-        "Introduction to Alzyara.io Audience List | Add, Import & Export Subscribers or Create Segmentation",
-        "How to Create a New Audience List",
-        "How to Add a New Subscriber to an AudienceList",
-        "How to Import Subscribers in Bulk from a CSV File",
-        "How to Map Imported CSV Fields with Alzyara Audience List?",
-        "How to Export your Alzyara.io Audience Subscriber into a CSV File",
-        "Email Custom Fields: How to Create a Personalized Email Using Custom Fields",
-        "Email Segmentation: How to Segment your Email List",
-        "How to Use Tags to Segment Your Audience in Your List",
-        "How to Enable Double Opt-In for Your Mailing List",
+        t('intro_to_audience_list'),
+        t('create_new_audience_list'),
+        t('add_new_subscriber'),
+        t('import_subscribers_bulk'),
+        t('map_imported_csv_fields'),
+        t('export_audience_subscribers'),
+        t('create_personalized_email_using_custom_fields'),
+        t('email_segmentation'),
+        t('use_tags_to_segment_audience'),
+        t('enable_double_opt_in'),
       ],
     },
     {
-      title: "Email Campaign",
+      title: t('email_campaign'), // Translation key for title
       icon: <i className="fas fa-envelope"></i>,
       count: 6,
       items: [
-        "Monitor Email Campaign Performance Easily with Alzyara.io",
-        "Introduction to Email Campaigns by Alzyara.io",
-        "How to Import Custom HTML Email Templates in Alzyara.io",
-        "How to Customize Your Imported Email HTML Templates in Alzyara.io",
-        "Design Beautiful HTML Email Templates with Alzyara.io’s Drag & Drop Email Designer",
-        "How to Launch an Effective Email Marketing Campaign with Alzyara.io",
+        t('monitor_email_campaign_performance'),
+        t('intro_to_email_campaigns'),
+        t('import_custom_html_templates'),
+        t('customize_imported_html_templates'),
+        t('design_html_email_templates'),
+        t('launch_effective_email_campaign'),
       ],
     },
   ];
+  
 
   // Handle search query change and filter suggestions
   const handleSearchChange = (e) => {
@@ -196,7 +199,7 @@ const TutorialPage = () => {
       {/* Sections */}
       <div className="mt-10 py-10 px-6 md:px-16">
         <h1 className="text-3xl font-bold text-center text-gray-900 mb-10">
-          Tutorials & Guides
+        {t('tutorials_and_guide')}
         </h1>
         <div className="flex flex-col md:flex-row gap-6">
           {sections.map((section, index) => (

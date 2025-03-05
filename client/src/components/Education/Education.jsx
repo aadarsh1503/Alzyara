@@ -41,7 +41,7 @@ const Education = () => {
           <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
         </svg>
       </span>
-      <span className="text-gray-800 font-medium">
+      <span className="text-gray-800  font-medium mr-2">
         <strong>{t(item.bold)}</strong>
         <span className="font-normal text-base"> {t(item.key)}</span>
       </span>
@@ -106,7 +106,7 @@ const Education = () => {
         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
       </svg>
     </span>
-    <span className="text-black font-medium">
+    <span className="text-black  font-medium mr-2">
       <span className='font-bold'>{t('targeted_outreach')}:</span><span className='font-normal'>{t('reach_students')}</span>
     </span>
   </li>
@@ -116,7 +116,7 @@ const Education = () => {
         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
       </svg>
     </span>
-    <span className="text-black font-medium">
+    <span className="text-black  font-medium mr-2">
       <strong>{t('automated_workflows')}:</strong> <span className="font-normal">{t('automate_followups')}</span>
     </span>
   </li>
@@ -126,7 +126,7 @@ const Education = () => {
         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
       </svg>
     </span>
-    <span className="text-gray-800 font-medium">
+    <span className="text-gray-800  font-medium mr-2">
       <strong>{t('data_driven_strategies')}:</strong><span className="font-normal text-base">{t('use_analytics')}</span>
     </span>
   </li>
@@ -136,7 +136,7 @@ const Education = () => {
         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
       </svg>
     </span>
-    <span className="text-gray-800 font-medium">
+    <span className="text-gray-800  font-medium mr-2">
       <strong>{t('multi_channel_marketing')}:</strong><span className="font-normal text-base">{t('integrate_email_sms')}</span>
     </span>
   </li>
@@ -206,7 +206,7 @@ const Education = () => {
         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
       </svg>
     </span>
-    <span className="text-black font-medium">
+    <span className="text-black  font-medium mr-2">
       <span className='font-bold'>{t('Community Building: ')}</span><span className='font-normal'>{t('Send newsletters, event invites, and updates.')}</span>
     </span>
   </li>
@@ -216,7 +216,7 @@ const Education = () => {
         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
       </svg>
     </span>
-    <span className="text-black font-medium">
+    <span className="text-black  font-medium mr-2">
       <strong>{t('Fundraising Campaigns:')}</strong> <span className="font-normal">{t('Create compelling appeals for donations.')}</span>
     </span>
   </li>
@@ -226,7 +226,7 @@ const Education = () => {
         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
       </svg>
     </span>
-    <span className="text-gray-800 font-medium">
+    <span className="text-gray-800  font-medium mr-2">
       <strong>{t('Donor Segmentation:')}</strong><span className="font-normal text-base">{t('Segment alumni for targeted fundraising efforts.')}</span>
     </span>
   </li>
@@ -236,7 +236,7 @@ const Education = () => {
         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
       </svg>
     </span>
-    <span className="text-gray-800 font-medium">
+    <span className="text-gray-800  font-medium mr-2">
       <strong>{t('Real-Time Analytics:')}</strong><span className="font-normal text-base">{t('Track campaign performance and donor engagement.')}</span>
     </span>
   </li>

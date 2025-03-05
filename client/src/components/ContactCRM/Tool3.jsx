@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   FaChartPie,
   FaNetworkWired,
@@ -16,9 +16,15 @@ import {
 import ApiIcon from '@mui/icons-material/Api';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRobot,faWandMagicSparkles,faChartBar,faBolt,faCog ,faFilter ,faInfoCircle   } from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from "react-i18next";
 const Tool3 = () => {
+  const { t, i18n } = useTranslation();
+  const [isRTL, setIsRTL] = useState(i18n.language === 'ar');
+  useEffect(() => {
+    setIsRTL(i18n.language === 'ar');
+  }, [i18n.language]);
   return (
-    <div className="bg-white ml-0 lg:ml-20  py-16 ">
+    <div className={`bg-white ml-0 lg:ml-20 ${i18n.language === 'ar' ? 'lg:mr-20' : ''}  py-16 `} >
       <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-1 items-center">
         {/* Left Side: Blocks */}
         <div className="grid lg:grid-cols-3 sm:grid-cols-1 gap-4">
@@ -27,9 +33,10 @@ const Tool3 = () => {
           <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
             <FontAwesomeIcon icon={faRobot} />
             </div>
-            <h3 className="text-lg font-semibold mb-2">Subject Analyzer</h3>
+            <h3 className="text-lg font-semibold mb-2">{t('subject_analyzer')}</h3>
             <p className="text-gray-600">
-              Improve your email open rates by analyzing your subject line.
+            
+            {t('subject_analyzer_desc')}
             </p>
           </a>
           {/* Drag & Drop Builder */}
@@ -37,9 +44,10 @@ const Tool3 = () => {
           <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
             <FontAwesomeIcon icon={faInfoCircle } />
             </div>
-            <h3 className="text-lg font-semibold mb-2">Drag & Drop Builder</h3>
+            <h3 className="text-lg font-semibold mb-2">{t('drag_drop_builder')}</h3>
             <p className="text-gray-600">
-              Easily drag & drop the relevant blocks to create the email template.
+            
+            {t('drag_drop_builder_desc')}
             </p>
           </a>
           {/* Email Validation */}
@@ -47,9 +55,10 @@ const Tool3 = () => {
           <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
             <FontAwesomeIcon icon={faChartBar} />
             </div>
-            <h3 className="text-lg font-semibold mb-2">Email Validation</h3>
+            <h3 className="text-lg font-semibold mb-2">{t('email_validation')}</h3>
             <p className="text-gray-600">
-              Validate your email list for the best deliverability results.
+            
+            {t('email_validation_desc')}
             </p>
           </a>
           {/* Handle Bounce & Unsubscribe */}
@@ -58,10 +67,11 @@ const Tool3 = () => {
               <FaServer />
             </div>
             <h3 className="text-lg font-semibold mb-2">
-              Handle Bounce & Unsubscribe
+              {t('handle_bounce_unsubscribe')}
+              
             </h3>
             <p className="text-gray-600">
-              Automatically remove all the bounced and unsubscribed emails.
+            {t('handle_bounce_unsubscribe_desc')}
             </p>
           </a>
           {/* Detailed Analytics */}
@@ -69,9 +79,10 @@ const Tool3 = () => {
             <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
             <FontAwesomeIcon icon={faBolt}  />
             </div>
-            <h3 className="text-lg font-semibold mb-2">Detailed Analytics</h3>
+            <h3 className="text-lg font-semibold mb-2">{t('detailed_analytics')}</h3>
             <p className="text-gray-600">
-              In-depth tracking of the results of every campaign.
+          
+            {t('detailed_analytics_desc')}
             </p>
           </a>
           {/* WYSIWYG Editor */}
@@ -79,18 +90,21 @@ const Tool3 = () => {
           <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
             <FontAwesomeIcon icon={faCog}  />
             </div>
-            <h3 className="text-lg font-semibold mb-2">WYSIWYG Editor</h3>
+            <h3 className="text-lg font-semibold mb-2">{t('wysiwyg_editor')}</h3>
             <p className="text-gray-600">
-              Use WYSIWYG Editor to create stunning emails without any hassle.
+        
+          
+            {t('wysiwyg_editor_desc')}
             </p>
           </a>
           <a href="/feature3" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
           <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
 <FaChartPie />
   </div>
-  <h3 className="text-lg font-semibold mb-2">Marketing Automation</h3>
+  <h3 className="text-lg font-semibold mb-2">{t('marketing_automation')}</h3>
   <p className="text-gray-600">
-    Nurture your leads with a series of automated emails based on the user's action
+
+  {t('marketing_automation_desc')}
   </p>
 </a>
 {/* Drag & Drop Builder */}
@@ -98,9 +112,10 @@ const Tool3 = () => {
             <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
   <FaNetworkWired />
   </div>
-  <h3 className="text-lg font-semibold mb-2">Email Tracking</h3>
+  <h3 className="text-lg font-semibold mb-2">{t('email_tracking')}</h3>
   <p className="text-gray-600">
-    Track every single engagement made by users for all your emails
+
+  {t('email_tracking_desc')}
   </p>
 </a>
 
@@ -109,9 +124,10 @@ const Tool3 = () => {
             <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
     <FaChartPie />
   </div>
-  <h3 className="text-lg font-semibold mb-2">List Segmentation</h3>
+  <h3 className="text-lg font-semibold mb-2">{t('list_segmentation')}</h3>
   <p className="text-gray-600">
-    Sending emails to targeted segments can increase email engagement & revenue by more than 25%.
+
+  {t('list_segmentation_desc')}
   </p>
 </a>
 {/* Handle Bounce & Unsubscribe */}
@@ -132,3 +148,11 @@ const Tool3 = () => {
 };
 
 export default Tool3;
+
+
+
+
+
+
+
+

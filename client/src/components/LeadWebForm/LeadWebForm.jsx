@@ -30,7 +30,7 @@ const LeadWebForm = () => {
           <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
         </svg>
       </span>
-      <span className="text-black font-medium">
+      <span className="text-black  font-medium mr-2">
         <span className='font-bold'>{t('user_friendly_interface')}</span>: <span className='font-normal'>{t('drag_drop_editor')}</span>
       </span>
     </li>
@@ -41,7 +41,7 @@ const LeadWebForm = () => {
           <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
         </svg>
       </span>
-      <span className="text-black font-medium">
+      <span className="text-black  font-medium mr-2">
         <strong>{t('customizable_elements')}</strong>: <span className="font-normal">{t('customize_fields')}</span>
       </span>
     </li>
@@ -52,7 +52,7 @@ const LeadWebForm = () => {
           <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
         </svg>
       </span>
-      <span className="text-gray-800 font-medium">
+      <span className="text-gray-800  font-medium mr-2">
         <strong>{t('quick_setup')}</strong>: <span className="font-normal text-base">{t('deploy_forms')}</span>
       </span>
     </li>
@@ -63,7 +63,7 @@ const LeadWebForm = () => {
           <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
         </svg>
       </span>
-      <span className="text-gray-800 font-medium">
+      <span className="text-gray-800  font-medium mr-2">
         <strong>{t('no_coding_required')}</strong>: <span className="font-normal text-base">{t('build_without_code')}</span>
       </span>
     </li>
@@ -147,7 +147,7 @@ const LeadWebForm = () => {
         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
       </svg>
     </span>
-    <span className="text-black font-medium">
+    <span className="text-black  font-medium mr-2">
       <span className='font-bold'>{t('easy_integration')}</span>
       <span className='font-normal'>{t('embed_forms_description')}</span>
     </span>
@@ -158,7 +158,7 @@ const LeadWebForm = () => {
         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
       </svg>
     </span>
-    <span className="text-black font-medium">
+    <span className="text-black  font-medium mr-2">
       <strong>{t('consistent_design')}</strong>
       <span className="font-normal">{t('consistent_design_description')}</span>
     </span>
@@ -169,7 +169,7 @@ const LeadWebForm = () => {
         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
       </svg>
     </span>
-    <span className="text-gray-800 font-medium">
+    <span className="text-gray-800  font-medium mr-2">
       <strong>{t('high_conversion_rates')}</strong>
       <span className="font-normal text-base">{t('high_conversion_description')}</span>
     </span>
@@ -180,7 +180,7 @@ const LeadWebForm = () => {
         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
       </svg>
     </span>
-    <span className="text-gray-800 font-medium">
+    <span className="text-gray-800  font-medium mr-2">
       <strong>{t('data_sync')}</strong>
       <span className="font-normal text-base">{t('data_sync_description')}</span>
     </span>
@@ -251,7 +251,7 @@ const LeadWebForm = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </span>
-          <span className="text-black font-medium">
+          <span className="text-black  font-medium mr-2">
             <span className='font-bold'>{t('real_time_updates')}:</span> <span className='font-normal'>{t('real_time_updates_desc')}</span> 
           </span>
         </li>
@@ -261,7 +261,7 @@ const LeadWebForm = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </span>
-          <span className="text-black font-medium">
+          <span className="text-black  font-medium mr-2">
             <strong>{t('accurate_display')}:</strong> <span className="font-normal">{t('accurate_display_desc')}</span>
           </span>
         </li>
@@ -271,7 +271,7 @@ const LeadWebForm = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </span>
-          <span className="text-gray-800 font-medium">
+          <span className="text-gray-800  font-medium mr-2">
             <strong>{t('interactive_elements')}:</strong> <span className="font-normal text-base">{t('interactive_elements_desc')}</span>
           </span>
         </li>
@@ -281,7 +281,7 @@ const LeadWebForm = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </span>
-          <span className="text-gray-800 font-medium">
+          <span className="text-gray-800  font-medium mr-2">
             <strong>{t('optimize_design')}:</strong> <span className="font-normal text-base">{t('optimize_design_desc')}</span>
           </span>
         </li>

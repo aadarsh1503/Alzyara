@@ -28,154 +28,125 @@ const ToolsSection = () => {
         <div className="grid lg:grid-cols-3 sm:grid-cols-1 gap-4">
           {/* Subject Analyzer */}
           <a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-          <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
-              <FaChartPie />
-            </div>
-            <h3 className="text-lg font-semibold mb-2">Subject Analyzer</h3>
-            <p className="text-gray-600">
-              Improve your email open rates by analyzing your subject line.
-            </p>
-          </a>
-          {/* Drag & Drop Builder */}
-          <a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-          <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
-              <FaMousePointer />
-            </div>
-            <h3 className="text-lg font-semibold mb-2">Drag & Drop Builder</h3>
-            <p className="text-gray-600">
-              Easily drag & drop the relevant blocks to create the email template.
-            </p>
-          </a>
-          {/* Email Validation */}
-          <a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-          <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
-              <FaCheckSquare />
-            </div>
-            <h3 className="text-lg font-semibold mb-2">Email Validation</h3>
-            <p className="text-gray-600">
-              Validate your email list for the best deliverability results.
-            </p>
-          </a>
-          {/* Handle Bounce & Unsubscribe */}
-          <a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-          <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
-              <FaInfoCircle />
-            </div>
-            <h3 className="text-lg font-semibold mb-2">
-              Handle Bounce & Unsubscribe
-            </h3>
-            <p className="text-gray-600">
-              Automatically remove all the bounced and unsubscribed emails.
-            </p>
-          </a>
-          {/* Detailed Analytics */}
-          <a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-          <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
-              <FaChartLine />
-            </div>
-            <h3 className="text-lg font-semibold mb-2">Detailed Analytics</h3>
-            <p className="text-gray-600">
-              In-depth tracking of the results of every campaign.
-            </p>
-          </a>
-          {/* WYSIWYG Editor */}
-          <a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-          <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
-              <FaPen />
-            </div>
-            <h3 className="text-lg font-semibold mb-2">WYSIWYG Editor</h3>
-            <p className="text-gray-600">
-              Use WYSIWYG Editor to create stunning emails without any hassle.
-            </p>
-          </a>
-          <a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-          <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
-    <FaNetworkWired />
-  </div>
-  <h3 className="text-lg font-semibold mb-2">Marketing Automation</h3>
-  <p className="text-gray-600">
-    Nurture your leads with a series of automated emails based on the user's action
-  </p>
-</a>
-{/* Drag & Drop Builder */}
-<a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-          <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
-    <FaEnvelopeOpenText />
-  </div>
-  <h3 className="text-lg font-semibold mb-2">Email Tracking</h3>
-  <p className="text-gray-600">
-    Track every single engagement made by users for all your emails
-  </p>
-</a>
-
-{/* Email Validation */}
-<a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-          <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
+  <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
     <FaChartPie />
   </div>
-  <h3 className="text-lg font-semibold mb-2">List Segmentation</h3>
-  <p className="text-gray-600">
-    Sending emails to targeted segments can increase email engagement & revenue by more than 25%.
-  </p>
+  <h3 className="text-lg font-semibold mb-2">{t('subject_analyzer')}</h3>
+  <p className="text-gray-600">{t('subject_analyzer_desc')}</p>
 </a>
+
+<a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
+  <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
+    <FaMousePointer />
+  </div>
+  <h3 className="text-lg font-semibold mb-2">{t('drag_drop_builder')}</h3>
+  <p className="text-gray-600">{t('drag_drop_builder_desc')}</p>
+</a>
+
+<a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
+  <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
+    <FaCheckSquare />
+  </div>
+  <h3 className="text-lg font-semibold mb-2">{t('email_validation')}</h3>
+  <p className="text-gray-600">{t('email_validation_desc')}</p>
+</a>
+
+<a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
+  <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
+    <FaInfoCircle />
+  </div>
+  <h3 className="text-lg font-semibold mb-2">{t('handle_bounce_unsubscribe')}</h3>
+  <p className="text-gray-600">{t('handle_bounce_unsubscribe_desc')}</p>
+</a>
+
+<a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
+  <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
+    <FaChartLine />
+  </div>
+  <h3 className="text-lg font-semibold mb-2">{t('detailed_analytics')}</h3>
+  <p className="text-gray-600">{t('detailed_analytics_desc')}</p>
+</a>
+
+<a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
+  <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
+    <FaPen />
+  </div>
+  <h3 className="text-lg font-semibold mb-2">{t('wysiwyg_editor')}</h3>
+  <p className="text-gray-600">{t('wysiwyg_editor_desc')}</p>
+</a>
+
+<a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
+  <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
+    <FaNetworkWired />
+  </div>
+  <h3 className="text-lg font-semibold mb-2">{t('marketing_automation')}</h3>
+  <p className="text-gray-600">{t('marketing_automation_desc')}</p>
+</a>
+
+<a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
+  <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
+    <FaEnvelopeOpenText />
+  </div>
+  <h3 className="text-lg font-semibold mb-2">{t('email_tracking')}</h3>
+  <p className="text-gray-600">{t('email_tracking_desc')}</p>
+</a>
+
+<a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
+  <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
+    <FaChartPie />
+  </div>
+  <h3 className="text-lg font-semibold mb-2">{t('list_segmentation')}</h3>
+  <p className="text-gray-600">{t('list_segmentation_desc')}</p>
+</a>
+
 {/* Handle Bounce & Unsubscribe */}
 <a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-          <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
+  <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
     <FaServer />
   </div>
-  <h3 className="text-lg font-semibold mb-2">Custom SMTP Server</h3>
-  <p className="text-gray-600">
-    Connect unlimited customer SMTP servers to spread your email sending load
-  </p>
+  <h3 className="text-lg font-semibold mb-2">{t('custom_smtp_server')}</h3>
+  <p className="text-gray-600">{t('custom_smtp_description')}</p>
 </a>
 {/* Detailed Analytics */}
 <a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-          <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
+  <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
     <FaUsers />
   </div>
-  <h3 className="text-lg font-semibold mb-2">Manage List and Subscribers</h3>
-  <p className="text-gray-600">
-    Manage and segment lists & subscribers easily with Alzyara
-  </p>
+  <h3 className="text-lg font-semibold mb-2">{t('manage_list_subscribers')}</h3>
+  <p className="text-gray-600">{t('manage_list_subscribers_description')}</p>
 </a>
 
 {/* WYSIWYG Editor */}
 <a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-          <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
+  <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
     <FaPen />
   </div>
-  <h3 className="text-lg font-semibold mb-2">Add DKIM Structure</h3>
-  <p className="text-gray-600">
-    Sign your emails with your sending domain and improve deliverability
-  </p>
+  <h3 className="text-lg font-semibold mb-2">{t('add_dkim_structure')}</h3>
+  <p className="text-gray-600">{t('add_dkim_structure_description')}</p>
 </a>
+
 <a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-          <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
+  <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
     <FaCheckSquare />
   </div>
-  <h3 className="text-lg font-semibold mb-2">Custom Tracking Domains</h3>
-  <p className="text-gray-600">
-    Use your custom tracking domains for better deliverability
-  </p>
+  <h3 className="text-lg font-semibold mb-2">{t('custom_tracking_domains')}</h3>
+  <p className="text-gray-600">{t('custom_tracking_domains_description')}</p>
 </a>
+
 <a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-          <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
+  <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
     <FaReplyAll />
   </div>
-  <h3 className="text-lg font-semibold mb-2">Auto Responder</h3>
-  <p className="text-gray-600">
-    Automatically send a welcome email when a new subscriber joins your email list
-  </p>
+  <h3 className="text-lg font-semibold mb-2">{t('auto_responder')}</h3>
+  <p className="text-gray-600">{t('auto_responder_description')}</p>
 </a>
 
         </div>
 
         {/* Right Side: Text */}
         <div className="text-left ml-0 lg:ml-20 mt-0 lg:-mt-[1300px]">
-        <h2 className="lg:text-4xl  text-3xl font-semibold mb-4">All the Tools You<br /> Need</h2>
-          <p className="text-gray-600 text-lg">
-            Start converting leads today with our top-tier<br /> Email Marketing solutions.
-          </p>
+        <h2 className="lg:text-4xl  text-3xl font-semibold mb-4">{t('all_tools_needed')}</h2>
+        <p className="text-gray-600 text-lg">{t('start_converting_leads')}</p>
         </div>
       </div>
     </div>

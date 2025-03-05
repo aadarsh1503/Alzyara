@@ -30,7 +30,7 @@ const Solutions = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </span>
-          <span className="text-black font-medium mr-2">
+          <span className="text-black  font-medium mr-2 mr-2">
             <span className='font-bold'>{t('detailed_segmentation_title')}:</span>
             <span className='font-normal'>{t('detailed_segmentation_description')}</span> 
           </span>
@@ -41,7 +41,7 @@ const Solutions = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </span>
-          <span className="text-black font-medium mr-2">
+          <span className="text-black  font-medium mr-2 mr-2">
             <strong>{t('custom_filters_title')}:</strong>
             <span className="font-normal">{t('custom_filters_description')}</span>
           </span>
@@ -52,7 +52,7 @@ const Solutions = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </span>
-          <span className="text-gray-800 font-medium mr-2">
+          <span className="text-gray-800  font-medium mr-2 mr-2">
             <strong>{t('higher_engagement_title')}:</strong>
             <span className="font-normal text-base">{t('higher_engagement_description')}</span>
           </span>
@@ -63,7 +63,7 @@ const Solutions = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </span>
-          <span className="text-gray-800 font-medium mr-2">
+          <span className="text-gray-800  font-medium mr-2 mr-2">
             <strong>{t('improved_results_title')}:</strong>
             <span className="font-normal text-base">{t('improved_results_description')}</span>
           </span>
@@ -179,7 +179,7 @@ const Solutions = () => {
                 />
               </svg>
             </span>
-            <span className="text-black font-medium">
+            <span className="text-black  font-medium mr-2">
               <strong>{item.title}</strong>{" "}
               <span className="font-normal">{item.description}</span>
             </span>
@@ -251,7 +251,7 @@ const Solutions = () => {
         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
       </svg>
     </span>
-    <span className="text-black font-medium mr-2">
+    <span className="text-black  font-medium mr-2 mr-2">
       <span className='font-bold'>{t('ai_powered')}</span>
       <span className='font-normal'> {t('ai_powered_desc')}</span> 
     </span>
@@ -262,7 +262,7 @@ const Solutions = () => {
         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
       </svg>
     </span>
-    <span className="text-black font-medium mr-2">
+    <span className="text-black  font-medium mr-2 mr-2">
       <strong>{t('custom_automation')}</strong> 
       <span className="font-normal">{t('custom_automation_desc')}</span>
     </span>
@@ -273,7 +273,7 @@ const Solutions = () => {
         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
       </svg>
     </span>
-    <span className="text-gray-800 font-medium mr-2">
+    <span className="text-gray-800  font-medium mr-2 mr-2">
       <strong>{t('behavior_triggers')}</strong>
       <span className="font-normal text-base">{t('behavior_triggers_desc')}</span>
     </span>
@@ -284,7 +284,7 @@ const Solutions = () => {
         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
       </svg>
     </span>
-    <span className="text-gray-800 font-medium mr-2">
+    <span className="text-gray-800  font-medium mr-2 mr-2">
       <strong>{t('engagement')}</strong>
       <span className="font-normal text-base">{t('engagement_desc')}</span>
     </span>

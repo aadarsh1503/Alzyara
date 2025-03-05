@@ -534,7 +534,7 @@ const Navbar = () => {
         </button>
         <a href="/signup">
           <button
-            className={`w-20 h-8 mr-4 bg-parrot hover:outline-parrot rounded-md ${
+            className={`w-20  h-8 mr-4 bg-parrot ${i18n.language === 'ar' ? 'w-32' : ''} hover:outline-parrot rounded-md ${
               isScrolled
                 ? "text-black bg-parrot hover:text-white hover:outline-white outline hover:bg-[#0f2027]"
                 : "text-black bg-parrot hover:text-white hover:outline-white outline hover:bg-[#0f2027]"

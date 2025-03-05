@@ -48,7 +48,7 @@ const MarketingAutomation = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </span>
-          <span className="text-black font-medium">
+          <span className="text-black  font-medium mr-2">
             <strong>{item.title}: </strong>
             <span className="font-normal">{item.description}</span>
           </span>
@@ -131,7 +131,7 @@ const MarketingAutomation = () => {
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
         </span>
-        <span className="text-black font-medium">
+        <span className="text-black  font-medium mr-2">
           <span className='font-bold'>{t('reactive_campaigns')}:</span>
           <span className='font-normal'>{t('reactive_campaigns_desc')}</span>
         </span>
@@ -143,7 +143,7 @@ const MarketingAutomation = () => {
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
         </span>
-        <span className="text-black font-medium">
+        <span className="text-black  font-medium mr-2">
           <strong>{t('engagement_boost')}:</strong>
           <span className="font-normal">{t('engagement_boost_desc')}</span>
         </span>
@@ -155,7 +155,7 @@ const MarketingAutomation = () => {
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
         </span>
-        <span className="text-gray-800 font-medium">
+        <span className="text-gray-800  font-medium mr-2">
           <strong>{t('customization')}:</strong>
           <span className="font-normal text-base">{t('customization_desc')}</span>
         </span>
@@ -167,7 +167,7 @@ const MarketingAutomation = () => {
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
         </span>
-        <span className="text-gray-800 font-medium">
+        <span className="text-gray-800  font-medium mr-2">
           <strong>{t('seamless_automation')}:</strong>
           <span className="font-normal text-base">{t('seamless_automation_desc')}</span>
         </span>
@@ -241,7 +241,7 @@ const MarketingAutomation = () => {
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
         </span>
-        <span className="text-black font-medium">
+        <span className="text-black  font-medium mr-2">
           <span className='font-bold'>{t('targeted_campaigns')}</span>
           <span className='font-normal'> {t('targeted_campaigns_desc')}</span>
         </span>
@@ -253,7 +253,7 @@ const MarketingAutomation = () => {
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
         </span>
-        <span className="text-black font-medium">
+        <span className="text-black  font-medium mr-2">
           <strong>{t('dynamic_segments')}</strong>
           <span className="font-normal"> {t('dynamic_segments_desc')}</span>
         </span>
@@ -265,7 +265,7 @@ const MarketingAutomation = () => {
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
         </span>
-        <span className="text-gray-800 font-medium">
+        <span className="text-gray-800  font-medium mr-2">
           <strong>{t('enhanced_personalization')}</strong>
           <span className="font-normal text-base"> {t('enhanced_personalization_desc')}</span>
         </span>
@@ -277,7 +277,7 @@ const MarketingAutomation = () => {
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
         </span>
-        <span className="text-gray-800 font-medium">
+        <span className="text-gray-800  font-medium mr-2">
           <strong>{t('increased_conversions')}</strong>
           <span className="font-normal text-base"> {t('increased_conversions_desc')}</span>
         </span>
