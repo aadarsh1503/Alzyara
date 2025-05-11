@@ -12,19 +12,22 @@ const ContactSection = () => {
     <div className="flex flex-col mt-32 md:flex-row items-center justify-between w-full min-h-screen ">
       {/* Left Form Section */}
       <div className="w-full lg:max-w-xl ml-0 lg:ml-20 lg:mr-20 md:w-1/2 p-8 md:p-16 bg-white">
-        <div className="mb-4">
-          <span className="bg-bkg p-2 rounded-md font-bold text-sm uppercase">{t('contact_us')}</span>
-          <h1 className="text-4xl font-bold mt-2 relative">
-            {t('for_you')}
-            <span className={`relative ${i18n.language === 'ar' ? 'text-white' : ''} inline-block`}>
-              for you
-              <span className={`absolute -bottom-3 ${i18n.language === 'ar' ? 'bg-white' : ''} left-0 w-full h-[8px] bg-parrot`}></span>
-            </span>
-          </h1>
-          <p className="text-gray-500 mt-4">
-            {t('message')}
-          </p>
-        </div>
+      <div className="mb-4">
+  <span className="bg-bkg p-2 rounded-md font-bold text-sm uppercase">{t('contact_us')}</span>
+  <h1 className="text-4xl font-bold mt-2 relative">
+    {t('for_you')}
+    <span className={`relative ${i18n.language === 'ar' ? 'text-white' : ''} inline-block`}>
+      for you
+      <span className={`absolute -bottom-3 ${i18n.language === 'ar' ? 'bg-white' : ''} left-0 w-full h-[8px] bg-parrot`}></span>
+    </span>
+  </h1>
+  <p className="text-gray-500 mt-4">
+    {t('message')}
+  </p>
+  <p className="text-gray-500 mt-2">
+    {t('or_email_us_at')}: <a href="mailto:info@alzyara.com" className="text-lgreen hover:underline">info@alzyara.com</a>
+  </p>
+</div>
         <form>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input

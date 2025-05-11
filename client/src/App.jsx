@@ -45,7 +45,7 @@ function App() {
           <Navbar />
           <Routes>
             {/* Define route paths for different components */}
-            <Route path="/" element={<Hero />} />\
+            <Route path="/" element={<Hero />} />
             <Route path="/feature1" element={<EmailSection />} />
             <Route path="/marketing" element={<Solutions />} />
             <Route path="/pricing" element={<PricingSection />} />

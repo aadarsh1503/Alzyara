@@ -8,15 +8,15 @@ const PrivacySection = () => {
     <div className="flex flex-col mt-32 lg:flex-row gap-6 lg:gap-12 px-6 lg:px-16 py-8 lg:py-12">
       {/* Left Side: Static Content */}
       <div className="w-full lg:w-2/3">
-        <p className="text-gray-700 mb-6">
-          {t('privacy.introduction')}
+        <p className="text-gray-700 mb-6 ">
+          {t('privacy.introduction')} 
           <a
-            href="https://alzyara.io"
+            href="https://alzyara.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 underline"
+            className="text-dgreen underline mr-1 ml-2"
           >
-            https://alzyara.io
+            https://alzyara.com
           </a>{" "}
           {t('privacy.serviceExplanation')}
         </p>

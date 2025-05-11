@@ -24,6 +24,9 @@ const Footer = () => {
       alt="Alzyara Logo"
       className="mb-4 w-32"
     />
+    <a href="mailto:info@alzyara.com" className="text-parrot font-bold ml-2 hover:underline block mb-2">
+  info@alzyara.com
+</a>
     <p className={`text-gray-400 text-left relative ml-0 lg:ml-36 ${i18n.language === 'ar' ? ' relative left-[50px]' : 'text-left lg:right-36 right-0'} text-14px mb-6`}>
       {t('alzyara_description')}
     </p>
@@ -43,10 +46,11 @@ const Footer = () => {
     </div>
 
     <a href="https://www.facebook.com/Alzyarasoftwares" target="_blank" rel="noopener noreferrer">
-      <h1 className="ml-0 lg:-ml-5 font-bold text-md hover:text-parrot mt-4">
+      <h1 className="ml-0  font-bold text-md hover:text-parrot mt-4">
         {t('join_facebook_community')}
       </h1>
     </a>
+    
   </div>
 
   {/* Subscription Section */}
@@ -68,19 +72,20 @@ const Footer = () => {
 </div>
 
         {/* Links Section */}
-        <div className={`mt-4 lg:-mt-56 ml-0 relative z-50 lg:ml-64 grid grid-cols-2 ${i18n.language === 'ar' ? 'text-right relative right-0 lg:right-[300px]' : 'text-left'} md:grid-cols-6 gap-6`}>
+        <div className={`mt-4 lg:-mt-56 ml-0 relative z-50 lg:ml-64 grid grid-cols-2 ${i18n.language === 'ar' ? 'text-right relative right-0 lg:right-[300px]' : 'text-left'} md:grid-cols-4 gap-9`}>
           <div>
             <h5 className="font-semibold mb-4">{t('quick_links')}</h5>
             <ul className="space-y-2 text-gray-400 text-13px">
-              <li>{t('getting_started')}</li>
-              <li>{t('login')}</li>
+              {/* <li>{t('getting_started')}</li> */}
+              <li><a href="/" class="hover:underline">{t('home')}</a></li>
+              <li><a href="/signup" class="hover:underline">{t('login')}</a></li>
               <li><a href="/pricing" class="hover:underline">{t('pricing')}</a></li>
-              <li>{t('features')}</li>
-              <li>{t('affiliates')}</li>
+              {/* <li>{t('features')}</li>
+              <li>{t('affiliates')}</li> */}
             </ul>
           </div>
 
-          <div>
+          {/* <div>
             <h5 className="font-semibold mb-4">{t('resources')}</h5>
             <ul className="space-y-2 text-gray-400 text-13px">
               <li>{t('support_centre')}</li>
@@ -88,7 +93,7 @@ const Footer = () => {
               <li>{t('community')}</li>
               <li>{t('faqs')}</li>
             </ul>
-          </div>
+          </div> */}
 
           <div>
             <h5 className="font-semibold mb-4">{t('features')}</h5>
@@ -122,14 +127,14 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          {/* <div>
             <h5 className="font-semibold mb-4">{t('legal')}</h5>
             <ul className="space-y-2 text-gray-400 text-13px">
               <li>{t('refund_policy')}</li>
               <li>{t('gdpr')}</li>
               <li>{t('affiliate_terms')}</li>
             </ul>
-          </div>
+          </div> */}
         </div>
 
 
