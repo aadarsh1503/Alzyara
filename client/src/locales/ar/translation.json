@@ -1040,7 +1040,30 @@
           "all_tools_title": "جميع الأدوات التي تحتاجها",
           "all_tools_description": "قم بتحسين استراتيجيتك التسويقية مع نماذج ويب قوية من Alzyara.",
           "home": "گھر",
-          "or_email_us_at": "یا ہمیں ای میل کریں"
+          "or_email_us_at": "یا ہمیں ای میل کریں",
+          
+            "something_went_wrong": "کچھ غلط ہوا۔ براہ کرم دوبارہ کوشش کریں۔",
+            "thank_you_message": "آپ کے پیغام کا شکریہ!",
+            "we_will_contact_you_soon": "ہم جلد ہی آپ سے رابطہ کریں گے۔",
+            "sending": "بھیجا جا رہا ہے...",
+             "already_have_account": "کیا آپ کا پہلے سے اکاؤنٹ ہے؟",
+  "login_here": "یہاں لاگ ان کریں",
+  "login": "لاگ ان",
+  "welcome_back": "خوش آمدید!‎",
+  "login_desc": "جاری رکھنے کے لیے اپنے اکاؤنٹ میں لاگ ان کریں",
+  "password": "پاس ورڈ",
+  "login_now": "ابھی لاگ ان کریں",
+  "dont_have_account": "اکاؤنٹ نہیں ہے؟",
+  "sign_up_here": "یہاں سائن اپ کریں",
+   "redirecting_message": "لاگ ان پیج پر ری ڈائریکٹ کیا جا رہا ہے",
+  "seconds": "سیکنڈز میں",
+  "signup_error": "سائن اپ ناکام ہوا۔ براہ کرم دوبارہ کوشش کریں۔",
+  "signup_success_title": "کامیابی!",
+  "signup_success_message": "آپ کا اکاؤنٹ کامیابی سے بن گیا ہے۔ براہ کرم تصدیق کے لیے اپنا ای میل چیک کریں۔",
+  "back_to_form": "فارم پر واپس جائیں",
+  "processing": "پروسس ہو رہا ہے..."
+  
+          
 
 
         

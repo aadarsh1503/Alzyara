@@ -1019,5 +1019,31 @@
   "all_tools_title": "All the Tools You Need",
   "all_tools_description": "Enhance your marketing strategy with Alzyara powerful lead webforms.",
   "home":"Home",
-  "or_email_us_at":"Or email us at"
+  "or_email_us_at":"Or email us at",
+  
+    "something_went_wrong": "Something went wrong. Please try again.",
+    "thank_you_message": "Thank you for your message!",
+    "we_will_contact_you_soon": "We'll get back to you soon.",
+    "sending": "SENDING...",
+    
+      "login": "Login",
+      "welcome_back": "Welcome Back!",
+      "login_desc": "Log in to your account to continue",
+      "password": "Password",
+      "login_now": "Login Now",
+      "dont_have_account": "Don't have an account?",
+      "sign_up_here": "Sign up here",
+        "already_have_account": "Already have an account?",
+  "login_here": "Login here",
+    "redirecting_message": "Redirecting to login page in",
+  "seconds": "seconds",
+  
+    "signup_error": "Signup failed. Please try again.",
+    "signup_success_title": "Success!",
+    "signup_success_message": "Your account has been created successfully. Please check your email for verification.",
+    "back_to_form": "Back to form",
+    "processing": "Processing..."
+  
+    
+  
 }

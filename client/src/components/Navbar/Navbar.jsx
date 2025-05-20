@@ -131,6 +131,10 @@ const Navbar = () => {
       // Change the text color of the feature section to white
       document.querySelector('.pricing').style.color = 'gray';
     }
+    if (window.location.pathname.includes('/contact')) {
+      // Change the text color of the feature section to white
+      document.querySelector('.contact').style.color = 'gray';
+    }
     if (window.location.pathname.includes('/integration') || window.location.pathname.includes('/integration2')
       || window.location.pathname.includes('/integration3') || window.location.pathname.includes('/integration4')) {
       // Change the text color of the feature section to white
@@ -518,7 +522,15 @@ const Navbar = () => {
       </div>
     </div>
   )}
+  
 </div>
+<div className=" contact ">
+  <a href="/contact">
+            <div className="hover:text-parrot p-8">
+            {t('contact_us')}
+            </div>
+            </a>
+            </div>
 
 
             {/* Three Buttons */}
@@ -532,7 +544,7 @@ const Navbar = () => {
         >
           {t('request_demo')}
         </button>
-        <a href="/signup">
+        <a href="/login">
           <button
             className={`w-20  h-8 mr-4 bg-parrot ${i18n.language === 'ar' ? 'w-32' : ''} hover:outline-parrot rounded-md ${
               isScrolled

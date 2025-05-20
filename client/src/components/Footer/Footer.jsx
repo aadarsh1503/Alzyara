@@ -24,9 +24,9 @@ const Footer = () => {
       alt="Alzyara Logo"
       className="mb-4 w-32"
     />
-    <a href="mailto:info@alzyara.com" className="text-parrot font-bold ml-2 hover:underline block mb-2">
+    {/* <a href="mailto:info@alzyara.com" className="text-parrot font-bold ml-2 hover:underline block mb-2">
   info@alzyara.com
-</a>
+</a> */}
     <p className={`text-gray-400 text-left relative ml-0 lg:ml-36 ${i18n.language === 'ar' ? ' relative left-[50px]' : 'text-left lg:right-36 right-0'} text-14px mb-6`}>
       {t('alzyara_description')}
     </p>

@@ -31,6 +31,7 @@ import ContactSection from './components/ContactSection/ContactSection';
 import PrivacySection from './components/PrivacyPolicy/PrivacyPolicy';
 import TermsofServic from './components/TermsofServic/TermsofServic';
 import { DirectionProvider } from './components/DirectionContext';
+import LoginForm from './components/LoginForm/LoginForm';
 
 
 
@@ -52,6 +53,8 @@ function App() {
             <Route path="/tutorials" element={<TutorialPage />} />
             <Route path="/integration" element={<Integrations />} />
             <Route path="/signup" element={<SignUpForm />} />
+            <Route path="/login" element={<LoginForm />} />
+
             <Route path="/feature2" element={<MarketingAutomation />} />
             <Route path="/feature3" element={<ContactCRM />} />
             <Route path="/feature4" element={<PopupBuilder />} />
