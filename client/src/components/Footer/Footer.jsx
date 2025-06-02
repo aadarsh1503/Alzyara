@@ -142,8 +142,9 @@ const Footer = () => {
        <div className="mt-10 border-t border-gray-700 pt-6 text-13px text-gray-400 flex items-center justify-between">
   {/* Left-aligned paragraph */}
   <p className="text-left">
-    © {t('copyright')} Alzyara. {t('all_rights_reserved')}
-  </p>
+  © {t('copyright')} {new Date().getFullYear()} Alzyara. {t('all_rights_reserved')}
+</p>
+
   {/* Right-aligned links */}
   <ul className="flex space-x-4">
     <li>
