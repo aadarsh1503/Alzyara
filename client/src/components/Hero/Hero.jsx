@@ -21,8 +21,8 @@ const Hero = () => {
   }, [i18n.language, isRTL]);
 
   return (
-    <div>
-      <div className="bg-[#0f2027] mt-0 lg:mt-20">
+    <div className="overflow-x-hidden">
+      <div className="bg-[#0f2027] mt-0  lg:mt-20">
         <div className={`text-white max-w-6xl mx-auto flex flex-col min-h-screen lg:flex-row items-center justify-between px-8 lg:px-24 py-12 lg:py-24 ${isRTL ? 'rtl' : 'ltr'}`}>
           {/* Left Section */}
           <div className="lg:w-1/2 text-center lg:text-left space-y-6">
