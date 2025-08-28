@@ -14,6 +14,7 @@ import i9 from "./i9.png";
 import i10 from "./i10.png";
 import i11 from "./i11.png";
 import i12 from "./i12.png";
+import { t } from 'i18next';
 
 
 const Slide = () => {
@@ -90,7 +91,7 @@ const Slide = () => {
 
     return (
         <section className="py-10 lg:max-w-7xl mb-10 lg:w-full w-[200px] mx-auto">
-            <h1 className='text-center text-4xl font-extrabold mb-14'>Trusted Brands</h1>
+            <h1 className='text-center text-4xl font-extrabold mb-14'>{t('Trusted_Brands')}</h1>
         <div className="">
             {isLoaded ? (
                 <Slider ref={sliderRef} {...settings}>

@@ -71,7 +71,7 @@ const MarketingSection = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                className={`p-6 rounded-xl cursor-pointer transition-all duration-300 text-left ${
+                className={`p-6 rounded-xl cursor-pointer transition-all duration-300 ${isRTL ? 'text-right' : 'text-left'} ${
                   hoveredFeature === index
                     ? 'bg-green-50/70 ring-2 ring-lgreen shadow-xl'
                     : 'bg-gray-50/50 ring-1 ring-gray-200'

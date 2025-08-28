@@ -102,7 +102,7 @@ const Automation = () => {
 
             <motion.ul variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="mt-8 space-y-5">
               {mainFeatures.map((item) => (
-                <li key={item.key} className={`flex items-start gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                <li key={item.key} className={`flex  gap-3 ${isRTL ? '' : ''}`}>
                   <span className="flex-shrink-0 flex items-center justify-center text-white w-6 h-6 mt-1 rounded-full bg-lgreen">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
