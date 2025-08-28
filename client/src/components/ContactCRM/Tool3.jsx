@@ -1,146 +1,128 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   FaChartPie,
   FaNetworkWired,
-  FaMousePointer,
+  FaMousePointer, // More intuitive for Drag & Drop
   FaServer,
-  FaReplyAll,
-  FaPen,
-  FaCheckSquare,
+  FaPen,         // More intuitive for an editor
+  FaCheckSquare, // More intuitive for validation
   FaInfoCircle,
-  FaChartLine,
-  FaUsers,
+  FaChartBar,
+  FaUsers,       // More intuitive for segmentation
   FaEnvelopeOpenText
 } from "react-icons/fa";
-
-import ApiIcon from '@mui/icons-material/Api';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRobot,faWandMagicSparkles,faChartBar,faBolt,faCog ,faFilter ,faInfoCircle   } from '@fortawesome/free-solid-svg-icons';
-import { useTranslation } from "react-i18next";
+import { faRobot, faBolt, faCog } from '@fortawesome/free-solid-svg-icons';
+
+// --- Step 1: Refactor features into a data array for clean, maintainable code ---
+// Note: I've updated the icons to be more intuitive for each feature.
+const featuresData = [
+  {
+    icon: <FontAwesomeIcon icon={faRobot} />,
+    titleKey: 'subject_analyzer',
+    descriptionKey: 'subject_analyzer_desc',
+    href: '/feature3',
+  },
+  {
+    icon: <FaMousePointer />, // Better icon
+    titleKey: 'drag_drop_builder',
+    descriptionKey: 'drag_drop_builder_desc',
+    href: '/feature3',
+  },
+  {
+    icon: <FaCheckSquare />, // Better icon
+    titleKey: 'email_validation',
+    descriptionKey: 'email_validation_desc',
+    href: '/feature3',
+  },
+  {
+    icon: <FaInfoCircle />, // Kept as it implies handling issues
+    titleKey: 'handle_bounce_unsubscribe',
+    descriptionKey: 'handle_bounce_unsubscribe_desc',
+    href: '/feature3',
+  },
+  {
+    icon: <FaChartBar />, // Better icon
+    titleKey: 'detailed_analytics',
+    descriptionKey: 'detailed_analytics_desc',
+    href: '/feature3',
+  },
+  {
+    icon: <FaPen />, // Better icon
+    titleKey: 'wysiwyg_editor',
+    descriptionKey: 'wysiwyg_editor_desc',
+    href: '/feature3',
+  },
+  {
+    icon: <FaNetworkWired />, // Better icon
+    titleKey: 'marketing_automation',
+    descriptionKey: 'marketing_automation_desc',
+    href: '/feature3',
+  },
+  {
+    icon: <FaEnvelopeOpenText />, // Better icon
+    titleKey: 'email_tracking',
+    descriptionKey: 'email_tracking_desc',
+    href: '/feature3',
+  },
+  {
+    icon: <FaUsers />, // Better icon
+    titleKey: 'list_segmentation',
+    descriptionKey: 'list_segmentation_desc',
+    href: '/feature3',
+  },
+];
+
 const Tool3 = () => {
   const { t, i18n } = useTranslation();
-  const [isRTL, setIsRTL] = useState(i18n.language === 'ar');
-  useEffect(() => {
-    setIsRTL(i18n.language === 'ar');
-  }, [i18n.language]);
+  const isRTL = i18n.language === 'ar';
+
   return (
-    <div className={`bg-white ml-0 lg:ml-20 ${i18n.language === 'ar' ? 'lg:mr-20' : ''}  py-16 `} >
-      <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-1 items-center">
-        {/* Left Side: Blocks */}
-        <div className="grid lg:grid-cols-3 sm:grid-cols-1 gap-4">
-          {/* Subject Analyzer */}
-          <a href="/feature3" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-          <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
-            <FontAwesomeIcon icon={faRobot} />
-            </div>
-            <h3 className="text-lg font-semibold mb-2">{t('subject_analyzer')}</h3>
-            <p className="text-gray-600">
-            
-            {t('subject_analyzer_desc')}
-            </p>
-          </a>
-          {/* Drag & Drop Builder */}
-          <a href="/feature3" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-          <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
-            <FontAwesomeIcon icon={faInfoCircle } />
-            </div>
-            <h3 className="text-lg font-semibold mb-2">{t('drag_drop_builder')}</h3>
-            <p className="text-gray-600">
-            
-            {t('drag_drop_builder_desc')}
-            </p>
-          </a>
-          {/* Email Validation */}
-          <a href="/feature3" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-          <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
-            <FontAwesomeIcon icon={faChartBar} />
-            </div>
-            <h3 className="text-lg font-semibold mb-2">{t('email_validation')}</h3>
-            <p className="text-gray-600">
-            
-            {t('email_validation_desc')}
-            </p>
-          </a>
-          {/* Handle Bounce & Unsubscribe */}
-          <a href="/feature3" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-            <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
-              <FaServer />
-            </div>
-            <h3 className="text-lg font-semibold mb-2">
-              {t('handle_bounce_unsubscribe')}
-              
-            </h3>
-            <p className="text-gray-600">
-            {t('handle_bounce_unsubscribe_desc')}
-            </p>
-          </a>
-          {/* Detailed Analytics */}
-          <a href="/feature3" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-            <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
-            <FontAwesomeIcon icon={faBolt}  />
-            </div>
-            <h3 className="text-lg font-semibold mb-2">{t('detailed_analytics')}</h3>
-            <p className="text-gray-600">
-          
-            {t('detailed_analytics_desc')}
-            </p>
-          </a>
-          {/* WYSIWYG Editor */}
-          <a href="/feature3" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-          <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
-            <FontAwesomeIcon icon={faCog}  />
-            </div>
-            <h3 className="text-lg font-semibold mb-2">{t('wysiwyg_editor')}</h3>
-            <p className="text-gray-600">
+    // Section container with a light, airy background
+    <div className={`py-16 sm:py-24 bg-gray-50 ${isRTL ? 'rtl' : ''}`}>
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
-          
-            {t('wysiwyg_editor_desc')}
-            </p>
-          </a>
-          <a href="/feature3" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-          <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
-<FaChartPie />
-  </div>
-  <h3 className="text-lg font-semibold mb-2">{t('marketing_automation')}</h3>
-  <p className="text-gray-600">
-
-  {t('marketing_automation_desc')}
-  </p>
-</a>
-{/* Drag & Drop Builder */}
-<a href="/feature3" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-            <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
-  <FaNetworkWired />
-  </div>
-  <h3 className="text-lg font-semibold mb-2">{t('email_tracking')}</h3>
-  <p className="text-gray-600">
-
-  {t('email_tracking_desc')}
-  </p>
-</a>
-
-{/* Email Validation */}
-<a href="/feature3" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-            <div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
-    <FaChartPie />
-  </div>
-  <h3 className="text-lg font-semibold mb-2">{t('list_segmentation')}</h3>
-  <p className="text-gray-600">
-
-  {t('list_segmentation_desc')}
-  </p>
-</a>
-{/* Handle Bounce & Unsubscribe */}
-
-
+        {/* --- Step 2: Integrated Header Section for a clean and robust layout --- */}
+        <div className="text-center max-w-3xl mx-auto">
+          {/* Using t() function for translatable text */}
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            {t('all_tools_you_need_crm')}
+          </h2>
+          <p className="mt-4 text-lg text-gray-600">
+            {t('start_converting_leads_crm')}
+          </p>
         </div>
 
-        {/* Right Side: Text */}
-        <div className="text-left mt-0 ml-0 lg:ml-20 lg:-mt-[700px]">
-          <h2 className="lg:text-4xl text-3xl font-bold mb-4">All the Tools You <br />Need</h2>
-          <p className="text-gray-600 text-lg">
-          Start converting leads today with our top-tier CRM <br /> and sales engagement solutions.
-          </p>
+        {/* --- Step 3: Dynamic Grid rendered from the data array --- */}
+        <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {featuresData.map((feature, index) => (
+            <a 
+              key={index} 
+              href={feature.href} 
+              // Card styling focused on a clean, light aesthetic with engaging hover effects
+              className="group block rounded-2xl border border-gray-200 bg-white p-6 shadow-sm
+                         transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-teal-600/10"
+            >
+              {/* Icon container with vibrant hover effect */}
+              <div 
+                className="flex h-16 w-16 items-center justify-center rounded-xl bg-gray-100 
+                           text-3xl text-teal-600 transition-all duration-300
+                           group-hover:bg-teal-500 group-hover:text-white group-hover:scale-110"
+              >
+                {feature.icon}
+              </div>
+              {/* Text content with high-contrast, readable colors */}
+              <div className="mt-5">
+                <h3 className="text-lg font-semibold text-gray-900">
+                  {t(feature.titleKey)}
+                </h3>
+                <p className="mt-1 text-base text-gray-600">
+                  {t(feature.descriptionKey)}
+                </p>
+              </div>
+            </a>
+          ))}
         </div>
       </div>
     </div>
@@ -148,11 +130,3 @@ const Tool3 = () => {
 };
 
 export default Tool3;
-
-
-
-
-
-
-
-

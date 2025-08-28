@@ -16,7 +16,7 @@ const FourthHome = () => {
     </div>
   
     {/* Left Side Content */}
-    <div className={`md:w-1/2 mt-0 lg:mt-10 ${i18n.language === 'ar' ? 'text-right relative right-[120px]' : 'text-left'} relative left-20`}>
+    <div className={`md:w-1/2 mt-0 lg:mt-10 ${i18n.language === 'ar' ? 'text-right relative right-0 lg:right-[120px]' : 'text-left'} relative left-0 lg:left-20`}>
       <h1 className='font-semibold w-[160px] rounded-md p-2 bg-bkg mb-2'>{t('contact_crm')} 👥</h1>
       
       <h1 className='text-40px leading-tight font-semibold'>{t('manage_contact_list')}</h1>

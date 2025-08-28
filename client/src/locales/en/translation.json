@@ -1,11 +1,12 @@
 {
-  "hero": {
-    "title": "Email Newsletters & Marketing Automation, 100x Better",
-    "description": "All-in-one AI-powered platform to send emails, manage contacts, capture leads and automate your marketing.",
-    "createAccount": "Create A FREE Account",
-    "seePricing": "See Pricing",
-    "noCreditCard": "No Credit Card Required | Forever FREE Account"
-  },
+ "hero": {
+  "title": "Email Newsletters & Marketing<br/>Automation, 100x <br /> Better",
+  "description": "All-in-one AI-powered platform to send emails,<br/>manage contacts, capture leads,<br/>and automate your marketing.",
+  "createAccount": "Create A FREE Account",
+  "seePricing": "See Pricing",
+  "noCreditCard": "No Credit Card Required<br/>Forever FREE Account"
+},
+
   "powerful_email_designer": "POWERFUL EMAIL DESIGNER 🎨",
   "create_stunning": "Create stunning &",
   "personalized_email_designs": "personalized email designs",
@@ -1042,7 +1043,10 @@
     "signup_success_title": "Success!",
     "signup_success_message": "Your account has been created successfully. Please check your email for verification.",
     "back_to_form": "Back to form",
-    "processing": "Processing..."
+    "processing": "Processing...",
+    "start_converting_leads_crm":"Start converting leads today with our top-tier CRM and sales engagement solutions.",
+    "all_tools_you_need_crm":"All the Tools You Need",
+    "choose_templates":"Choose from a variety of pre-designed templates or start from scratch."
   
     
   

@@ -1,0 +1,70 @@
+.constellation-section {
+    position: relative;
+    background-color: #111827; /* A dark, sophisticated gray */
+    overflow: hidden; /* Crucial for containing the particles and animations */
+    padding: 8rem 2rem; /* More vertical space */
+  }
+  
+  /* Animated Particle Background */
+  .particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.04) 0, rgba(255, 255, 255, 0.04) 1px, transparent 1px, transparent 100%);
+    background-size: 20px 20px;
+    animation: pan-particles 25s linear infinite;
+    z-index: 0;
+  }
+  
+  @keyframes pan-particles {
+    0% { background-position: 0 0; }
+    100% { background-position: -400px -400px; }
+  }
+  
+  /* Central Content */
+  .constellation-core {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Stat Orb Styling */
+  .stat-orb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Start them all in the center */
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(31, 41, 55, 0.3); /* Glassy background */
+    border: 1px solid rgba(167, 243, 208, 0.2); /* Use your lgreen color, but subtle */
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+    z-index: 1;
+  }
+  
+  .stat-orb:hover {
+    transform: scale(1.1);
+    background: rgba(52, 211, 153, 0.1); /* Glow with your lgreen color */
+    box-shadow: 0 0 25px rgba(52, 211, 153, 0.4);
+    z-index: 10;
+  }
+  
+  .stat-orb h2 {
+    font-size: 2.5rem; /* 40px */
+    font-weight: 700;
+    color: #ffffff;
+  }
+  
+  .stat-orb p {
+    font-size: 0.875rem; /* 14px */
+    color: #d1d5db; /* Lighter gray */
+    margin-top: 0.5rem;
+    max-width: 80%;
+  }

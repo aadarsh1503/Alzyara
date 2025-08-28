@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import g1 from "./g1.png";
-import g2 from "./g2.png";
+import g1 from "./g1.png"; // Your logo
+import g2 from "./g2.png"; // Corrected: Added g2 import
 import { AiOutlineInstagram, AiOutlineYoutube, AiOutlineFacebook, AiOutlineTwitter, AiOutlineLinkedin } from 'react-icons/ai';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
@@ -15,25 +15,19 @@ const Footer = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    setIsRTL(i18n.language === 'ar');
+    const isArabic = i18n.language === 'ar';
+    setIsRTL(isArabic);
+    document.body.dir = isArabic ? 'rtl' : 'ltr';
   }, [i18n.language]);
 
   const handleSubscribe = async (e) => {
     e.preventDefault();
-    
-    if (!email.trim()) {
-      toast.error(t('please_enter_email'));
-      return;
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
+    if (!email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       toast.error(t('please_enter_valid_email'));
       return;
     }
-
+    setIsLoading(true);
     try {
-      setIsLoading(true);
       const formData = new FormData();
       formData.append('email', email);
       formData.append('list', 'wV0U4Q6b4892wE8VkDEmG6qQ');
@@ -46,14 +40,7 @@ const Footer = () => {
         mode: 'no-cors',
       });
 
-      toast.success(t('Thank you For Subscribing'), {
-        autoClose: 5000, // Auto close after 5 seconds
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      toast.success(t('Thank you For Subscribing'));
       setEmail("");
     } catch (error) {
       console.error('Error:', error);
@@ -64,147 +51,116 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 z-50 text-13px text-white py-10">
-      <ToastContainer
-        position="bottom-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={isRTL}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Top Section */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-32">
-          {/* Alzyara Section */}
-          <div className="md:col-span-2">
-            <img
-              src={g1}
-              alt="Alzyara Logo"
-              className="mb-4 w-32"
-            />
-            <p className={`text-gray-400 text-left relative ml-0 lg:ml-36 ${i18n.language === 'ar' ? ' relative left-[50px]' : 'text-left lg:right-36 right-0'} text-14px mb-6`}>
-              {t('alzyara_description')}
-            </p>
+    <footer className="bg-gray-900 text-white z-50 relative overflow-hidden">
+      
+      {/* MONOCHROMATIC ON-BRAND ANIMATION */}
+      <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
+        <div className="absolute top-1/4 left-0 w-96 h-96 bg-lgreen rounded-full filter blur-3xl animate-aurora"></div>
+        <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-gray-700 rounded-full filter blur-3xl animate-aurora animation-delay-4000"></div>
+      </div>
+      
+      {/* Content wrapper with generous padding */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-24">
+        <div className="flex flex-col gap-16 lg:gap-24">
 
-            <div className="flex items-center cursor-pointer justify-start space-x-4 ml-2">
-              <a href="https://www.instagram.com/alzyarasoftwares/" target="_blank" rel="noopener noreferrer">
-                <AiOutlineInstagram className={`text-gray-400 ${i18n.language === 'ar' ? 'mr-4' : ''} hover:text-parrot text-2xl`} />
-              </a>
-
-              <a href="https://www.facebook.com/Alzyarasoftwares" target="_blank" rel="noopener noreferrer">
-                <AiOutlineFacebook className={`text-gray-400 ${i18n.language === 'ar' ? 'mr-4' : ''} hover:text-parrot text-2xl`} />
-              </a>
-
-              <a href="https://x.com/Alzyara_Tech" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faXTwitter} className="text-gray-400 hover:text-parrot text-2xl" />
-              </a>
-            </div>
-
-            <a href="https://www.facebook.com/Alzyarasoftwares" target="_blank" rel="noopener noreferrer">
-              <h1 className="ml-0 font-bold text-md hover:text-parrot mt-4">
-                {t('join_facebook_community')}
-              </h1>
-            </a>
-          </div>
-
-          {/* Subscription Section */}
-          <div className="md:col-span-3 relative bottom-0 lg:bottom-5">
-            <p className="text-gray-300 mb-4">{t('subscription_message')}</p>
-
-            <form onSubmit={handleSubscribe} className="flex">
+          {/* === TOP TIER: HERO CTA === */}
+          <div className="text-center max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-400">
+              {t('subscription_message')}
+            </h2>
+            <p className="text-gray-400 mb-8">{t('alzyara_description')}</p>
+            <form onSubmit={handleSubscribe} className="flex max-w-md mx-auto">
               <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                type="email" value={email} onChange={(e) => setEmail(e.target.value)}
                 placeholder={t('enter_email')}
-                className="flex-grow px-4 py-2 rounded-l-md bg-gray-800 text-gray-300 placeholder-gray-500 focus:outline-none"
+                className="flex-grow px-4 py-3 rounded-l-md bg-white/5 backdrop-blur-sm border border-white/10 text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-lgreen transition-all duration-300 rtl:rounded-r-md rtl:rounded-l-none"
                 required
               />
-
               <button 
                 type="submit"
-                className="bg-lgreen text-white px-6 py-2 rounded-r-md hover:bg-hgreen"
+                className="bg-lgreen text-black font-bold px-6 py-3 rounded-r-md hover:bg-hgreen transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-lgreen transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed rtl:rounded-l-md rtl:rounded-r-none"
                 disabled={isLoading}
               >
                 {isLoading ? t('subscribing') : t('subscribe')}
               </button>
             </form>
           </div>
-        </div>
 
-        {/* Links Section */}
-        <div className={`mt-4 lg:-mt-56 ml-0 relative z-50 lg:ml-64 grid grid-cols-2 ${i18n.language === 'ar' ? 'text-right relative right-0 lg:right-[300px]' : 'text-left'} md:grid-cols-4 gap-9`}>
-          <div>
-            <h5 className="font-semibold mb-4">{t('quick_links')}</h5>
-            <ul className="space-y-2 text-gray-400 text-13px">
-              <li><a href="/" className="hover:underline">{t('home')}</a></li>
-              <li><a href="/signup" className="hover:underline">{t('login')}</a></li>
-              <li><a href="/pricing" className="hover:underline">{t('pricing')}</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h5 className="font-semibold mb-4">{t('features')}</h5>
-            <ul className="space-y-2 text-gray-400 text-13px">
-              <li><a href="/feature1" className="hover:underline">{t('email_marketing')}</a></li>
-              <li><a href="/feature2" className="hover:underline">{t('marketing_automation')}</a></li>
-              <li><a href="/feature3" className="hover:underline">{t('contact_crm')}</a></li>
-              <li><a href="/feature4" className="hover:underline">{t('popup_builder')}</a></li>
-              <li><a href="/feature5" className="hover:underline">{t('lead_webform')}</a></li>
-              <li><a href="/feature6" className="hover:underline">{t('email_verification')}</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h5 className="font-semibold mb-4">{t('solutions')}</h5>
-            <ul className="space-y-2 text-gray-400 text-13px">
-              <li><a href="/marketing" className="hover:underline">{t('marketing_agencies')}</a></li>
-              <li><a href="/solution2" className="hover:underline">{t('sales_teams')}</a></li>
-              <li><a href="/solution3" className="hover:underline">{t('education')}</a></li>
-              <li><a href="/solution4" className="hover:underline">{t('ecommerce')}</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h5 className="font-semibold mb-4">{t('integrations')}</h5>
-            <ul className="space-y-2 text-gray-400 text-13px">
-              <li><a href="/integration" className="hover:underline">{t('zapier')}</a></li>
-              <li><a href="/integration2" className="hover:underline">{t('pabbly')}</a></li>
-              <li><a href="/integration3" className="hover:underline">{t('woo_commerce_addon')}</a></li>
-              <li><a href="/integration4" className="hover:underline">{t('api_integration')}</a></li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Disclaimer Section */}
-        <div className="mt-10 border-t border-gray-700 pt-6 text-13px text-gray-400 flex items-center justify-between">
-          <p className="text-left">
-            © {t('copyright')} {new Date().getFullYear()} Alzyara. {t('all_rights_reserved')}
-          </p>
-
-          <ul className="flex space-x-4">
-            <li>
-              <a href="/contact" className="hover:underline ml-2">
-                {t('contact_us')}
+          {/* === MIDDLE TIER: INFO HUB === */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 border-t border-white/10 pt-16">
+            {/* Brand Info */}
+            <div className="lg:col-span-1">
+              <img src={g1} alt="Alzyara Logo" className="w-32 mb-4" />
+              <p className={`text-gray-400 text-sm mb-6`}>
+                {t('alzyara_description')}
+              </p>
+              <div className="flex items-center space-x-5 rtl:space-x-reverse mt-6">
+                <a href="https://www.instagram.com/alzyarasoftwares/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-lgreen transform hover:scale-125 transition-all duration-300"><AiOutlineInstagram size={24} /></a>
+                <a href="https://www.facebook.com/Alzyarasoftwares" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-lgreen transform hover:scale-125 transition-all duration-300"><AiOutlineFacebook size={24} /></a>
+                <a href="https://x.com/Alzyara_Tech" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-lgreen transform hover:scale-125 transition-all duration-300"><FontAwesomeIcon icon={faXTwitter} className="h-[22px]" /></a>
+              </div>
+              <a href="https://www.facebook.com/Alzyarasoftwares" target="_blank" rel="noopener noreferrer">
+                <h1 className="font-bold text-md hover:text-lgreen mt-4">
+                  {t('join_facebook_community')}
+                </h1>
               </a>
-            </li>
-            <li>
-              <a href="/termsofService" className="hover:underline">
-                {t('terms_conditions')}
-              </a>
-            </li>
-            <li>
-              <a href="/privacy" className="hover:underline">
-                {t('privacy_policy')}
-              </a>
-            </li>
-          </ul>
+            </div>
+            
+            {/* Links Grid */}
+            <div className="lg:col-span-2 grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div>
+                <h5 className="font-bold uppercase tracking-wider text-sm mb-5 transition-all duration-300 hover:text-lgreen hover:tracking-widest">{t('quick_links')}</h5>
+                <ul className="space-y-3">
+                  <li><a href="/" className="text-gray-400 text-sm hover:text-white transition-colors duration-300">{t('home')}</a></li>
+                  <li><a href="/signup" className="text-gray-400 text-sm hover:text-white transition-colors duration-300">{t('login')}</a></li>
+                  <li><a href="/pricing" className="text-gray-400 text-sm hover:text-white transition-colors duration-300">{t('pricing')}</a></li>
+                </ul>
+              </div>
+              <div>
+                <h5 className="font-bold uppercase tracking-wider text-sm mb-5 transition-all duration-300 hover:text-lgreen hover:tracking-widest">{t('features')}</h5>
+                <ul className="space-y-3">
+                  <li><a href="/feature1" className="text-gray-400 text-sm hover:text-white transition-colors duration-300">{t('email_marketing')}</a></li>
+                  <li><a href="/feature2" className="text-gray-400 text-sm hover:text-white transition-colors duration-300">{t('marketing_automation')}</a></li>
+                  <li><a href="/feature3" className="text-gray-400 text-sm hover:text-white transition-colors duration-300">{t('contact_crm')}</a></li>
+                  <li><a href="/feature4" className="text-gray-400 text-sm hover:text-white transition-colors duration-300">{t('popup_builder')}</a></li>
+                  <li><a href="/feature5" className="text-gray-400 text-sm hover:text-white transition-colors duration-300">{t('lead_webform')}</a></li>
+                  <li><a href="/feature6" className="text-gray-400 text-sm hover:text-white transition-colors duration-300">{t('email_verification')}</a></li>
+                </ul>
+              </div>
+              <div>
+                <h5 className="font-bold uppercase tracking-wider text-sm mb-5 transition-all duration-300 hover:text-lgreen hover:tracking-widest">{t('solutions')}</h5>
+                <ul className="space-y-3">
+                  <li><a href="/marketing" className="text-gray-400 text-sm hover:text-white transition-colors duration-300">{t('marketing_agencies')}</a></li>
+                  <li><a href="/solution2" className="text-gray-400 text-sm hover:text-white transition-colors duration-300">{t('sales_teams')}</a></li>
+                  <li><a href="/solution3" className="text-gray-400 text-sm hover:text-white transition-colors duration-300">{t('education')}</a></li>
+                  <li><a href="/solution4" className="text-gray-400 text-sm hover:text-white transition-colors duration-300">{t('ecommerce')}</a></li>
+                </ul>
+              </div>
+              <div>
+                <h5 className="font-bold uppercase tracking-wider text-sm mb-5 transition-all duration-300 hover:text-lgreen hover:tracking-widest">{t('integrations')}</h5>
+                <ul className="space-y-3">
+                  <li><a href="/integration" className="text-gray-400 text-sm hover:text-white transition-colors duration-300">{t('zapier')}</a></li>
+                  <li><a href="/integration2" className="text-gray-400 text-sm hover:text-white transition-colors duration-300">{t('pabbly')}</a></li>
+                  <li><a href="/integration3" className="text-gray-400 text-sm hover:text-white transition-colors duration-300">{t('woo_commerce_addon')}</a></li>
+                  <li><a href="/integration4" className="text-gray-400 text-sm hover:text-white transition-colors duration-300">{t('api_integration')}</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          {/* === BOTTOM TIER: FOUNDATION === */}
+          <div className="border-t border-white/10 pt-8 text-sm text-gray-500 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-center sm:text-left">© {new Date().getFullYear()} Alzyara. {t('all_rights_reserved')}</p>
+            <ul className="flex items-center space-x-6 rtl:space-x-reverse">
+              <li><a href="/contact" className="hover:text-white transition-colors duration-300">{t('contact_us')}</a></li>
+              <li><a href="/termsofService" className="hover:text-white transition-colors duration-300">{t('terms_conditions')}</a></li>
+              <li><a href="/privacy" className="hover:text-white transition-colors duration-300">{t('privacy_policy')}</a></li>
+            </ul>
+          </div>
+
         </div>
       </div>
+      <ToastContainer position="bottom-right" theme="dark" />
     </footer>
   );
 };

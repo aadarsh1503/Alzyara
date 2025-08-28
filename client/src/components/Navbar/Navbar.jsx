@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom"; // Import Link for React Router navigation
 import { AiOutlineSearch } from "react-icons/ai";
 import { FaBars, FaTimes } from "react-icons/fa"; // Import icons for menu
@@ -41,12 +41,34 @@ const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [searchText, setSearchText] = useState("");
 
+  // --- START: NEW STATE FOR HIDE/SHOW ON SCROLL ---
+  const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  // --- END: NEW STATE ---
+
   const dropdownRef = useRef(null);
 
-  // Effect to handle scroll and close dropdown
+  // --- START: MODIFIED SCROLL HANDLER ---
+  // This useEffect now handles both background color change and visibility
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
+      const currentScrollY = window.scrollY;
+
+      // Logic for background color change (existing)
+      setIsScrolled(currentScrollY > 50);
+
+      // Logic for showing/hiding navbar
+      // Hide navbar only if scrolling down and past the navbar height
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsNavbarVisible(false);
+      } else {
+        setIsNavbarVisible(true);
+      }
+
+      // Update the last scroll position
+      setLastScrollY(currentScrollY);
+      
+      // Close dropdowns on scroll (existing)
       closeAllDropdowns();
     };
 
@@ -55,7 +77,8 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [lastScrollY]); // Add lastScrollY to dependencies
+  // --- END: MODIFIED SCROLL HANDLER ---
 
   // Effect to handle click outside dropdown
   useEffect(() => {
@@ -80,14 +103,6 @@ const Navbar = () => {
     setOpenDropdown(null);
     setIsSolutionsOpen(false);
   };
-  // Handle scroll event
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50); // Change state when scrolled more than 50px
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll); // Cleanup listener
-  }, []);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -114,19 +129,19 @@ const Navbar = () => {
   };
   useEffect(() => {
     // Check if the current URL contains '/email'
-    if (window.location.pathname.includes('/feature1') || window.location.pathname.includes('/feature2') || window.location.pathname.includes('/feature3') 
+    if (window.location.pathname.includes('/feature1') || window.location.pathname.includes('/feature2') || window.location.pathname.includes('/feature3')
       || window.location.pathname.includes('/feature4') || window.location.pathname.includes('/feature5') || window.location.pathname.includes('/feature6')) {
       // Change the text color of the feature section to gray
       document.querySelector('.feature-section').style.color = 'gray';
     }
-    
+
 
     if (window.location.pathname.includes('/marketing') || window.location.pathname.includes('/solution2')
-       || window.location.pathname.includes('/solution3') || window.location.pathname.includes('/solution4')) {
+      || window.location.pathname.includes('/solution3') || window.location.pathname.includes('/solution4')) {
       // Change the text color of the feature section to white
       document.querySelector('.market-section').style.color = 'gray';
     }
-    
+
     if (window.location.pathname.includes('/pricing')) {
       // Change the text color of the feature section to white
       document.querySelector('.pricing').style.color = 'gray';
@@ -159,406 +174,407 @@ const Navbar = () => {
   return (
     <div>
       <nav
-        className={`fixed hidden lg:flex  top-0 w-full  z-50 transition-all duration-300 ${
-          isScrolled ? "bg-[#0f2027] text-white" : "bg-[#0f2027]  text-white"
-        }`}
+        // --- START: APPLIED GLASS EFFECT ---
+        // Changed background to be semi-transparent and added backdrop-blur
+        className={`fixed hidden lg:flex top-0 w-full z-50 transition-all duration-300 transform 
+          bg-[#0f2027]/50 backdrop-blur-lg  text-white
+          ${isNavbarVisible ? 'translate-y-0' : '-translate-y-full'}`}
+        // --- END: APPLIED GLASS EFFECT ---
       >
         <div className="container mx-auto flex max-w-7xl items-center justify-between px-6 py-">
           {/* Logo Section */}
           <div className="flex items-center space-x-">
             <a href="/">
-              <img src={g1} alt="Logo" className={`h-16  w-16`} />
+              <img src={g1} alt="Logo" className={`h-16 w-16`} />
             </a>
           </div>
           {/* Desktop Menu Items */}
-          <div className="hidden md:flex font-semibold items-center  lg:-space-x-5 text-xs tracking-wide relative">
-          <div className="relative">
-      {/* Features button */}
-      <div
-  className="hover:text-parrot p-8 flex feature-section items-center cursor-pointer"
-  onClick={toggleFeaturesDropdown}
->
-{t('features')}
-  <RiArrowDropDownLine className="ml-1 text-xl text-white" />
-</div>
-
-{/* Dropdown for Features */}
-{openDropdown === 'features' && (
-  <div className="fixed top-24 left-0 w-full h-[456px] bg-white pt-3 text-black z-10">
-    <div className="grid grid-cols-1 -ml-32  lg:grid-cols-2 gap-  h-full p-12">
-  
-      {/* Email Marketing */}
-      <div className={`${i18n.language === 'ar' ? 'relative right-44' : 'text-left'}`}>
-  <a href="/feature1">
-    <div className="flex items-center w-[446px] ml-72 hover:bg-bkg space-x-2 p-4 hover:text-dgreen group rounded-lg">
-      <div className="w-24 h-18 bg-transparent rounded-xl p-3 group-hover:bg-gray-50 flex items-center justify-center">
-        <img src={i1} alt={t('email_marketing')} className={` ${i18n.language === 'ar' ? 'relative w-12' : 'w-full h-full'} `} />
-      </div>
-      <div>
-        <div className="font-normal text-lg">{t('email_marketing')}</div>
-        <p className="font-light text-sm">{t('email_marketing_desc')}</p>
-      </div>
-    </div>
-  </a>
-</div>
-
-<a href="/feature2">
-  <div className="flex relative z-50 shrink-0 items-center ml-20 w-[446px] space-x-4 p-4 hover:bg-bkg hover:text-dgreen rounded-lg">
-    <img src={a2} alt={t('marketing_automation')} className="w-12 h-12" />
-    <div>
-      <div className="font-normal mr-2 text-lg">{t('marketing_automation')}</div>
-      <p className="font-light mr-2 text-sm">{t('marketing_automation_desc')}</p>
-    </div>
-  </div>
-</a>
-
-<div className={`${i18n.language === 'ar' ? 'relative right-44 shrink-0' : 'text-left'}`}>
-  <a href="/feature3">
-    <div className="flex items-center w-[446px] ml-72 space-x-2 p-4 hover:bg-bkg hover:text-dgreen group rounded-lg">
-      <div className="w-24 h-18 bg-transparent rounded-xl p-3 group-hover:bg-gray-50 flex items-center justify-center">
-        <img src={i2} alt={t('contact_crm')} className="w-full h-full" />
-      </div>
-      <div>
-        <div className="font-normal text-lg">{t('contact_crm')}</div>
-        <p className="font-light text-sm">{t('contact_crm_desc')}</p>
-      </div>
-    </div>
-  </a>
-</div>
-
-<a href="/feature4">
-  <div className="flex items-center relative z-50 ml-20 w-[456px] space-x-4 p-4 hover:bg-bkg hover:text-dgreen rounded-lg">
-    <img src={a4} alt={t('popup_builder')} className="w-12 h-12" />
-    <div>
-      <div className="font-normal mr-2 text-lg">{t('popup_builder')}</div>
-      <p className="font-light mr-2 text-sm">{t('popup_builder_desc')}</p>
-    </div>
-  </div>
-</a>
-
-<div className={`${i18n.language === 'ar' ? 'relative right-48 shrink-0' : 'text-left'}`}>
-  <a href="/feature5">
-    <div className="flex items-center ml-72 space-x-2 p-4 hover:bg-bkg hover:text-dgreen rounded-lg">
-      <img src={a5} alt={t('lead_webform')} className="w-12 shrink-0 ml-2 h-12" />
-      <div>
-        <div className="font-normal ml-2 text-lg">{t('lead_webform')}</div>
-        <p className="font-light ml-2 text-sm">{t('lead_webform_desc')}</p>
-      </div>
-    </div>
-  </a>
-</div>
-
-    {/* Email Verification */}
-    <a href="/feature6">
-  <div class="flex items-center relative z-50 ml-20 space-x-4 p-4 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg">
-    <img
-      src={a6}
-      alt="{t('email_verification_alt')}"
-      class="w-12 h-12"
-    />
-    <div>
-      <div class="font-normal mr-2 text-lg">
-        {t('email_verification_title')}
-      </div>
-      <p class="font-light mr-2 text-sm">
-        {t('email_verification_description')}
-      </p>
-    </div>
-  </div>
-</a>
-  </div>
-</div>
-
-      )}
-    </div>
-    <div className="group relative hover:text-parrot">
-  <div
-    className="hover:text-parrot p-8 market-section flex items-center cursor-pointer"
-    onClick={toggleSolutionsDropdown}
-  >
-    {t('solutions')}
-    <RiArrowDropDownLine className="ml-1 text-xl text-white" />
-  </div>
-
-  {openDropdown === 'solutions' && (
-    <div className="fixed top-24 left-0 w-full h-[300px] bg-white pt-3 text-black z-10">
-      <div className="grid grid-cols-2 gap-4 bg-white -ml-32 h-[300px] p-12">
-
-        {/* Marketing Agencies */}
-        <div className={`${i18n.language === 'ar' ? 'relative right-44' : 'text-left'}`}>
-          <a href="/marketing">
-            <div className="flex items-center ml-72 p-4 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg space-x-4">
-              <img src={b4} alt={t('marketing_agencies')} className="w-12 h-12 ml-4" />
-              <div>
-                <div className="font-normal text-lg">{t('marketing_agencies')}</div>
-                <p className="font-light text-sm">{t('marketing_agencies_desc')}</p>
+          <div className="hidden md:flex font-semibold items-center lg:-space-x-5 text-xs tracking-wide relative">
+            <div className="relative">
+              {/* Features button */}
+              <div
+                className="hover:text-parrot p-8 flex feature-section items-center cursor-pointer"
+                onClick={toggleFeaturesDropdown}
+              >
+                {t('features')}
+                <RiArrowDropDownLine className="ml-1 text-xl text-white" />
               </div>
-            </div>
-          </a>
-        </div>
 
-        {/* Education */}
-        <a href="/solution2">
-          <div className="flex items-center relative z-50 ml-20 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg p-4 space-x-4">
-            <img src={b2} alt={t('education')} className="w-12 h-12 ml-4" />
-            <div>
-              <div className="font-normal text-lg">{t('education')}</div>
-              <p className="font-light text-sm">{t('education_desc')}</p>
-            </div>
-          </div>
-        </a>
+              {/* Dropdown for Features */}
+              {openDropdown === 'features' && (
+                <div className="fixed top-24 left-0 w-full h-[456px] bg-white pt-3 text-black z-10">
+                  <div className="grid grid-cols-1 -ml-32  lg:grid-cols-2 gap-  h-full p-12">
 
-        {/* Sales Teams */}
-        <div className={`${i18n.language === 'ar' ? 'relative right-44' : 'text-left'}`}>
-          <a href="/solution3">
-            <div className="flex items-center ml-72 p-4 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg space-x-4">
-              <img src={b3} alt={t('sales_teams')} className="w-12 h-12 ml-4" />
-              <div>
-                <div className="font-normal text-lg">{t('sales_teams')}</div>
-                <p className="font-light text-sm">{t('sales_teams_desc')}</p>
+                    {/* Email Marketing */}
+                    <div className={`${i18n.language === 'ar' ? 'relative right-44' : 'text-left'}`}>
+                      <a href="/feature1">
+                        <div className="flex items-center w-[446px] ml-72 hover:bg-bkg space-x-2 p-4 hover:text-dgreen group rounded-lg">
+                          <div className="w-24 h-18 bg-transparent rounded-xl p-3 group-hover:bg-gray-50 flex items-center justify-center">
+                            <img src={i1} alt={t('email_marketing')} className={` ${i18n.language === 'ar' ? 'relative w-12' : 'w-full h-full'} `} />
+                          </div>
+                          <div>
+                            <div className="font-normal text-lg">{t('email_marketing')}</div>
+                            <p className="font-light text-sm">{t('email_marketing_desc')}</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <a href="/feature2">
+                      <div className="flex relative z-50 shrink-0 items-center ml-20 w-[446px] space-x-4 p-4 hover:bg-bkg hover:text-dgreen rounded-lg">
+                        <img src={a2} alt={t('marketing_automation')} className="w-12 h-12" />
+                        <div>
+                          <div className="font-normal mr-2 text-lg">{t('marketing_automation')}</div>
+                          <p className="font-light mr-2 text-sm">{t('marketing_automation_desc')}</p>
+                        </div>
+                      </div>
+                    </a>
+
+                    <div className={`${i18n.language === 'ar' ? 'relative right-44 shrink-0' : 'text-left'}`}>
+                      <a href="/feature3">
+                        <div className="flex items-center w-[446px] ml-72 space-x-2 p-4 hover:bg-bkg hover:text-dgreen group rounded-lg">
+                          <div className="w-24 h-18 bg-transparent rounded-xl p-3 group-hover:bg-gray-50 flex items-center justify-center">
+                            <img src={i2} alt={t('contact_crm')} className="w-full h-full" />
+                          </div>
+                          <div>
+                            <div className="font-normal text-lg">{t('contact_crm')}</div>
+                            <p className="font-light text-sm">{t('contact_crm_desc')}</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <a href="/feature4">
+                      <div className="flex items-center relative z-50 ml-20 w-[456px] space-x-4 p-4 hover:bg-bkg hover:text-dgreen rounded-lg">
+                        <img src={a4} alt={t('popup_builder')} className="w-12 h-12" />
+                        <div>
+                          <div className="font-normal mr-2 text-lg">{t('popup_builder')}</div>
+                          <p className="font-light mr-2 text-sm">{t('popup_builder_desc')}</p>
+                        </div>
+                      </div>
+                    </a>
+
+                    <div className={`${i18n.language === 'ar' ? 'relative right-48 shrink-0' : 'text-left'}`}>
+                      <a href="/feature5">
+                        <div className="flex items-center ml-72 space-x-2 p-4 hover:bg-bkg hover:text-dgreen rounded-lg">
+                          <img src={a5} alt={t('lead_webform')} className="w-12 shrink-0 ml-2 h-12" />
+                          <div>
+                            <div className="font-normal ml-2 text-lg">{t('lead_webform')}</div>
+                            <p className="font-light ml-2 text-sm">{t('lead_webform_desc')}</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    {/* Email Verification */}
+                    <a href="/feature6">
+                      <div class="flex items-center relative z-50 ml-20 space-x-4 p-4 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg">
+                        <img
+                          src={a6}
+                          alt="{t('email_verification_alt')}"
+                          class="w-12 h-12"
+                        />
+                        <div>
+                          <div class="font-normal mr-2 text-lg">
+                            {t('email_verification_title')}
+                          </div>
+                          <p class="font-light mr-2 text-sm">
+                            {t('email_verification_description')}
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+              )}
+            </div>
+            <div className="group relative hover:text-parrot">
+              <div
+                className="hover:text-parrot p-8 market-section flex items-center cursor-pointer"
+                onClick={toggleSolutionsDropdown}
+              >
+                {t('solutions')}
+                <RiArrowDropDownLine className="ml-1 text-xl text-white" />
               </div>
-            </div>
-          </a>
-        </div>
 
-        {/* E-Commerce */}
-        <a href="/solution4">
-          <div className="flex items-center relative z-50 ml-20 w-[456px] hover:bg-bkg hover:text-dgreen p-4 rounded-lg space-x-4">
-            <img src={b1} alt={t('ecommerce')} className="w-12 h-12 ml-4" />
-            <div>
-              <div className="font-normal text-lg">{t('ecommerce')}</div>
-              <p className="font-light text-sm">{t('ecommerce_desc')}</p>
-            </div>
-          </div>
-        </a>
+              {openDropdown === 'solutions' && (
+                <div className="fixed top-24 left-0 w-full h-[300px] bg-white pt-3 text-black z-10">
+                  <div className="grid grid-cols-2 gap-4 bg-white -ml-32 h-[300px] p-12">
 
-      </div>
-    </div>
-  )}
-</div>
+                    {/* Marketing Agencies */}
+                    <div className={`${i18n.language === 'ar' ? 'relative right-44' : 'text-left'}`}>
+                      <a href="/marketing">
+                        <div className="flex items-center ml-72 p-4 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg space-x-4">
+                          <img src={b4} alt={t('marketing_agencies')} className="w-12 h-12 ml-4" />
+                          <div>
+                            <div className="font-normal text-lg">{t('marketing_agencies')}</div>
+                            <p className="font-light text-sm">{t('marketing_agencies_desc')}</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
 
-<div className=" pricing ">
-  <a href="/pricing">
-            <div className="hover:text-parrot p-8">
-            {t('pricing')}
+                    {/* Education */}
+                    <a href="/solution2">
+                      <div className="flex items-center relative z-50 ml-20 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg p-4 space-x-4">
+                        <img src={b2} alt={t('education')} className="w-12 h-12 ml-4" />
+                        <div>
+                          <div className="font-normal text-lg">{t('education')}</div>
+                          <p className="font-light text-sm">{t('education_desc')}</p>
+                        </div>
+                      </div>
+                    </a>
+
+                    {/* Sales Teams */}
+                    <div className={`${i18n.language === 'ar' ? 'relative right-44' : 'text-left'}`}>
+                      <a href="/solution3">
+                        <div className="flex items-center ml-72 p-4 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg space-x-4">
+                          <img src={b3} alt={t('sales_teams')} className="w-12 h-12 ml-4" />
+                          <div>
+                            <div className="font-normal text-lg">{t('sales_teams')}</div>
+                            <p className="font-light text-sm">{t('sales_teams_desc')}</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    {/* E-Commerce */}
+                    <a href="/solution4">
+                      <div className="flex items-center relative z-50 ml-20 w-[456px] hover:bg-bkg hover:text-dgreen p-4 rounded-lg space-x-4">
+                        <img src={b1} alt={t('ecommerce')} className="w-12 h-12 ml-4" />
+                        <div>
+                          <div className="font-normal text-lg">{t('ecommerce')}</div>
+                          <p className="font-light text-sm">{t('ecommerce_desc')}</p>
+                        </div>
+                      </div>
+                    </a>
+
+                  </div>
+                </div>
+              )}
             </div>
-            </a>
+
+            <div className=" pricing ">
+              <a href="/pricing">
+                <div className="hover:text-parrot p-8">
+                  {t('pricing')}
+                </div>
+              </a>
             </div>
- 
+
 
             <div className="relative">
-  <div
-    className="hover:text-parrot p-8 integration-section flex items-center cursor-pointer"
-    onClick={toggleIntegrationDropdown}
-  >
-    {t('integration')}
-    <RiArrowDropDownLine className="ml-1 text-xl text-white" />
-  </div>
-  {openDropdown === 'integration' && (
-    <div className="fixed top-24 left-0 w-full h-[200px] bg-white pt-3 text-black z-10">
-      <div className="grid grid-cols-2 gap-4 bg-white -ml-32 h-[300px] p-12">
-        <div className={`${i18n.language === 'ar' ? 'relative right-44' : 'text-left'}`}>
-          {/* Email Marketing */}
-          <a href="/integration">
-            <div className="flex items-center ml-72 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg p-4 space-x-4">
-              <img
-                src={c3}
-                alt="Email Marketing"
-                className="w-12 h-12"
-              />
-              <div>
-                <div className="font-normal mr-2 text-lg">
-                  {t('zapier_integration')}
+              <div
+                className="hover:text-parrot p-8 integration-section flex items-center cursor-pointer"
+                onClick={toggleIntegrationDropdown}
+              >
+                {t('integration')}
+                <RiArrowDropDownLine className="ml-1 text-xl text-white" />
+              </div>
+              {openDropdown === 'integration' && (
+                <div className="fixed top-24 left-0 w-full h-[200px] bg-white pt-3 text-black z-10">
+                  <div className="grid grid-cols-2 gap-4 bg-white -ml-32 h-[300px] p-12">
+                    <div className={`${i18n.language === 'ar' ? 'relative right-44' : 'text-left'}`}>
+                      {/* Email Marketing */}
+                      <a href="/integration">
+                        <div className="flex items-center ml-72 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg p-4 space-x-4">
+                          <img
+                            src={c3}
+                            alt="Email Marketing"
+                            className="w-12 h-12"
+                          />
+                          <div>
+                            <div className="font-normal mr-2 text-lg">
+                              {t('zapier_integration')}
+                            </div>
+                            <p className="font-light mr-2 text-sm">
+                              {t('zapier_description')}
+                            </p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    {/* Marketing Automation */}
+                    <a href="/integration2">
+                      <div className="flex items-center relative z-50 ml-20 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg p-4 space-x-4">
+                        <img
+                          src={c4}
+                          alt="Marketing Automation"
+                          className="w-12 h-12"
+                        />
+                        <div>
+                          <div className="font-normal mr-2 text-lg">
+                            {t('pabbly_integration')}
+                          </div>
+                          <p className="font-light mr-2 text-sm">
+                            {t('pabbly_description')}
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+
+                    {/* Contact CIRM */}
+                    <div className={`${i18n.language === 'ar' ? 'relative right-44' : 'text-left'}`}>
+                      <a href="/integration3">
+                        <div className="flex items-center ml-72 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg p-4 space-x-4">
+                          <img
+                            src={c2}
+                            alt="Contact CIRM"
+                            className="w-12 h-12"
+                          />
+                          <div>
+                            <div className="font-normal mr-2 text-lg">
+                              {t('woo_commerce_addon')}
+                            </div>
+                            <p className="font-light mr-2 text-sm">
+                              {t('woo_commerce_description')}
+                            </p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    {/* Popup Builder */}
+                    <a href="/integration4">
+                      <div className="flex items-center relative z-50 ml-20 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg p-4 space-x-4">
+                        <img
+                          src={c1}
+                          alt="Popup Builder"
+                          className="w-12 h-12"
+                        />
+                        <div>
+                          <div className="font-normal mr-2 text-lg">
+                            {t('api_integration')}
+                          </div>
+                          <p className="font-light mr-2 text-sm">
+                            {t('api_description')}
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
                 </div>
-                <p className="font-light mr-2 text-sm">
-                  {t('zapier_description')}
-                </p>
-              </div>
+              )}
             </div>
-          </a>
-        </div>
 
-        {/* Marketing Automation */}
-        <a href="/integration2">
-          <div className="flex items-center relative z-50 ml-20 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg p-4 space-x-4">
-            <img
-              src={c4}
-              alt="Marketing Automation"
-              className="w-12 h-12"
-            />
-            <div>
-              <div className="font-normal mr-2 text-lg">
-                {t('pabbly_integration')}
+            <div className="relative">
+              <div
+                className="hover:text-parrot p-8 resource-section flex items-center cursor-pointer"
+                onClick={toggleresourcesDropdown}
+              >
+                {t('resources')}
+                <RiArrowDropDownLine className="ml-1 text-xl text-white" />
               </div>
-              <p className="font-light mr-2 text-sm">
-                {t('pabbly_description')}
-              </p>
-            </div>
-          </div>
-        </a>
 
-        {/* Contact CIRM */}
-        <div className={`${i18n.language === 'ar' ? 'relative right-44' : 'text-left'}`}>
-          <a href="/integration3">
-            <div className="flex items-center ml-72 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg p-4 space-x-4">
-              <img
-                src={c2}
-                alt="Contact CIRM"
-                className="w-12 h-12"
-              />
-              <div>
-                <div className="font-normal mr-2 text-lg">
-                  {t('woo_commerce_addon')}
+              {/* Dropdown for Resources */}
+              {openDropdown === 'resources' && (
+
+                <div className="fixed top-24 left-0 w-full h-[200px] bg-white pt-3 text-black z-10">
+                  <div className="grid grid-cols-2 gap-4 bg-white -ml-32 h-[300px] p-12">
+                    {/* Knowledge Base */}
+                    <div className={`${i18n.language === 'ar' ? 'relative right-44' : 'text-left'}`}>
+                      <a href="/tutorials">
+                        <div className="flex items-center ml-72 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg p-6 space-x-4">
+                          <img
+                            src={d4}
+                            alt="Email Marketing"
+                            className="w-12 h-12"
+                          />
+                          <div>
+                            <div className="font-normal mr-2 text-lg">{t('knowledge_base')}</div>
+                            <p className="font-light mr-2 text-sm">{t('knowledge_base_description')}</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    {/* Watch Tutorials */}
+                    <a href="/tutorials">
+                      <div className="flex items-center relative z-50 ml-20 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg p-6 space-x-4">
+                        <img
+                          src={d2}
+                          alt="Marketing Automation"
+                          className="w-12 h-12"
+                        />
+                        <div>
+                          <div className="font-normal mr-2 text-lg">{t('watch_tutorials')}</div>
+                          <p className="font-light mr-2  text-sm">{t('watch_tutorials_description')}</p>
+                        </div>
+                      </div>
+                    </a>
+
+                    {/* Ultimate Guide */}
+                    <div className={`${i18n.language === 'ar' ? 'relative right-44' : 'text-left'}`}>
+                      <a href="/tutorials">
+                        <div className="flex items-center ml-72 w-[524px] hover:bg-bkg hover:text-dgreen rounded-lg p-6 space-x-4">
+                          <img
+                            src={d3}
+                            alt="Contact CIRM"
+                            className="w-12 h-12"
+                          />
+                          <div>
+                            <div className="font-normal mr-2 text-lg">
+                              {t('ultimate_guide')}
+                            </div>
+                            <p className="font-light mr-2 text-sm">{t('ultimate_guide_description')}</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    {/* Join the Community */}
+                    <a href="/tutorials">
+                      <div className="flex items-center relative z-50 ml-20 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg p-6 space-x-4">
+                        <img
+                          src={d1}
+                          alt="Popup Builder"
+                          className="w-12 h-12"
+                        />
+                        <div>
+                          <div className="font-normal mr-2 text-lg">{t('join_community')}</div>
+                          <p className="font-light mr-2  text-sm">{t('join_community_description')}</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
                 </div>
-                <p className="font-light mr-2 text-sm">
-                  {t('woo_commerce_description')}
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
+              )}
 
-        {/* Popup Builder */}
-        <a href="/integration4">
-          <div className="flex items-center relative z-50 ml-20 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg p-4 space-x-4">
-            <img 
-              src={c1}
-              alt="Popup Builder"
-              className="w-12 h-12"
-            />
-            <div>
-              <div className="font-normal mr-2 text-lg">
-                {t('api_integration')}
-              </div>
-              <p className="font-light mr-2 text-sm">
-                {t('api_description')}
-              </p>
             </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  )}
-</div>
-
-<div className="relative">
-  <div
-    className="hover:text-parrot p-8 resource-section flex items-center cursor-pointer"
-    onClick={toggleresourcesDropdown}
-  >
-    {t('resources')}
-    <RiArrowDropDownLine className="ml-1 text-xl text-white" />
-  </div>
-
-  {/* Dropdown for Resources */}
-  {openDropdown === 'resources' && (
-
-    <div className="fixed top-24 left-0 w-full h-[200px] bg-white pt-3 text-black z-10">
-      <div className="grid grid-cols-2 gap-4 bg-white -ml-32 h-[300px] p-12">
-        {/* Knowledge Base */}
-        <div className={`${i18n.language === 'ar' ? 'relative right-44' : 'text-left'}`}>
-        <a href="/tutorials">
-          <div className="flex items-center ml-72 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg p-6 space-x-4">
-            <img
-              src={d4}
-              alt="Email Marketing"
-              className="w-12 h-12"
-            />
-            <div>
-              <div className="font-normal mr-2 text-lg">{t('knowledge_base')}</div>
-              <p className="font-light mr-2 text-sm">{t('knowledge_base_description')}</p>
-            </div>
-          </div>
-        </a>
-</div>
-        {/* Watch Tutorials */}
-        <a href="/tutorials">
-          <div className="flex items-center relative z-50 ml-20 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg p-6 space-x-4">
-            <img
-              src={d2}
-              alt="Marketing Automation"
-              className="w-12 h-12"
-            />
-            <div>
-              <div className="font-normal mr-2 text-lg">{t('watch_tutorials')}</div>
-              <p className="font-light mr-2  text-sm">{t('watch_tutorials_description')}</p>
-            </div>
-          </div>
-        </a>
-
-        {/* Ultimate Guide */}
-        <div className={`${i18n.language === 'ar' ? 'relative right-44' : 'text-left'}`}>
-        <a href="/tutorials">
-          <div className="flex items-center ml-72 w-[524px] hover:bg-bkg hover:text-dgreen rounded-lg p-6 space-x-4">
-            <img
-              src={d3}
-              alt="Contact CIRM"
-              className="w-12 h-12"
-            />
-            <div>
-              <div className="font-normal mr-2 text-lg">
-                {t('ultimate_guide')}
-              </div>
-              <p className="font-light mr-2 text-sm">{t('ultimate_guide_description')}</p>
-            </div>
-          </div>
-        </a>
-        </div>
-
-        {/* Join the Community */}
-        <a href="/tutorials">
-          <div className="flex items-center relative z-50 ml-20 w-[456px] hover:bg-bkg hover:text-dgreen rounded-lg p-6 space-x-4">
-            <img
-              src={d1}
-              alt="Popup Builder"
-              className="w-12 h-12"
-            />
-            <div>
-              <div className="font-normal mr-2 text-lg">{t('join_community')}</div>
-              <p className="font-light mr-2  text-sm">{t('join_community_description')}</p>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  )}
-  
-</div>
-<div className=" contact ">
-  <a href="/contact">
-            <div className="hover:text-parrot p-8">
-            {t('contact_us')}
-            </div>
-            </a>
+            <div className=" contact ">
+              <a href="/contact">
+                <div className="hover:text-parrot p-8">
+                  {t('contact_us')}
+                </div>
+              </a>
             </div>
 
 
             {/* Three Buttons */}
             <div className="flex space-x-4 p-8">
-        <button
-          className={`w-32 h-8 text-xs hover:outline-parrot rounded-md ${
-            isScrolled
-              ? "text-black bg-parrot hover:text-white hover:outline-white outline hover:bg-[#0f2027]"
-              : "text-black bg-parrot hover:text-white hover:outline-white outline hover:bg-[#0f2027]"
-          }`}
-        >
-          {t('request_demo')}
-        </button>
-        <a href="/login">
-          <button
-            className={`w-20  h-8 mr-4 bg-parrot ${i18n.language === 'ar' ? 'w-32' : ''} hover:outline-parrot rounded-md ${
-              isScrolled
-                ? "text-black bg-parrot hover:text-white hover:outline-white outline hover:bg-[#0f2027]"
-                : "text-black bg-parrot hover:text-white hover:outline-white outline hover:bg-[#0f2027]"
-            }`}
-          >
-            {t('login')}
-          </button>
-        </a>
-      </div>
+              <button
+                className={`w-32 h-8 text-xs hover:outline-parrot rounded-md ${isScrolled
+                    ? "text-black bg-parrot hover:text-white  hover:bg-[#0f2027]"
+                    : "text-black bg-parrot hover:text-white hover:outline-white outline hover:bg-[#0f2027]"
+                  }`}
+              >
+                {t('request_demo')}
+              </button>
+              <a href="/login">
+                <button
+                  className={`w-20  h-8 mr-4 bg-parrot ${i18n.language === 'ar' ? 'w-32' : ''} hover:outline-parrot rounded-md ${isScrolled
+                      ? "text-black bg-parrot hover:text-white  hover:bg-[#0f2027]"
+                      : "text-black bg-parrot hover:text-white hover:outline-white outline hover:bg-[#0f2027]"
+                    }`}
+                >
+                  {t('login')}
+                </button>
+              </a>
+            </div>
             <LanguageToggle />
           </div>
-       
+
           {/* Hamburger Menu Icon */}
           <div className="md:hidden">
             {!isMobileMenuOpen ? (

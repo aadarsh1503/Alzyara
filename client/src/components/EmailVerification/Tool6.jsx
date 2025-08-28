@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   FaChartPie,
   FaNetworkWired,
@@ -11,151 +12,152 @@ import {
   FaChartLine,
   FaUsers,
   FaEnvelopeOpenText,
-  FaFilter
+  FaSignature, // A more specific icon for DKIM
+  FaLink,      // A more specific icon for Custom Domains
 } from "react-icons/fa";
-import MouseIcon from '@mui/icons-material/Mouse';
 
-import ApiIcon from '@mui/icons-material/Api';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRobot,faWandMagicSparkles,faChartBar,faBolt,faCog,faFileSignature,faEnvelope ,faEdit  ,faFilter ,faInfoCircle,faGripLines,faMousePointer ,faMobileAlt,faImage, faUser, faKey, faBullseye, faReply      } from '@fortawesome/free-solid-svg-icons';
-import { useTranslation } from "react-i18next";
+// --- Step 1: Refactor all 14 features into a clean data array for maintainability ---
+const featuresData = [
+  {
+    icon: <FaChartPie />,
+    titleKey: 'subject_analyzer',
+    descriptionKey: 'subject_analyzer_desc',
+    href: '/feature6', // Assuming this links to feature6 page
+  },
+  {
+    icon: <FaMousePointer />,
+    titleKey: 'drag_drop_builder',
+    descriptionKey: 'drag_drop_builder_desc',
+    href: '/feature6',
+  },
+  {
+    icon: <FaCheckSquare />,
+    titleKey: 'email_validation',
+    descriptionKey: 'email_validation_desc',
+    href: '/feature6',
+  },
+  {
+    icon: <FaInfoCircle />,
+    titleKey: 'handle_bounce_unsubscribe',
+    descriptionKey: 'handle_bounce_unsubscribe_desc',
+    href: '/feature6',
+  },
+  {
+    icon: <FaChartLine />,
+    titleKey: 'detailed_analytics',
+    descriptionKey: 'detailed_analytics_desc',
+    href: '/feature6',
+  },
+  {
+    icon: <FaPen />,
+    titleKey: 'wysiwyg_editor',
+    descriptionKey: 'wysiwyg_editor_desc',
+    href: '/feature6',
+  },
+  {
+    icon: <FaNetworkWired />,
+    titleKey: 'marketing_automation',
+    descriptionKey: 'marketing_automation_desc',
+    href: '/feature6',
+  },
+  {
+    icon: <FaEnvelopeOpenText />,
+    titleKey: 'email_tracking',
+    descriptionKey: 'email_tracking_desc',
+    href: '/feature6',
+  },
+  {
+    // Using a more intuitive icon than FaChartPie for segmentation
+    icon: <FaUsers />,
+    titleKey: 'list_segmentation',
+    descriptionKey: 'list_segmentation_desc',
+    href: '/feature6',
+  },
+  {
+    icon: <FaServer />,
+    titleKey: 'custom_smtp_server',
+    descriptionKey: 'custom_smtp_description',
+    href: '/feature6',
+  },
+  {
+    icon: <FaUsers />,
+    titleKey: 'manage_list_subscribers',
+    descriptionKey: 'manage_list_subscribers_description',
+    href: '/feature6',
+  },
+  {
+    // Using a more specific icon than FaPen for DKIM/Signatures
+    icon: <FaSignature />,
+    titleKey: 'add_dkim_structure',
+    descriptionKey: 'add_dkim_structure_description',
+    href: '/feature6',
+  },
+  {
+    // Using a more specific icon than FaCheckSquare for Domains
+    icon: <FaLink />,
+    titleKey: 'custom_tracking_domains',
+    descriptionKey: 'custom_tracking_domains_description',
+    href: '/feature6',
+  },
+  {
+    icon: <FaReplyAll />,
+    titleKey: 'auto_responder',
+    descriptionKey: 'auto_responder_description',
+    href: '/feature6',
+  },
+];
 
 const Tool6 = () => {
   const { t, i18n } = useTranslation();
-  const [isRTL, setIsRTL] = useState(i18n.language === 'ar');
-  useEffect(() => {
-    setIsRTL(i18n.language === 'ar');
-  }, [i18n.language]);
-  
+  const isRTL = i18n.language === 'ar';
+
   return (
-    <div className={`bg-white ml-0 lg:ml-20 ${i18n.language === 'ar' ? 'lg:mr-20' : ''}  py-16 `}>
-    <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-1 items-center">
-      {/* Left Side: Blocks */}
-      <div className="grid lg:grid-cols-3 sm:grid-cols-1 gap-4">
-        {/* Subject Analyzer */}
-        <a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-<div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
-  <FaChartPie />
-</div>
-<h3 className="text-lg font-semibold mb-2">{t('subject_analyzer')}</h3>
-<p className="text-gray-600">{t('subject_analyzer_desc')}</p>
-</a>
+    // Section container with a light, airy background
+    <div className={`py-16 sm:py-24 bg-gray-50 ${isRTL ? 'rtl' : ''}`}>
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        
+        {/* --- Step 2: Integrated Header Section for a clean and robust layout --- */}
+        <div className="text-center max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            {t('all_tools_needed')}
+          </h2>
+          <p className="mt-4 text-lg text-gray-600">
+            {t('start_converting_leads')}
+          </p>
+        </div>
 
-<a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-<div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
-  <FaMousePointer />
-</div>
-<h3 className="text-lg font-semibold mb-2">{t('drag_drop_builder')}</h3>
-<p className="text-gray-600">{t('drag_drop_builder_desc')}</p>
-</a>
-
-<a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-<div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
-  <FaCheckSquare />
-</div>
-<h3 className="text-lg font-semibold mb-2">{t('email_validation')}</h3>
-<p className="text-gray-600">{t('email_validation_desc')}</p>
-</a>
-
-<a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-<div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
-  <FaInfoCircle />
-</div>
-<h3 className="text-lg font-semibold mb-2">{t('handle_bounce_unsubscribe')}</h3>
-<p className="text-gray-600">{t('handle_bounce_unsubscribe_desc')}</p>
-</a>
-
-<a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-<div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
-  <FaChartLine />
-</div>
-<h3 className="text-lg font-semibold mb-2">{t('detailed_analytics')}</h3>
-<p className="text-gray-600">{t('detailed_analytics_desc')}</p>
-</a>
-
-<a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-<div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
-  <FaPen />
-</div>
-<h3 className="text-lg font-semibold mb-2">{t('wysiwyg_editor')}</h3>
-<p className="text-gray-600">{t('wysiwyg_editor_desc')}</p>
-</a>
-
-<a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-<div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
-  <FaNetworkWired />
-</div>
-<h3 className="text-lg font-semibold mb-2">{t('marketing_automation')}</h3>
-<p className="text-gray-600">{t('marketing_automation_desc')}</p>
-</a>
-
-<a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-<div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
-  <FaEnvelopeOpenText />
-</div>
-<h3 className="text-lg font-semibold mb-2">{t('email_tracking')}</h3>
-<p className="text-gray-600">{t('email_tracking_desc')}</p>
-</a>
-
-<a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-<div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
-  <FaChartPie />
-</div>
-<h3 className="text-lg font-semibold mb-2">{t('list_segmentation')}</h3>
-<p className="text-gray-600">{t('list_segmentation_desc')}</p>
-</a>
-
-{/* Handle Bounce & Unsubscribe */}
-<a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-<div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
-  <FaServer />
-</div>
-<h3 className="text-lg font-semibold mb-2">{t('custom_smtp_server')}</h3>
-<p className="text-gray-600">{t('custom_smtp_description')}</p>
-</a>
-{/* Detailed Analytics */}
-<a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-<div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
-  <FaUsers />
-</div>
-<h3 className="text-lg font-semibold mb-2">{t('manage_list_subscribers')}</h3>
-<p className="text-gray-600">{t('manage_list_subscribers_description')}</p>
-</a>
-
-{/* WYSIWYG Editor */}
-<a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-<div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
-  <FaPen />
-</div>
-<h3 className="text-lg font-semibold mb-2">{t('add_dkim_structure')}</h3>
-<p className="text-gray-600">{t('add_dkim_structure_description')}</p>
-</a>
-
-<a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-<div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
-  <FaCheckSquare />
-</div>
-<h3 className="text-lg font-semibold mb-2">{t('custom_tracking_domains')}</h3>
-<p className="text-gray-600">{t('custom_tracking_domains_description')}</p>
-</a>
-
-<a href="/feature1" className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col items-start group">
-<div className="text-lgreen text-3xl mb-4 group-hover:bg-lgreen bg-gray-200 group-hover:text-white p-6 rounded-lg">
-  <FaReplyAll />
-</div>
-<h3 className="text-lg font-semibold mb-2">{t('auto_responder')}</h3>
-<p className="text-gray-600">{t('auto_responder_description')}</p>
-</a>
-
-      </div>
-
-      {/* Right Side: Text */}
-      <div className="text-left ml-0 lg:ml-20 mt-0 lg:-mt-[1300px]">
-      <h2 className="lg:text-4xl  text-3xl font-semibold mb-4">{t('all_tools_needed')}</h2>
-      <p className="text-gray-600 text-lg">{t('start_converting_leads')}</p>
+        {/* --- Step 3: Dynamic Grid rendered from the data array. Using 4 columns for a better fit --- */}
+        <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {featuresData.map((feature, index) => (
+            <a 
+              key={index} 
+              href={feature.href} 
+              // Card styling focused on a clean, light aesthetic with engaging hover effects
+              className="group block rounded-2xl border border-gray-200 bg-white p-6 shadow-sm
+                         transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-teal-600/10"
+            >
+              {/* Icon container with vibrant hover effect */}
+              <div 
+                className="flex h-16 w-16 items-center justify-center rounded-xl bg-gray-100 
+                           text-3xl text-teal-600 transition-all duration-300
+                           group-hover:bg-teal-500 group-hover:text-white group-hover:scale-110"
+              >
+                {feature.icon}
+              </div>
+              {/* Text content with high-contrast, readable colors */}
+              <div className="mt-5">
+                <h3 className="text-lg font-semibold text-gray-900">
+                  {t(feature.titleKey)}
+                </h3>
+                <p className="mt-1 text-base text-gray-600">
+                  {t(feature.descriptionKey)}
+                </p>
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
     </div>
-  </div>
   );
 };
 

@@ -10,16 +10,16 @@ const Thirdsegment = () => {
   }, [i18n.language]);
   
   return (
-    <div className="flex flex-col md:flex-row items-center max-w-7xl mx-auto justify-between px-6 py-10 md:px-16 md:py-20">
+    <div className="flex flex-col md:flex-row items-center max-w-7xl mx-auto justify-between px- py-10 md:px-16 md:py-20">
   {/* Left Side Content */}
-  <div className={`md:w-1/2 mt-0 lg:mt-10 ${i18n.language === 'ar' ? 'text-right' : 'text-left'} text-left`}>
+  <div className={`md:w-1/2 w-[320px] mt-0 lg:mt-10 ${i18n.language === 'ar' ? 'text-right' : 'text-left'} text-left`}>
     <h1 className="font-semibold w-64 rounded-md mb-2 bg-bkg">{t('easy_workflow_builder')} 🤖</h1>
     <h1 className="text-40px font-semibold text-gray-900 leading-tight md:leading-snug">
       {t('save_time_money')} <br />
     </h1>
-    <h1 className="text-4xl sm:text-40px font-semibold leading-tight relative whitespace-nowrap inline-block">
+    <h1 className="text-4xl sm:text-40px font-semibold leading-tight relative whitespace-normal lg:whitespace-nowrap inline-block">
       {t('automated_email_workflows')}
-      <span className="absolute -bottom-1 left-0 w-full h-4 bg-parrot -z-10"></span>
+      <span className="absolute -bottom-1 left-0 w-44 lg:w-full h-4 bg-parrot -z-10"></span>
     </h1>
 
     <p className="mt-4 text-lg text-gray-700">

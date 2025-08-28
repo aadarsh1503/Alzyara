@@ -1,0 +1,48 @@
+/* The main container for the two columns */
+.scrolly-section {
+    display: flex;
+    position: relative;
+    max-width: 1280px; /* 7xl */
+    margin: auto;
+    padding: 80px 16px; /* py-20 px-4 */
+  }
+  
+  /* The left column that will scroll with the text */
+  .scrolly-text-content {
+    width: 50%;
+    position: relative; /* For the SVG line */
+  }
+  
+  /* The right column that will be STICKY */
+  .scrolly-sticky-image {
+    width: 50%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Each individual feature block */
+  .feature-item {
+    min-height: 60vh; /* Gives each feature its own "screen" to animate in */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 4rem; /* Adds some spacing */
+    opacity: 0.2; /* Start slightly visible for better perceived performance */
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* The feature that is currently active/in view */
+  .feature-item.is-active {
+    opacity: 1;
+  }
+  
+  /* The animated SVG line */
+  .workflow-connector-path {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    transition: stroke-dashoffset 0.5s ease-in-out;
+  }
