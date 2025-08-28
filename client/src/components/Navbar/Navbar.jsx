@@ -132,32 +132,32 @@ const Navbar = () => {
     if (window.location.pathname.includes('/feature1') || window.location.pathname.includes('/feature2') || window.location.pathname.includes('/feature3')
       || window.location.pathname.includes('/feature4') || window.location.pathname.includes('/feature5') || window.location.pathname.includes('/feature6')) {
       // Change the text color of the feature section to gray
-      document.querySelector('.feature-section').style.color = 'gray';
+      document.querySelector('.feature-section').style.color = 'black';
     }
 
 
     if (window.location.pathname.includes('/marketing') || window.location.pathname.includes('/solution2')
       || window.location.pathname.includes('/solution3') || window.location.pathname.includes('/solution4')) {
       // Change the text color of the feature section to white
-      document.querySelector('.market-section').style.color = 'gray';
+      document.querySelector('.market-section').style.color = 'black';
     }
 
     if (window.location.pathname.includes('/pricing')) {
       // Change the text color of the feature section to white
-      document.querySelector('.pricing').style.color = 'gray';
+      document.querySelector('.pricing').style.color = 'black';
     }
     if (window.location.pathname.includes('/contact')) {
       // Change the text color of the feature section to white
-      document.querySelector('.contact').style.color = 'gray';
+      document.querySelector('.contact').style.color = 'black';
     }
     if (window.location.pathname.includes('/integration') || window.location.pathname.includes('/integration2')
       || window.location.pathname.includes('/integration3') || window.location.pathname.includes('/integration4')) {
       // Change the text color of the feature section to white
-      document.querySelector('.integration-section').style.color = 'gray';
+      document.querySelector('.integration-section').style.color = 'black';
     }
     if (window.location.pathname.includes('/tutorials')) {
       // Change the text color of the feature section to white
-      document.querySelector('.resource-section').style.color = 'gray';
+      document.querySelector('.resource-section').style.color = 'black';
     }
   }, []); // Empty dependency array means this effect runs once when the component mounts
 
