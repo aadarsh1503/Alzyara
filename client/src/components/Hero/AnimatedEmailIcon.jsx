@@ -18,13 +18,13 @@ const AnimatedEmailIcon = () => {
   };
 
   return (
-    <div className="w-full h-full flex items-center justify-center text-parrot">
+    <div className="w-full h-full hidden lg:flex items-center justify-center text-parrot">
       <motion.svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="currentColor"
         className="w-16 h-16 lg:w-24 lg:h-24"
-        style={{ overflow: "visible" }} // Allow paper to fly "outside" the SVG bounds
+        style={{ overflow: "visible" }} 
       >
         {/* The paper that flies out */}
         <motion.path

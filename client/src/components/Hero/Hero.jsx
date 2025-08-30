@@ -102,7 +102,7 @@ const Hero = () => {
           </motion.div>
 
           {/* Right Section - Animated Visual */}
-          <div className="relative w-full h-96 lg:h-full  flex items-center justify-center  lg:-mt-32">
+          <div className="relative w-full h-9 lg:h-full  flex items-center justify-center  lg:-mt-32">
             <motion.div
               className="absolute w-full h-full"
               initial={{ opacity: 0, scale: 0.5 }}
@@ -114,7 +114,7 @@ const Hero = () => {
 
               {/* Orbiting Shape 1 */}
               <motion.div
-                className="absolute w-32 h-32 lg:w-72 lg:h-72 top-[190px] left-[165px]"
+                className="absolute w-32 h-32 lg:flex hidden lg:w-72 lg:h-72 top-[190px] left-[165px]"
               
                 animate={{ rotate: 360 }}
                 transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
@@ -124,7 +124,7 @@ const Hero = () => {
 
               {/* Orbiting Shape 2 */}
               <motion.div
-                className="absolute w-40 h-40 lg:w-80 lg:h-80 top-1/2 left-1/2"
+                className="absolute w-40  h-40 lg:w-80 lg:h-80 top-1/2 left-1/2"
                 style={{ transformOrigin: "-80px -80px" }}
                 animate={{ rotate: -360 }}
                 transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
@@ -134,7 +134,7 @@ const Hero = () => {
               
             
               <motion.div
-                className="absolute top-1/2  left-1/3 -translate-x-1/2 -translate-y-1/2 w-48 h-32 lg:w-64 lg:h-40 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 shadow-2xl"
+                className="absolute lg:flex hidden top-1/2  left-1/3 -translate-x-1/2 -translate-y-1/2 w-48 h-32 lg:w-64 lg:h-40 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 shadow-2xl"
                 initial={{ y: -10 }}
                 animate={{ y: 10 }}
                 transition={{ duration: 3, repeat: Infinity, repeatType: "mirror", ease: "easeInOut" }}

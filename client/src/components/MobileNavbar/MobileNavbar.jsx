@@ -85,8 +85,10 @@ function MobileNavbar() {
               </ul>
             )}
           </li>
+          <a href="/pricing" className="">
           {/* Third Menu Item */}
-          <li className="hover:text-green-500 cursor-pointer">Pricing</li>
+          <li className="hover:text-green-500 mt-3 cursor-pointer">Pricing</li>
+          </a>
           {/* Fourth Menu Item */}
           <li>
             <div
@@ -99,7 +101,7 @@ function MobileNavbar() {
             {activeDropdown === 4 && (
               <ul className="mt-2 pl-4 space-y-4">
                <li>
-  <a href="/integration1" className="hover:text-lime-500 cursor-pointer">Zapier Integration</a>
+  <a href="/integration" className="hover:text-lime-500 cursor-pointer">Zapier Integration</a>
 </li>
 <li>
   <a href="/integration2" className="hover:text-lime-500 cursor-pointer">Pabbly Integration</a>
